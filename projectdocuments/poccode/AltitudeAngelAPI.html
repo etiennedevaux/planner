@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='' crossorigin='anonymous'></script>
+    <script src='https://dronesafetymap.com/client/altitudeAngelMap.js'></script>
+</head>
+<body>
+    <div id='aamap' style='width: 800px; height: 600px; margin: 0; padding: 0;'></div>
+    <script>
+        $(function () {
+            aa.initialize({
+                "target": "aamap",
+                "baseUrl": "https://dronesafetymap.com",
+                "postCode": "CV31 3PE",
+                "authDetails": {
+                    "apiKey": "fQWxiLdadwrolw8O3W8EJIDxgWeDkHNuwMc5mYL60"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
