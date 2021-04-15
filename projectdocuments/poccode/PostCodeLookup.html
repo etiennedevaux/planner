@@ -1,5 +1,30 @@
 <html>
+    <head>
+        <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='' crossorigin='anonymous'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+           const baseURL = "http://api.getthedata.com/postcode/CV313pe";
+
+function getData(type, cb) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var rsp=JSON.parse(this.responseText);
+            console.log(rsp.data.latitude);
+            document.getElementById("data").innerHTML="Latitude" + rsp.data.latitude + "longitude" + rsp.data.longitude;
+        }
+    };
+
+    xhr.open("GET", baseURL );
+    xhr.send();
+}
+
+
+        </script>
+    </head>
     <body>
-        <button onclick="">Postcode</button>
+        <button onclick="getData('latitude');">Postcode</button>
+        <div id="data"></div>
     </body>
 </html>
