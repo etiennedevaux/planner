@@ -1,0 +1,30 @@
+<script type="text/javascript" >
+function loadDB()
+{
+alert ("Hello");
+set connection = new ActiveXObject("ADODB.Connection");
+alert ("Hello 2");
+var connectionstring = "tcp:blaireau.database.windows.net,1433;Initial Catalog=Property;Persist Security Info=False;User ID=sclarke;Password=SaintLo?0011;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+alert (connectionstring);
+connection.Open(connectionstring);
+var rs = new ActiveXObject("ADODB.Recordset");
+rs.Open("select * from emp", connection);
+rs.MoveFirst();
+var span = document.createElement("span");
+span.style.color = "Blue";
+span.innerText = " ID "+" Name "+" Salary";
+document.body.appendChild(span);
+while (!rs.eof)
+{
+var span = document.createElement("span");
+span.style.color = "green";
+span.innerText = "\n " + rs.fields(0) +" | "+ rs.fields(1) +" | "+ rs.fields(2);
+document.body.appendChild(span);
+rs.MoveNext();
+}
+rs.close();
+connection.close();
+}
+</script>
+<body onload="loadDB()">
+</body>
