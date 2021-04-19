@@ -3,7 +3,7 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0007;  
+README Version: 0024;  
 HTML Version: 0007;  
 CSS Version: 0002;  
 JavaScript Version: 0003;
@@ -77,10 +77,19 @@ THe POC file is called [PostCodeLookup](https://etiennedevaux.github.io/planner/
 The smooth operation of this site requires mapping of proposed flight locations.  On its own this is sufficient for the core strategy.  However that does still leave the users needing to cross-reference with air traffic data.  Using the Altitude Angel API an air traffic map can be integrated.  The API for this is commercial, and offers a 1 month free trial.  Altitude Angel have agreed to grant me free access for academic purposes until the end of August 2021, allowing me to incorporate it into my project.  Should problems occur then this feature may need to be deprecated. 
 
 
-THe POC file is called [AltititudeAngelAP](https://etiennedevaux.github.io/planner/projectdocuments/poccode/AltititudeAngelAPI.html) and provides a surface level air traffic map for a given latitude and longitude.
+THe POC file is called [AltititudeAngelAPI](https://etiennedevaux.github.io/planner/projectdocuments/poccode/AltitudeAngelAPI.html) and provides a surface level air traffic map for a given latitude and longitude.
 
 The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  
 **NB Requires registration and login.**
+
+### 1.5.5 Link to Bing Maps API
+
+Google maps is generally seen as the *Goto* mapping service.  Within the UK Bing Maps provides an additional service that Google Maps does not, that being access to the Ordnance Survey mapping for the country.  This mapping provides an outstanding level of detail, authority and familiarity for UK based navigation.
+
+THe POC file is called [BingMapsAPI](https://etiennedevaux.github.io/planner/projectdocuments/poccode/BingMapsAPI.html) and provides a surface level air traffic map for a given latitude and longitude.
+
+
+The POC file was taken from the sample source code at the [Bing Maps SDK](https://www.bing.com/api/maps/sdk/mapcontrol/isdk/)
 
 # 2 Scope
 
@@ -89,31 +98,46 @@ The POC file was provided by Altitude Angel and was taken from the sample source
 
 ### 2.1.1 Proof of Concept
 
-If required a proof of concept should establish that the potential features are achievable within the resource envelope of the project.
+The proof of concept showed that the features that fall outside of the learning content of the Code Institute modules leading up to Milestone 2 aware
 
-The results of the proof of concept may alter the scope.
+* The Postcode Lookup API
+* Altitude Angel Flight Zone API
+
+The postcode lookup is an open API, provided by the UK government and is therefore low risk, however the AltitudeAngel API has been provided as part of a discretionary trial license, normally one month but extended to the end of August 2021 on condition it is used for academic purposes only.  The normal cost is from GBP 500 per month.  So this part of the scope carries a small but definite risk.  Should access to the API be lost a backup link to a similar website will be included, hence slightly reducing the overall scope.
 
 ### 2.1.2 Features to Implement
 
-#### Feature 1 - Navigation Menu - appears at the top and remains throughout the users navigation experience.  The navigation bar provides a single point for access to all site pages.
+#### Feature 1 - Navigation Menu
 
-#### Feature 2 - Footer Bar - the footer bar appears at the bottom and remains throughout.  THe footer bar provides information about the site, it author and summary technical information to aid debugging and identification of FAD (functioning as designed) user issues byt linking what the user is seeing to specific code versions of html, css and Javascript.
+Appears at the top and remains throughout the users navigation experience.  The navigation bar provides a single point for access to all site pages.
 
-#### Feature 3 - Home Page - Introduces users to the concept of the site.  Checks their self-certified competency level and makes them aware of other helpful resources. There will be no mandatory fields so that a user can, if they wish, navigate directly to any page.
+#### Feature 2 - Footer Bar
+
+The footer bar appears at the bottom and remains throughout.  THe footer bar provides information about the site, it author and summary technical information to aid debugging and identification of FAD (functioning as designed) user issues byt linking what the user is seeing to specific code versions of html, css and Javascript.
+
+#### Feature 3 - Home Page
+
+Introduces users to the concept of the site, explain what it can do to help them and what their responsibilities are.  
+
+#### Feature 3 - Home Page
+
+Check the users's self-certified competency level and makes them aware of other helpful resources in accordance with the level entered. 
+There will be no mandatory fields so that a user can, if they wish, navigate directly to any page.
+
+#### Feature 4 - Mapping Page
+
+Gives user a cartographic view of their proposed flight location, this will include.  Ideally this will have 
+
+### 2.1.3 Wireframes for Implementation
+
+#### Home Page 
+
+![Alt Text](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/homepagedesktop.png)
+
+### 2.1.4 Features for Future Implementation
 
 
-
-#### Feature 4 - allows users X to achieve Y, by having them fill out Z
-
-#### Feature 5 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### 2.1.3 Features for Future Implementation
-
-### 2.1.4 Features for Consideration
+### 2.1.5 Features for Consideration
 
 # 3 Structure
 
