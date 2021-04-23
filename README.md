@@ -3,12 +3,23 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0024;  
+README Version: 0027;  
 HTML Version: 0007;  
 CSS Version: 0002;  
 JavaScript Version: 0003;
 
 # 1 Strategy
+
+Cultural fit?
+
+Relevance?
+
+Intuitive?
+
+Appropriate technology?
+
+B2B vs B2C?
+
 
 ## 1.1 Concept
 
@@ -23,6 +34,12 @@ The site will help those users with flight planning activities, guide them in wh
 The site will provide the user with a flight plan summary, which may also be emailed to them.
 
 ## 1.3 Site Owner Goals
+
+The primary purpose of the site is to highlight the knowledge and expertise of the site owner, with particular reference to the flight planning and execution rules introduced to the UK in January 2021.
+
+The secondary purpose is for leisure drone pilots to understand what they can, and can not do, and where they might need support from a pilot with higher levels of knowledge, certification and experience.
+
+The third purpose is to create trusted relationship, so that when a user does require professional support they feel that the site owner is a trusted source for that support.
 
 This site will help me, as a Commercial Drone Pilot, with the initial task planning, giving sufficient information to assess whether or not a requested flight can be carried out and to provide key data to feed into the formal planning and risk assessment.  
 
@@ -130,14 +147,44 @@ Gives user a cartographic view of their proposed flight location, this will incl
 
 ### 2.1.3 Wireframes for Implementation
 
-#### Home Page 
+#### 2.1.3.1 Home Page 
+ * Desktop
+![Desktop Homepage](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/home_desktop.png)
 
-![Alt Text](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/homepagedesktop.png)
+ * Mobile  
+![Phone Homepage](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/home_phone.png)
+
+#### 2.1.3.2 Flight Location
+ * Desktop
+![Desktop Flight Location](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/flight_location_desktop.png)
+
+ * Mobile  
+![Phone Flight Location](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/flight_location_phone.png)
+
+#### 2.1.3.3 Flight Parameters
+ * Desktop
+![Desktop Flight Parameters](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/flight_parameters_desktop.png)
+
+ * Mobile  
+![Phone Flight Parameters](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/flight_parameters_phone.png)
+
+#### 2.1.3.4 Risk Assessment
+ * Desktop
+![Desktop Risk Assessment](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/risk_assessment_desktop.png)
+
+ * Mobile  
+![Phone Risk Assessment](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/risk_assessment_phone.png)
+
+
 
 ### 2.1.4 Features for Future Implementation
 
+A summary page giving a printable version of the summary of the flight information entered would be a nice to have feature, but is not essential for the flight planning process.
+
 
 ### 2.1.5 Features for Consideration
+
+It would be good to provide the flight summary page in PDF format and to email it to registered users.  At present there is no user registration process.
 
 # 3 Structure
 
