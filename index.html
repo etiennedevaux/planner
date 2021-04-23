@@ -9,6 +9,7 @@
 <meta name='keywords' content=''>
 <meta name='author' content='Stephen Clarke: The Code Institute'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel='stylesheet' href='assets/css/uavflightplanner.css'>
 <script src='assets/js/uavflightplanner.js'></script>
 <title>UAV Flight Planner</title>
@@ -16,13 +17,43 @@
 <body onload="showMenuComponent('HomePage');document.getElementById('navbarNavDropdown').className='navbar-collapse collapse';" onhashchange='showMenuComponent(location.hash.substring(1,location.hash.length-4));'>
 <div id='imgbground' class='bground Home-display Gallery-display'></div>
 <div id='imgbground-blur' class='bground-blur'></div>
-<!-- Start of Nav -->
+<!-- Start of Nav SME-->
 <nav >
 <div class='logoleft'>
 <img class='logoleft' src='assets/images/logo.png' alt='Navigation Logo'>
 </div>
-<a href='#Home-Top' </nav>
-<!-- End of Nav -->
+<a href='#Home-Top' >
+UAV Flight Planner
+</a>
+<div class='row no-gutters'>
+<div class='col'>
+<ul id='nav' class='list-inline menucontainer row'>
+<li class='col-6 col-sm-3 list-inline-item menuitem'>
+ <a class='hvr-sweep-to-bottom' onclick="showMenuComponent('HomePage')">
+<span>
+Home Page
+</span>
+</a>
+</li>
+<li class='col-6 col-sm-3 list-inline-item menuitem'>
+ <a class='hvr-sweep-to-bottom' onclick="showMenuComponent('Location')">
+<span>
+Location
+</span>
+</a>
+</li>
+<li class='col-6 col-sm-3 list-inline-item menuitem'>
+ <a class='hvr-sweep-to-bottom' onclick="showMenuComponent('FlightParameters')">
+<span>
+Flight Parameters
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- End of Nav SME-->
 
 <!--  Start of HomePage menu section-->
 <div style='display: none;' class='MenuComponent' id='HomePage'>
@@ -41,6 +72,29 @@
 </div>
 <!--  End of HomePage menu section-->
 
+
+<!--  Start of Location menu section-->
+<div style='display: none;' class='MenuComponent' id='Location'>
+<a id='Location-Top'></a>
+<header>
+<h1 class='MenuSectionTitle'>Flight Location</h1>
+</header>
+<section>
+Location
+</section>
+</div>
+<!--  End of Location menu section-->
+
+
+<!--  Start of FlightParameters menu section-->
+<div style='display: none;' class='MenuComponent' id='FlightParameters'>
+<a id='FlightParameters-Top'></a>
+<header>
+<h1 class='MenuSectionTitle'>Parameters</h1>
+</header>
+</div>
+<!--  End of FlightParameters menu section-->
+
 <footer>
 <ul class="social-networks" aria-label="Social Media">
 <li><a aria-label="Facebook" href="http://www.facebook.com/warksar" target="_blank" aria-label="Facebook"><i class="fab fa-facebook" ></i></a></li>
@@ -51,6 +105,6 @@
 <p>Registered Charity No. 1167079</p>
 <p class='enquiry'>For Enquiries Please Email: Null</p>
 <p class='d-none d-lg-inline footer-sm'>Created by Stephen Clarke on behalf of The Code Institute 
-||&nbsp;Last update on 23/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0007</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
+||&nbsp;Last update on 23/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0014</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
 </body>
 </html>

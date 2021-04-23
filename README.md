@@ -3,10 +3,10 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0027;  
-HTML Version: 0007;  
+README Version: 0028;  
+HTML Version: 0014;  
 CSS Version: 0002;  
-JavaScript Version: 0003;
+JavaScript Version: 0007;
 
 # 1 Strategy
 
@@ -168,16 +168,18 @@ Gives user a cartographic view of their proposed flight location, this will incl
  * Mobile  
 ![Phone Flight Parameters](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/flight_parameters_phone.png)
 
-#### 2.1.3.4 Risk Assessment
+
+
+### 2.1.4 Features for Future Implementation
+
+#### 2.1.4.1 Risk Assessment
  * Desktop
 ![Desktop Risk Assessment](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/risk_assessment_desktop.png)
 
  * Mobile  
 ![Phone Risk Assessment](https://etiennedevaux.github.io/planner/projectdocuments/wireframes/risk_assessment_phone.png)
 
-
-
-### 2.1.4 Features for Future Implementation
+#### 2.1.4.2 Summary Page
 
 A summary page giving a printable version of the summary of the flight information entered would be a nice to have feature, but is not essential for the flight planning process.
 
