@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0035";
+--cssfileversion: "0042";
 --footergrey:#ddddddcc;
 }
 body{
@@ -60,8 +60,12 @@ margin: 0px 0px 0px 0px;
 display: block;
 background-color: #000000cc;
 }
+#nav{
+margin: 0 10% 0 50px;
+}
 #nav span{
  color: #ffffff;
+ margin: 0 50px;
 }
 footer{
 position: fixed;
