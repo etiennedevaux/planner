@@ -4,8 +4,8 @@ README.md
 
 ## Version Details
 README Version: 0028;  
-HTML Version: 0015;  
-CSS Version: 0054;  
+HTML Version: 0041;  
+CSS Version: 0087;  
 JavaScript Version: 0014;
 
 # 1 Strategy

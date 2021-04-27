@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0054";
+--cssfileversion: "0087";
 --footergrey:#aaaaaaff;
 }
 body{
@@ -29,9 +29,9 @@ opacity: 0.8;
 backdrop-filter: grayscale(70%);
 }
 div.MenuComponent{
-padding: 0 0 0 0;
-margin-top: 100px;
-margin-bottom: 120px;
+ padding: 0 0 0 0;
+ margin-top: 100px;
+ margin-bottom: 100px;
 }
 /* CSS for the Gallery element */
 #Gallery{
@@ -77,7 +77,7 @@ width: 100%;
 text-align: center;
 background-color: var(--footergrey);
 opacity: 0.9;
-height: 120px;
+height: 100px;
 z-index: 5;
 }
 footer p{
@@ -134,4 +134,38 @@ padding: 0;
 line-height: 100%;
 letter-spacing: 1px;
 text-align: center;
+}
+#pln-cta{
+ background-image: url("../images/home_image.jpg");
+ background-size: cover;
+ margin: 20px auto;
+ background-position: center center;
+ padding: 10% 10% 15px;
+}
+#pln-cta p{
+ font-size: 20pt;
+ font-weight: 600;
+ display: block;
+ width: 100%;
+ background-color: #ccccccbb;
+ margin-top: 50px;
+ border: 1px black solid;
+ border-radius: 10px;
+ padding: 5px;
+}
+#pln-cta-primary{
+ margin: auto;
+}
+.pln-notice{
+ font-weight: 800;
+ background-color: #ccccccbb;
+ font-size: 18pt;
+}
+.pln-notice-header{
+ font-weight: 900;
+ font-size: 20pt;
+ background-color: #ccccccbb;
+}
+.pln-notice-container{
+ margin: auto;
 }
