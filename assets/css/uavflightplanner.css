@@ -4,12 +4,13 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0042";
---footergrey:#ddddddcc;
+--cssfileversion: "0054";
+--footergrey:#aaaaaaff;
 }
 body{
 font-family: Lato;
 background-color: var(--bgroundshade);
+margin: 0px;
 }
 div.bground{
 width: 100%;
@@ -24,6 +25,8 @@ animation-name: hero-zoom;
 animation-duration: 5s;
 animation-fill-mode: forwards;
 background-position: center center;
+opacity: 0.8;
+backdrop-filter: grayscale(70%);
 }
 div.MenuComponent{
 padding: 0 0 0 0;
@@ -63,7 +66,7 @@ background-color: #000000cc;
 #nav{
 margin: 0 10% 0 50px;
 }
-#nav span{
+.menu_span{
  color: #ffffff;
  margin: 0 50px;
 }
@@ -85,8 +88,8 @@ margin: 0;
 content: var(--cssfileversion);
 }
 .footer-sm{
-font-size: 90%;
-color: #aaa;
+ font-size: 100%;
+ color: #fff;
 }
 .social-networks{
 text-align: center;
@@ -100,6 +103,9 @@ color: #ffffffff;
 }
 .social-networks li{
 display: inline;
+}
+#CSSSerNo::before{
+content: var(--cssfileversion);
 }
 .logoleft{
 border-radius: 50%;
