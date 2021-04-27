@@ -4,9 +4,124 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0002";
+--cssfileversion: "0035";
+--footergrey:#ddddddcc;
+}
+body{
+font-family: Lato;
+background-color: var(--bgroundshade);
+}
+div.bground{
+width: 100%;
+height: 100%;
+background-image: URL("../images/ingenuity.png"); 
+z-index: -1;
+padding: 0px;
+position: fixed;
+background-size: cover;
+margin: 0px;
+animation-name: hero-zoom;
+animation-duration: 5s;
+animation-fill-mode: forwards;
+background-position: center center;
+}
+div.MenuComponent{
+padding: 0 0 0 0;
+margin-top: 100px;
+margin-bottom: 120px;
 }
 /* CSS for the Gallery element */
 #Gallery{
 margin-bottom: 0px;
+}
+.navbar navbar-nav a{
+font-weight: bold;
+}
+.navbar{
+    margin-bottom: 0;
+    border: 0;
+    width: 100%;
+    background-color:  rgba(0,0,0,.9);
+    position: fixed;
+    top: 0;
+    height: 100px;
+    z-index: 5;
+}
+.navbar .navbar-toggler{
+border: 0;
+}
+.navbar .navbar-toggler{
+border: 0;
+}
+nav{
+width: 100%;
+padding: 0px;
+margin: 0px 0px 0px 0px;
+display: block;
+background-color: #000000cc;
+}
+#nav span{
+ color: #ffffff;
+}
+footer{
+position: fixed;
+bottom: 0;
+width: 100%;
+text-align: center;
+background-color: var(--footergrey);
+opacity: 0.9;
+height: 120px;
+z-index: 5;
+}
+footer p{
+color: #ffffffff;
+margin: 0;
+}
+#CSSSerNo::before{
+content: var(--cssfileversion);
+}
+.footer-sm{
+font-size: 90%;
+color: #aaa;
+}
+.social-networks{
+text-align: center;
+margin: 5px 0;
+}
+.social-networks i{
+font-size: 160%;
+margin: 0 1% 0;
+padding: 3px 5% 0;
+color: #ffffffff;
+}
+.social-networks li{
+display: inline;
+}
+.logoleft{
+border-radius: 50%;
+width: 80px;
+padding: 0;
+margin: 0 10px 0 0;
+border-width: 0;
+}
+header{
+overflow: hidden;
+margin: 0;
+}
+.header-lg{
+font-size: 130%;
+font-weight: 500;
+margin: 0;
+padding: 0;
+line-height: 100%;
+text-align: center;
+}
+.header-sm{
+font-size: 90%;
+font-weight: 300;
+margin: 0 0 0 5px;
+padding: 0;
+line-height: 100%;
+letter-spacing: 1px;
+text-align: center;
 }
