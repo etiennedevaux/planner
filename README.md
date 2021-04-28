@@ -3,10 +3,10 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0028;  
-HTML Version: 0041;  
-CSS Version: 0087;  
-JavaScript Version: 0014;
+README Version: 0031;  
+HTML Version: 0059;  
+CSS Version: 0092;  
+JavaScript Version: 0024;
 
 # 1 Strategy
 
@@ -229,4 +229,6 @@ For each, provide its name, a link to its official site and a short sentence of 
 ## 11.1 External Libraries
 
 ## 11.2 Code Sources
+
+The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)
 

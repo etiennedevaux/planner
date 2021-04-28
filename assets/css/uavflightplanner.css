@@ -4,8 +4,8 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0087";
---footergrey:#aaaaaaff;
+--cssfileversion: "0092";
+--footergrey:#999999cc;;
 }
 body{
 font-family: Lato;
@@ -13,20 +13,20 @@ background-color: var(--bgroundshade);
 margin: 0px;
 }
 div.bground{
-width: 100%;
-height: 100%;
-background-image: URL("../images/ingenuity.png"); 
-z-index: -1;
-padding: 0px;
-position: fixed;
-background-size: cover;
-margin: 0px;
-animation-name: hero-zoom;
-animation-duration: 5s;
-animation-fill-mode: forwards;
-background-position: center center;
-opacity: 0.8;
-backdrop-filter: grayscale(70%);
+    width: 100%;
+    height: 100%;
+    background-image: URL("../images/ingenuity.png"); 
+    z-index: -1;
+    padding: 0px;
+    position: fixed;
+    background-size: cover;
+    margin: 0px;
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    background-position: center center;
+    opacity: 0.3;
+    filter: grayscale(0.9);
 }
 div.MenuComponent{
  padding: 0 0 0 0;
@@ -76,7 +76,6 @@ bottom: 0;
 width: 100%;
 text-align: center;
 background-color: var(--footergrey);
-opacity: 0.9;
 height: 100px;
 z-index: 5;
 }
@@ -168,4 +167,5 @@ text-align: center;
 }
 .pln-notice-container{
  margin: auto;
+ border: 3px solid brown;
 }

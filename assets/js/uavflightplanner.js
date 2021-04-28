@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0014";
+var jsfileversion="0024";
 
 function showMenuComponent(sect) {
 var elements = document.getElementsByClassName('MenuComponent');
@@ -21,4 +21,32 @@ y.style.textDecoration = 'underline';
 
 document.getElementById('JSSerNo').textContent='.'+jsfileversion;
 }
+
+/* Derived from The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  */
+function aaMapShow() {
+        $(function () {
+            aa.initialize({
+                "target": "pln-osmap",
+                "baseUrl": "https://dronesafetymap.com",
+                "postCode": "CV31 3PE",
+                "authDetails": {
+                    "apiKey": "fQWxiLdadwrolw8O3W8EJIDxgWeDkHNuwMc5mYL60"
+                }
+            });
+        });}
+
+function GetMap() {
+        var map = new Microsoft.Maps.Map('#pln-osmap', {});
+
+        
+
+            //Center the map on the user's location.
+var loc = new Microsoft.Maps.Location(51.477976,0);
+            map.setView({ mapTypeId: Microsoft.Maps.MapTypeId.ordnanceSurvey, center: loc , zoom: 15,  });
+
+//Add a pushpin at the user's location.
+            var pin = new Microsoft.Maps.Pushpin(loc);
+            map.entities.push(pin);
+       
+    }
 
