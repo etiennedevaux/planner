@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0033";
+var jsfileversion="0068";
 
 function showMenuComponent(sect) {
 var elements = document.getElementsByClassName('MenuComponent');
@@ -58,4 +58,14 @@ function initialize() {
           mapTypeId: 'hybrid'
         });
         }
+
+function droneSafetyMap(lat, long) {
+
+var ht=document.getElementById("pln-osmap").offsetHeight;
+var wd=document.getElementById("pln-osmap").offsetWidth;
+var url="https://dronesafetymap.com/#loc=" + lat + "," + long + "," + "15";
+var winsize="top=50,left=50,width=" + wd + ",height=" + ht;
+ var win=window.open(url,'_blank',winsize);
+//*alert (win.document.getElementsByTagName("BODY")[0].innerHTML);*//
+}
 
