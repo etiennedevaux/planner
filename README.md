@@ -3,10 +3,10 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0031;  
-HTML Version: 0059;  
-CSS Version: 0092;  
-JavaScript Version: 0024;
+README Version: 0033;  
+HTML Version: 0061;  
+CSS Version: 0094;  
+JavaScript Version: 0033;
 
 # 1 Strategy
 
@@ -79,7 +79,11 @@ This has been covered in the Code Institute module Interactive Front End Develop
 
 This has also been covered in the Code Institute module Interactive Front End Development from the Diploma in Software Development.
 
-### 1.5.3 Link to Government Postcode Checker API
+### 1.5.3 Link to Google StreetView API
+
+The POC file is called [googlestreetview](https://etiennedevaux.github.io/planner/projectdocuments/poccode/googlestreetview.html) and provides the latitude and longitude in the correct format for a a chosen location.  For the location used in this POC the map and the streetview show side by side.  However, if we change to [googlestreetview2](https://etiennedevaux.github.io/planner/projectdocuments/poccode/googlestreetview2.html), which is by an obscure lake in County Cavan, and arguably a more likely flight location, then we get a blank screen - which is a poor user experience.
+
+### 1.5.4 Link to Government Postcode Checker API
 
 The smooth operation of this site requires conversion from UK postcodes to latitude and longitude for a central point in that postcode.  
 
@@ -87,9 +91,9 @@ This data is feely available from the [*Open Postcode Geo*](https://www.gettheda
 
 A proof of concept page has been created to ensure that the technology could return decimal latitude and longitude, suitable for use in both the Google Maps and Altitude Angel APIs, and is stored within the project space on GitHub.
 
-THe POC file is called [PostCodeLookup](https://etiennedevaux.github.io/planner/projectdocuments/poccode/PostCodeLookup.html) and provides the latitude and longitude in the correct format for a single postcode (CV31 3PE).  The code to input any postcode was not required to prove the concept, but will be within the final project.
+The POC file is called [PostCodeLookup](https://etiennedevaux.github.io/planner/projectdocuments/poccode/PostCodeLookup.html) and provides the latitude and longitude in the correct format for a single postcode (CV31 3PE).  The code to input any postcode was not required to prove the concept, but will be within the final project.
 
-### 1.5.4 Link to Altitude Angel Drone Flight API
+### 1.5.5 Link to Altitude Angel Drone Flight API
 
 The smooth operation of this site requires mapping of proposed flight locations.  On its own this is sufficient for the core strategy.  However that does still leave the users needing to cross-reference with air traffic data.  Using the Altitude Angel API an air traffic map can be integrated.  The API for this is commercial, and offers a 1 month free trial.  Altitude Angel have agreed to grant me free access for academic purposes until the end of August 2021, allowing me to incorporate it into my project.  Should problems occur then this feature may need to be deprecated. 
 
@@ -99,7 +103,7 @@ THe POC file is called [AltititudeAngelAPI](https://etiennedevaux.github.io/plan
 The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  
 **NB Requires registration and login.**
 
-### 1.5.5 Link to Bing Maps API
+### 1.5.6 Link to Bing Maps API
 
 Google maps is generally seen as the *Goto* mapping service.  Within the UK Bing Maps provides an additional service that Google Maps does not, that being access to the Ordnance Survey mapping for the country.  This mapping provides an outstanding level of detail, authority and familiarity for UK based navigation.
 
@@ -118,9 +122,16 @@ The POC file was taken from the sample source code at the [Bing Maps SDK](https:
 The proof of concept showed that the features that fall outside of the learning content of the Code Institute modules leading up to Milestone 2 aware
 
 * The Postcode Lookup API
-* Altitude Angel Flight Zone API
 
 The postcode lookup is an open API, provided by the UK government and is therefore low risk, however the AltitudeAngel API has been provided as part of a discretionary trial license, normally one month but extended to the end of August 2021 on condition it is used for academic purposes only.  The normal cost is from GBP 500 per month.  So this part of the scope carries a small but definite risk.  Should access to the API be lost a backup link to a similar website will be included, hence slightly reducing the overall scope.
+
+* Altitude Angel Flight Zone API
+
+Initial tests have already shown a lack of reliability of access via the Altitude Angel API, so a different solution will be deployed using the DroneSafetyMap website, which shows the same information.  This website has built-in checks to ensure that it is not deployed in an iframe, so it will be provided as an option, opening in a new window, coming up over the main site.
+
+* The Google Street View API
+
+The POC testing showed that this feature works well and is reliable, but has the drawback that if the co-ordinates entered do not have a streetview panorama available it shows a blank screen, giving a poor user experience.  So this feature will be replaced with the Google Maps satellite view, which has a street view option that the user can select.
 
 ### 2.1.2 Features to Implement
 

@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0024";
+var jsfileversion="0033";
 
 function showMenuComponent(sect) {
 var elements = document.getElementsByClassName('MenuComponent');
@@ -49,4 +49,13 @@ var loc = new Microsoft.Maps.Location(51.477976,0);
             map.entities.push(pin);
        
     }
+
+function initialize() {
+        const loc = { lat: 51.477976 ,  lng: 0, };
+        const map = new google.maps.Map(document.getElementById("pln-satview"), {
+          center: loc,
+          zoom: 15,
+          mapTypeId: 'hybrid'
+        });
+        }
 

@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0092";
+--cssfileversion: "0094";
 --footergrey:#999999cc;;
 }
 body{
@@ -168,4 +168,10 @@ text-align: center;
 .pln-notice-container{
  margin: auto;
  border: 3px solid brown;
+}
+#pln-osmap{
+ height: 600px;
+}
+#pln-satview{
+ height: 600px;
 }
