@@ -136,14 +136,53 @@ Flight Parameters
 <a id='FlightParameters-Top'></a>
 <section>
 <div class="row">
+
+<!-- Evaluate the competencies of the remote pilot all can be selected -->
  <div id="pln-comp" class="col-2">
   <p>Competencies</p>
+
+<!-- Taken from https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios -->
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  <label class="form-check-label" for="defaultCheck2">
+    Disabled checkbox
+  </label>
+</div>
  </div>
- <div id="pln-flightcat" class="col-4">
-  <p>Flight Categories</p>
- </div>
+
+<!-- Choose the Category of Drone, only one can be selected -->
  <div id="pln-dronecat" class="col-4">
   <p>Drone Categories</p>
+<!-- Taken from https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios -->
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Second default radio
+  </label>
+</div>
+<div class="form-check disabled">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+  <label class="form-check-label" for="exampleRadios3">
+    Disabled radio
+  </label>
+</div>
+ </div>
+
+<!-- List the flight categories, mark those available with the drone and pilot competency combination -->
+ <div id="pln-flightcat" class="col-4">
+  <p>Flight Categories</p>
  </div>
 </div>
 </section>
@@ -159,6 +198,6 @@ Flight Parameters
 </ul>
 <p class='enquiry'>For Enquiries Please Email: Stephen.J.Clarke@hotmail.co.uk</p>
 <p class='d-none d-lg-inline footer-sm'>Created by Stephen Clarke on behalf of The Code Institute 
-||&nbsp;Last update on 28/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0065</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
+||&nbsp;Last update on 29/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0066</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
 </body>
 </html>
