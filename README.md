@@ -3,11 +3,22 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0033;  
-HTML Version: 0066;  
+README Version: 0040;  
+HTML Version: 0071;  
 CSS Version: 0094;  
-JavaScript Version: 0070;
+JavaScript Version: 0084;
 
+# Errors and Bug Fixes
+
+Altitue Angel API not working
+
+Switch to popup windows
+
+
+Multiple popup windows
+
+In Javascript routine test to see if the popup is already open, if so close it and open a new window
+
 # 1 Strategy
 
 Cultural fit?

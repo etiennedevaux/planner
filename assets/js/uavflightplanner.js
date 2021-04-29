@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0070";
+var jsfileversion="0084";
 
 function showMenuComponent(sect) {
 var elements = document.getElementsByClassName('MenuComponent');
@@ -78,5 +78,25 @@ function closePopupIfOpen(popupName){
   if(typeof(window[popupName]) != 'undefined' && !window[popupName].closed){
     window[popupName].close();
   }
+}
+
+function recentreMaps() {
+alert(document.getElementById("plnLatitude").value);
+}
+
+alert (document.getElementById("plnPostcode").value);
+
+function domLoaded() {
+
+//* Add Event Handlers *//
+
+alert ("Hello");
+document.getElementById("plnPostcode").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        alert(document.getElementById("plnPostcode").value);
+    }
+});
+
 }
 

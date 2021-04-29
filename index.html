@@ -19,7 +19,7 @@
 <script src='assets/js/uavflightplanner.js'></script>
 <title>UAV Flight Planner</title>
 </head>
-<body onload="showMenuComponent('HomePage');document.getElementById('navbarNavDropdown').className='navbar-collapse collapse';" onhashchange='showMenuComponent(location.hash.substring(1,location.hash.length-4));'>
+<body onload="showMenuComponent('HomePage');domLoaded();" onhashchange='showMenuComponent(location.hash.substring(1,location.hash.length-4));'>
 <div id='imgbground' class='bground Home-display Gallery-display'></div>
 <div id='imgbground-blur' class='bground-blur'></div>
 <!-- Start of Nav SME-->
@@ -104,16 +104,16 @@ Flight Parameters
       </div>
       <div class="form-group">
         <label for="plnLatitude">Latitude</label>
-        <input type="number" class="form-control" id="plnLatitude" placeholder="Decimal Latitude">
+        <input type="number" class="form-control" id="plnLatitude" name="plnLat" placeholder="Decimal Latitude">
         <label for="plnLongitude">Longitude</label>
-        <input type="number" class="form-control" id="plnLongitude" placeholder="Decimal Longitdue">
+        <input type="number" class="form-control" id="plnLongitude" name="plnLong" placeholder="Decimal Longitdue">
         <small id="latlongHelp" class="form-text text-muted">You may wish to further localise the latitude and longitude</small>
       </div>
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
-      <div class="btn btn-primary" onclick="aaMapShow()">Submit</div>
+      <div class="btn btn-primary" onclick="recentreMaps()">Re-Centre Maps</div>
     </form>
  </div>
  <div id="pln-osmap" class="col-5">
@@ -198,6 +198,6 @@ Flight Parameters
 </ul>
 <p class='enquiry'>For Enquiries Please Email: Stephen.J.Clarke@hotmail.co.uk</p>
 <p class='d-none d-lg-inline footer-sm'>Created by Stephen Clarke on behalf of The Code Institute 
-||&nbsp;Last update on 29/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0066</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
+||&nbsp;Last update on 29/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0071</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
 </body>
 </html>
