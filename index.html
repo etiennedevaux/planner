@@ -140,51 +140,122 @@ Flight Parameters
 <div class="row">
 
 <!-- Evaluate the competencies of the remote pilot all can be selected -->
- <div id="pln-comp" class="col-2">
-  <p>Competencies</p>
+ <div id="pln-competencies" class="col-4">
+  <h1 class="pln-params">Competencies</h1>
+  <p class="pln-params-p">Select below all the certifications and competencies that you have completed.</p>
 
-<!-- Taken from https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios -->
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-  <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
-  </label>
-</div>
+    <!-- Read the Manual -->
+    <div id="pln-rtm" class="pln-comp">
+      <div>
+        <label class="pln-comp-lbl" for="pln-comp-rtm-chk">
+        Read the Manual
+        </label>
+        <input type="checkbox" id="pln-comp-rtm-chk">
+      </div>
+      <div class="pln-comp-desc">
+        <p>Ensure that you have read the manual so that you are familiar with the drone, its specifications, its capabilities and its limitations.</p>
+      </div>
+    </div>
+
+    <!-- Operator ID-->
+    <div id="pln-opid" class="pln-comp">
+      <div>
+        <label class="pln-comp-lbl" for="pln-comp-opid-chk">
+         <p>Operator ID</p>
+        </label>
+        <input type="checkbox" id="pln-comp-opid-chk">
+      </div>
+      <div  class="pln-comp-desc">
+        <p>Ensure that you have obtained an operator ID from the Civil Aviation Authority.</p>
+      </div>
+    </div>
+
+    <!-- Flyer ID-->
+    <div id="pln-flyid" class="pln-comp">
+      <div>
+        <label class="pln-comp-lbl" for="pln-comp-flyid-chk">
+         <p>Flyer ID</p>
+        </label>
+        <input type="checkbox" id="pln-comp-flyid-chk">
+      </div>
+      <div  class="pln-comp-desc">
+        <p>Ensure that you have taken the online test and obtained a Flyer ID from the Civil Aviation Authority.</p>
+      </div>
+    </div>
+
+    <!-- A2 Certificate of Competency-->
+    <div id="pln-a2coc" class="pln-comp">
+      <div>
+        <label class="pln-comp-lbl" for="pln-comp-a2coc-chk">
+         <p>A2 CoC</p>
+        </label>
+        <input type="checkbox" id="pln-comp-a2coc-chk">
+      </div>
+      <div  class="pln-comp-desc">
+        <p>Ensure that you hold a current A2 Certificate of Competency from a CAA approved training organisation.</p>
+      </div>
+    </div>
+
+    <!-- GVC-->
+    <div id="pln-gvc" class="pln-comp">
+      <div>
+        <label class="pln-comp-lbl" for="pln-comp-gvc-chk">
+         <p>Flyer ID</p>
+        </label>
+        <input type="checkbox" id="pln-comp-gvc-chk">
+      </div>
+      <div  class="pln-comp-desc">
+        <p>Ensure that you hold a current General Visual Line of Sight Certificate or GVC for short.</p>
+      </div>
+    </div>
+
+
  </div>
+ <!-- End of Competencies Section-->
 
 <!-- Choose the Category of Drone, only one can be selected -->
- <div id="pln-dronecat" class="col-4">
-  <p>Drone Categories</p>
-<!-- Taken from https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios -->
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Default radio
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Second default radio
-  </label>
-</div>
-<div class="form-check disabled">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-  <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
-  </label>
-</div>
- </div>
+ <div id="pln-dronecategories" class="col-4">
+ <h1 class="pln-params">Drone Categories</h1>
+  <p class="pln-params-p">Select below the category for the drone you intend to fly.  Refer to the CAA if not sure.</p>
+    <div class="pln-dronecat">
+      <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c01" value="option1">
+      <label for="pln-dronecat-radio-c01">
+        <p>C0 - Toy or no camera</p>
+      </label>
+      <div class="pln-dronecat-desc">
+        <p>A drone weighing 250g or less, that is either clearly a toy or has no camera or other data recording device.</p>
+      </div>
+    </div>
 
+    <!-- C0 with camera-->
+    <div class="pln-dronecat">
+      <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c02" value="option2">
+      <label for="pln-dronecat-radio-c02">
+        <p>C0 - Camera</p>
+      </label>
+      <div class="pln-dronecat-desc">
+        <p>A drone weighing 250g or less, that has a camera or other data recording device.</p>
+      </div>
+    </div>
+
+
+    <!-- C1 certified-->
+    <div class="pln-dronecat">
+      <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c1" value="option3">
+      <label for="pln-dronecat-radio-c1">
+        <p>C1 - Certified</p>
+      </label>
+      <div class="pln-dronecat-desc">
+        <p>A drone that has been certified by the manufacturer as C1.</p>
+      </div>
+    </div>
+
+  </div>
+ <!-- End of Drone Categories-->
 <!-- List the flight categories, mark those available with the drone and pilot competency combination -->
  <div id="pln-flightcat" class="col-4">
-  <p>Flight Categories</p>
+   <h1 class="pln-params">Flight Categories</h1>
+  <p class="pln-params-p">Below are descriptions of the flight categories that you can undertake with the combination of drone and competencies that you have indicated.</p>
  </div>
 </div>
 </section>
@@ -200,6 +271,6 @@ Flight Parameters
 </ul>
 <p class='enquiry'>For Enquiries Please Email: Stephen.J.Clarke@hotmail.co.uk</p>
 <p class='d-none d-lg-inline footer-sm'>Created by Stephen Clarke on behalf of The Code Institute 
-||&nbsp;Last update on 30/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0074</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
+||&nbsp;Last update on 30/04/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0085</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0094";
+--cssfileversion: "0102";
 --footergrey:#999999cc;;
 }
 body{
@@ -174,4 +174,29 @@ text-align: center;
 }
 #pln-satview{
  height: 600px;
+}
+.pln-params{
+ font-wieght: 500;
+ color: #0000ff;
+}
+/* Styling for competency boxes on the flight parameters page */
+.pln-comp{
+ border: 2px solid black;
+ margin: 1%;
+ padding: 5px;
+ height: 18%;
+}
+/* Styling for drone category boxes on the flight parameters page */
+.pln-dronecat{
+ border: 2px solid black;
+ border-radius: 5px;
+}
+/* Styling for sub-heading paragaphs for flight parameter sections. */
+.pln-params-p{
+ display: block;
+ width: 100%;
+ height: 60px;
+}
+pln-comp{
+ border: 1px solid black;
 }
