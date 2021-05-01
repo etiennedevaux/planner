@@ -3,9 +3,9 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0040;  
-HTML Version: 0085;  
-CSS Version: 0102;  
+README Version: 0041;  
+HTML Version: 0095;  
+CSS Version: 0156;  
 JavaScript Version: 0161;
 
 # Errors and Bug Fixes
@@ -18,6 +18,10 @@ Switch to popup windows
 Multiple popup windows
 
 In Javascript routine test to see if the popup is already open, if so close it and open a new window
+
+Google Map not refreshing
+
+The Google map goes blank when the map is re-written, the simplest solution to this is to create an EventListener from wihtin the initialize function, so that it can refer to the map object without needing to crowd the global variable space, so that when the re-center map button is clicked the map recenters to the co-ordinates currently in the lat and long boxes
 
 # 1 Strategy
 
