@@ -3,10 +3,10 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0041;  
-HTML Version: 0095;  
-CSS Version: 0156;  
-JavaScript Version: 0161;
+README Version: 0042;  
+HTML Version: 0098;  
+CSS Version: 0160;  
+JavaScript Version: 0187;
 
 # Errors and Bug Fixes
 
@@ -233,6 +233,8 @@ In this section, you should mention all of the languages, frameworks, libraries,
 For each, provide its name, a link to its official site and a short sentence of why it was used.
 
 # 7 Code Structure
+
+Some of the code structure, particularly for the droen flight rules has been written in a sub-optimal way in terms of code length, but is designed to facilitate easy maintenance as drone flight rules are subject to change.  This values developer time over a small increase in code length.
 
 # 8 Version Control
 

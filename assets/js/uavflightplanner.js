@@ -1,29 +1,32 @@
 // Global Variables
-var jsfileversion="0161";
+var jsfileversion="0187";
 
 //Global Variables
 var dlat=51.477976;
 var dlng=0.000001;
 
-function showMenuComponent(sect) {
-var elements = document.getElementsByClassName('MenuComponent');
+//* Function aiming to consolidate all onload scripts into a single place, keeping the HTML cleaner *//
+function domLoaded() {
 
-    for (var i = 0; i < elements.length; i++){
-        elements[i].style.display = 'none';
-    }
-var x = document.getElementById(sect);
-x.style.display = 'block';
+    //* Event Listeners *//
 
-var elements = document.getElementsByClassName('menu_span');
+        //*Event Listeners for Location Page*//
+            document.getElementById("pln-Postcode").addEventListener("keyup", function(event) {
+            event.preventDefault();
+                if (event.keyCode === 13) {
+                    getPostcodeData(document.getElementById("pln-Postcode").value);
+                }
+            });
 
-    for (var i = 0; i < elements.length; i++){
-        elements[i].style.textDecoration = '';
-    }
+        //*Event Listeners for Flight Parameters Page*//
+            var inputBoxes= document.getElementsByClassName("pln-param-input");
 
-var y = document.getElementById(sect + 'Span');
-y.style.textDecoration = 'underline';
+            for (var i = 0; i < inputBoxes.length; i++) {
+                inputBoxes[i].addEventListener('click', function(){paramUpdate();});
+            };
 
-document.getElementById('JSSerNo').textContent='.'+jsfileversion;
+    //* End of Event Listeners
+
 }
 
 /* Derived from The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  */
@@ -59,6 +62,27 @@ var loc = new Microsoft.Maps.Location(lat,long);
             map.entities.push(pin);
        
     }
+
+function showMenuComponent(sect) {
+var elements = document.getElementsByClassName('MenuComponent');
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = 'none';
+    }
+var x = document.getElementById(sect);
+x.style.display = 'block';
+
+var elements = document.getElementsByClassName('menu_span');
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.textDecoration = '';
+    }
+
+var y = document.getElementById(sect + 'Span');
+y.style.textDecoration = 'underline';
+
+document.getElementById('JSSerNo').textContent='.'+jsfileversion;
+}
 
 function initialize() {
 
@@ -117,20 +141,6 @@ function recenterMaps() {
 
 alert (document.getElementById("plnPostcode").value);
 
-//* Function aiming to consolidate all onload scripts into a single place, keeping the HTML cleaner *//
-function domLoaded() {
-
-//* Add Event Handlers *//
-    document.getElementById("pln-Postcode").addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-
-        getPostcodeData(document.getElementById("pln-Postcode").value);
-    }
-});
-
-}
-
 function getPostcodeData(postcode) {
 
 postcode=postcode.replaceAll(/\s/g,'');
@@ -163,5 +173,51 @@ function gmapRecenter(map) {
 
    //* Also recentre Bing Map at the same time
    GetMap(document.getElementById("pln-Latitude").value,document.getElementById("pln-Longitude").value);
+}
+
+function paramUpdate() {
+
+//* Display Reset Button*//
+
+document.getElementById("pln-param-reset").style.display="inline";
+var drones = document.getElementsByName("pln-dronecat-radios");
+var selectedDrone;
+
+ for(var i = 0; i < drones.length; i++) {
+   if(drones[i].checked) {selectedDrone = i;}
+ }
+
+alert(selectedDrone);
+
+//* Select Flight Categories*// 
+var fCats=document.getElementsByClassName("pln-flightcat");
+
+ //*Hide All Flight Categories*//
+ for(var i=0; i<fCats.length; i++){
+  fCats[i].style.display="none";
+ }
+
+ //* Check flight categories to switch on *//
+
+ var rtm=document.getElementById("pln-comp-rtm-chk");
+ var opid=document.getElementById("pln-comp-opid-chk");
+
+ //* Rule 1 - C0 no camera - each category as a separate line for easy maintenance*//
+ if(selectedDrone == 0  && rtm.checked == true) {
+    document.getElementById("pln-flightcat-a1-so").style.display="block"; //* A1 - Fly Over Stay Over*//
+    document.getElementById("pln-flightcat-a1-po").style.display="block"; //* A1 - Fly Over Pass Over*//
+    document.getElementById("pln-flightcat-a2-5").style.display="block"; //* A2 - 5m*//
+    document.getElementById("pln-flightcat-a2-30").style.display="block"; //* A2 - 30m*//
+ }
+
+ //* Rule 2 - C0 Camera - each category as a separate line for easy maintenance*//
+ if(selectedDrone < 2  && rtm.checked == true && opid.checked == true) {
+    document.getElementById("pln-flightcat-a1-so").style.display="block"; //* A1 - Fly Over Stay Over*//
+    document.getElementById("pln-flightcat-a1-po").style.display="block"; //* A1 - Fly Over Pass Over*//
+    document.getElementById("pln-flightcat-a2-5").style.display="block"; //* A2 - 5m*//
+    document.getElementById("pln-flightcat-a2-30").style.display="block"; //* A2 - 30m*//
+ }
+ 
+
 }
 

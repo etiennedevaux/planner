@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0156";
+--cssfileversion: "0160";
 --footergrey:#999999cc;;
 }
 *{
@@ -190,7 +190,7 @@ text-align: center;
 .pln-dronecat{
  border: 2px solid black;
  margin: 0 5px 5px 0px;
- height: 59px;
+ height: 67px;
  padding: 5px;
 }
 /* Styling for sub-heading paragaphs for flight parameter sections. */
@@ -246,4 +246,8 @@ text-align: center;
  font-size: 150%;
  height: 25px;
  margin: 3px;
+}
+#pln-param-reset{
+ z-index: 10;
+ display: none;
 }
