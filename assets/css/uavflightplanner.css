@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0160";
+--cssfileversion: "0161";
 --footergrey:#999999cc;;
 }
 *{
@@ -202,10 +202,11 @@ text-align: center;
  margin: 3px;
 }
 .pln-flightcat{
- border: 1px solid black;
+ border: 2px solid;
  margin: 0 5px 15px 0;
  border-radius: 5px;
  height: 94px;
+ padding: 5px;
 }
 /* Labels for the competencies on the flight parameters page. */
 .pln-comp-lbl{

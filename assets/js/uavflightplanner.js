@@ -1,9 +1,22 @@
 // Global Variables
-var jsfileversion="0187";
+var jsfileversion="0245";
 
 //Global Variables
 var dlat=51.477976;
 var dlng=0.000001;
+
+/* Derived from The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  */
+function aaMapShow() {
+        $(function () {
+            aa.initialize({
+                "target": "pln-osmap",
+                "baseUrl": "https://dronesafetymap.com",
+                "postCode": "CV31 3PE",
+                "authDetails": {
+                    "apiKey": "fQWxiLdadwrolw8O3W8EJIDxgWeDkHNuwMc5mYL60"
+                }
+            });
+        });}
 
 //* Function aiming to consolidate all onload scripts into a single place, keeping the HTML cleaner *//
 function domLoaded() {
@@ -25,43 +38,13 @@ function domLoaded() {
                 inputBoxes[i].addEventListener('click', function(){paramUpdate();});
             };
 
+        //* Event Listener for Flight Parameters reset *//
+          document.getElementById("pln-param-reset").addEventListener('click', function(){paramReset();});
+
+
     //* End of Event Listeners
 
 }
-
-/* Derived from The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  */
-function aaMapShow() {
-        $(function () {
-            aa.initialize({
-                "target": "pln-osmap",
-                "baseUrl": "https://dronesafetymap.com",
-                "postCode": "CV31 3PE",
-                "authDetails": {
-                    "apiKey": "fQWxiLdadwrolw8O3W8EJIDxgWeDkHNuwMc5mYL60"
-                }
-            });
-        });}
-
-function GetMap(lat, long) {
-        var map = new Microsoft.Maps.Map('#pln-osmap', {});
-
-        
-
-            //Center the map on the user's location.
-
-if(lat == undefined){lat=51.4779760;}
-if(long == undefined){long=0.000001;}
-
-
-//* var loc = new Microsoft.Maps.Location(51.4779760,0.000001);*//
-var loc = new Microsoft.Maps.Location(lat,long);
-            map.setView({ mapTypeId: Microsoft.Maps.MapTypeId.ordnanceSurvey, center: loc , zoom: 15,  });
-
-//Add a pushpin at the user's location.
-            var pin = new Microsoft.Maps.Pushpin(loc);
-            map.entities.push(pin);
-       
-    }
 
 function showMenuComponent(sect) {
 var elements = document.getElementsByClassName('MenuComponent');
@@ -83,6 +66,27 @@ y.style.textDecoration = 'underline';
 
 document.getElementById('JSSerNo').textContent='.'+jsfileversion;
 }
+
+function GetMap(lat, long) {
+        var map = new Microsoft.Maps.Map('#pln-osmap', {});
+
+        
+
+            //Center the map on the user's location.
+
+if(lat == undefined){lat=51.4779760;}
+if(long == undefined){long=0.000001;}
+
+
+//* var loc = new Microsoft.Maps.Location(51.4779760,0.000001);*//
+var loc = new Microsoft.Maps.Location(lat,long);
+            map.setView({ mapTypeId: Microsoft.Maps.MapTypeId.ordnanceSurvey, center: loc , zoom: 15,  });
+
+//Add a pushpin at the user's location.
+            var pin = new Microsoft.Maps.Pushpin(loc);
+            map.entities.push(pin);
+       
+    }
 
 function initialize() {
 
@@ -177,6 +181,9 @@ function gmapRecenter(map) {
 
 function paramUpdate() {
 
+//* Reset Flight Categories *//
+flightCatReset();
+
 //* Display Reset Button*//
 
 document.getElementById("pln-param-reset").style.display="inline";
@@ -187,37 +194,118 @@ var selectedDrone;
    if(drones[i].checked) {selectedDrone = i;}
  }
 
-alert(selectedDrone);
 
-//* Select Flight Categories*// 
-var fCats=document.getElementsByClassName("pln-flightcat");
 
- //*Hide All Flight Categories*//
- for(var i=0; i<fCats.length; i++){
-  fCats[i].style.display="none";
- }
-
- //* Check flight categories to switch on *//
+ //* Check flight categories to switch on or off *//
 
  var rtm=document.getElementById("pln-comp-rtm-chk");
  var opid=document.getElementById("pln-comp-opid-chk");
+ var flyid=document.getElementById("pln-comp-flyid-chk");
+ var a2coc=document.getElementById("pln-comp-a2coc-chk");
 
- //* Rule 1 - C0 no camera - each category as a separate line for easy maintenance*//
- if(selectedDrone == 0  && rtm.checked == true) {
-    document.getElementById("pln-flightcat-a1-so").style.display="block"; //* A1 - Fly Over Stay Over*//
-    document.getElementById("pln-flightcat-a1-po").style.display="block"; //* A1 - Fly Over Pass Over*//
-    document.getElementById("pln-flightcat-a2-5").style.display="block"; //* A2 - 5m*//
-    document.getElementById("pln-flightcat-a2-30").style.display="block"; //* A2 - 30m*//
+alert(selectedDrone);
+switch (selectedDrone){
+
+   case 0:
+      //* Rule 1 - C0 no camera - each category as a separate line for easy maintenance*//
+      if(rtm.checked == true) {
+         allFly();
+      }
+      else {
+         noFly();
+      }
+      break;
+   
+   case 1:
+      //* Rule 2 - C0 Camera - each category as a separate line for easy maintenance*//
+      if(rtm.checked == true && opid.checked == true) {
+         allFly();
+      }
+      else {
+         noFly();
+      }
+      break;
+
+   case 2:
+      //* Rule 3 - C1 Certified - each category as a separate line for easy maintenance*//
+      if(rtm.checked == true && opid.checked == true && flyid == true) {
+         flightCatMarker(document.getElementById("pln-flightcat-a1-so"),0); //* A1 - Fly Over Stay Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a1-po"),1); //* A1 - Fly Over Pass Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-5"),1); //* A2 - 5m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-30"),1); //* A2 - 30m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-50"),1); //* A2 - 50m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a3"),1); //* A3 - 50m and 150m from congested areas*//
+      }
+      break;
+
+   case 3:
+      //* Rule 4 - A1 Transition - each category as a separate line for easy maintenance*//
+      if(rtm.checked == true && opid.checked == true && flyid == true && a2coc == true) {
+         flightCatMarker(document.getElementById("pln-flightcat-a1-so"),0); //* A1 - Fly Over Stay Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a1-po"),1); //* A1 - Fly Over Pass Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-5"),1); //* A2 - 5m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-30"),1); //* A2 - 30m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-50"),1); //* A2 - 50m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a3"),1); //* A3 - 50m and 150m from congested areas*//
+      }
+
+}
+
+
+
+
+}
+
+function flightCatMarker(elem, yesno) {
+
+ //* Display Flights that can be conducted *//
+ if (yesno == 1){
+  elem.style.color="#00dd00";
  }
 
- //* Rule 2 - C0 Camera - each category as a separate line for easy maintenance*//
- if(selectedDrone < 2  && rtm.checked == true && opid.checked == true) {
-    document.getElementById("pln-flightcat-a1-so").style.display="block"; //* A1 - Fly Over Stay Over*//
-    document.getElementById("pln-flightcat-a1-po").style.display="block"; //* A1 - Fly Over Pass Over*//
-    document.getElementById("pln-flightcat-a2-5").style.display="block"; //* A2 - 5m*//
-    document.getElementById("pln-flightcat-a2-30").style.display="block"; //* A2 - 30m*//
+ //* Display Flights that can not be conducted *//
+ if (yesno == 0){
+  elem.style.color = "#000000";
+  elem.style.textDecoration = "line-through";
  }
- 
 
+ //* Reset Flights to original *//
+ if (yesno == 2){
+  elem.attributeStyleMap.clear();
+ }
+
+}
+
+function flightCatReset() {
+
+var fcats=document.getElementsByClassName("pln-flightcat");
+
+var i;
+for (i=0; i<fcats.length; i++) {
+ flightCatMarker(fcats[i], 2);
+}
+
+}
+
+function paramReset() {
+flightCatReset();
+}
+
+function allFly() {
+         flightCatMarker(document.getElementById("pln-flightcat-a1-so"),1); //* A1 - Fly Over Stay Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a1-po"),1); //* A1 - Fly Over Pass Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-5"),1); //* A2 - 5m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-30"),1); //* A2 - 30m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-50"),1); //* A2 - 50m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a3"),1); //* A3 - 50m and 150m from congested areas*//
+}
+
+function noFly() {
+         flightCatMarker(document.getElementById("pln-flightcat-a1-so"),0); //* A1 - Fly Over Stay Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a1-po"),0); //* A1 - Fly Over Pass Over*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-5"),0); //* A2 - 5m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-30"),0); //* A2 - 30m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a2-50"),0); //* A2 - 50m*//
+         flightCatMarker(document.getElementById("pln-flightcat-a3"),0); //* A3 - 50m and 150m from congested areas*//
 }
 
