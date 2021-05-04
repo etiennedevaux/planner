@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0163";
+--cssfileversion: "0168";
 --footergrey:#999999cc;;
 }
 *{
@@ -229,7 +229,7 @@ text-align: center;
 }
 /* Styling that applies to all elements in the flight categories column */
 #pln-flightcategories{
- color: #005500;
+ color: #554400;
 }
 .pln-comp-head{
  height: 40px;
@@ -252,4 +252,6 @@ text-align: center;
 #pln-param-reset{
  z-index: 10;
  display: none;
+ margin-left: 30px;
+ width: 100px;
 }

@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0268";
+var jsfileversion="0293";
 
 //Global Variables
 var dlat=51.477976;
@@ -32,15 +32,22 @@ function domLoaded() {
             });
 
         //*Event Listeners for Flight Parameters Page*//
-            var inputBoxes= document.getElementsByClassName("pln-param-input");
+            //* Click Event listeners for selector *//
+           var inputBoxes= document.getElementsByClassName("pln-param-input");
 
             for (var i = 0; i < inputBoxes.length; i++) {
                 inputBoxes[i].addEventListener('click', function(){paramUpdate();});
             };
+            
+            //* Hover Event Listeners for Boxes *//
+var fcBox= document.getElementsByClassName("pln-flightcat");
+                        for (var i = 0; i < fcBox.length; i++) {
+                fcBox[i].addEventListener('mouseover', function(){paramHlight(this,1);});
+fcBox[i].addEventListener('mouseout', function(){paramHlight(this, 0);});
+            };
 
         //* Event Listener for Flight Parameters reset *//
           document.getElementById("pln-param-reset").addEventListener('click', function(){paramReset();});
-
 
     //* End of Event Listeners
 
@@ -422,6 +429,14 @@ for (i=0; i<fcats.length; i++) {
 }
 
 function paramReset() {
+
+var dcats=document.getElementsByClassName("pln-param-input");
+
+var i;
+for (i=0; i < dcats.length; i++) {
+ dcats[i].checked = false;
+}
+
 flightCatReset();
 }
 
@@ -441,5 +456,17 @@ function noFly() {
          flightCatMarker(document.getElementById("pln-flightcat-a2-30"),0); //* A2 - 30m*//
          flightCatMarker(document.getElementById("pln-flightcat-a2-50"),0); //* A2 - 50m*//
          flightCatMarker(document.getElementById("pln-flightcat-a3"),0); //* A3 - 50m and 150m from congested areas*//
+}
+
+function paramHlight(elem, onoff) {
+
+if (onoff == 1) {
+ elem.style.borderColor="red";
+}
+
+if (onoff == 0) {
+ elem.attributeStyleMap.clear();
+}
+
 }
 
