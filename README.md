@@ -3,12 +3,12 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0042;  
-HTML Version: 0099;  
-CSS Version: 0161;  
-JavaScript Version: 0245;
+README Version: 0044;  
+HTML Version: 0101;  
+CSS Version: 0163;  
+JavaScript Version: 0268;
 
-# Errors and Bug Fixes
+# Key Issues, Errors and Bug Fixes
 
 Altitue Angel API not working
 
@@ -249,6 +249,60 @@ Some of the code structure, particularly for the droen flight rules has been wri
 ## 10.3 Lighthouse Report
 
 ## 10.4 Systematic Testing
+
+### 10.4.1 Navigation
+
+### 10.4.2 Footer
+
+### 10.4.3 Home Page
+
+### 10.4.4 Location Page
+
+### 10.4.5 Flight Parameters Page
+
+The flight parameters are based on CAP 722 issues by the UK Civil Aviation Authority, a live version can be found here
+
+For archive purposes the version on which the flight parameters were based is stored here
+
+This table summarises the rules for Open Category UAV Flights, it is these documents that have been used to populate the contents of the page and design the business rules.
+
+To test the business rules perform the following tests:
+
+1.  Load the homepage
+
+2.  From the nvaigation bar select 'Flight Parameters'
+
+3.  The page should appear as follows:
+
+Note that no checkboxes or radio buttons are selected at the start, the flight categories are all in amber
+
+4.  Select on of the Drone Categories, check that as you cycle through that only one radio button can be selected at a time.
+
+5.  Check that the items in the Flight Categories column are all crossed out when a single drone category is selected with none of the competencies being selected.
+
+6.  Start with drone category 'C0 - No Data' 
+
+6.1 initally all the flight categories should be crossed out.
+
+6.2 Select, deselect and select again 'Read the Manual' - all flight categories should now be green, having been crossed out when Read the Manual is deselected
+
+6.3 Select all the other competency in turn, and each permutatiion.  Only the Read the Manual competency should affect the flight categories displayed.
+
+6.4 Rest the display
+
+6.5 Start with drone category 'C0 - No Data' 
+
+6.1 initally all the flight categories should be crossed out.
+
+6.2 Select, deselect and select again 'Read the Manual' - all flight categories should now be green, having been crossed out when Read the Manual is deselected
+
+6.3 Select all the other competency in turn, and each permutatiion.  Only the Read the Manual competency should affect the flight categories displayed.
+
+6.4 Rest the display
+
+
+
+
 
 ## 10.5 Responsive Breakpoint Testing
 

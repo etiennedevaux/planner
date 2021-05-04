@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0161";
+--cssfileversion: "0163";
 --footergrey:#999999cc;;
 }
 *{
@@ -144,6 +144,7 @@ text-align: center;
  margin: 20px auto;
  background-position: center center;
  padding: 10% 10% 15px;
+ max-width: 1300px;
 }
 #pln-cta p{
  font-size: 20pt;
