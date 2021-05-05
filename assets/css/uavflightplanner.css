@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0179";
+--cssfileversion: "0182";
 --footergrey:#999999cc;;
 }
 *{
@@ -80,7 +80,7 @@ bottom: 0;
 width: 100%;
 text-align: center;
 background-color: var(--footergrey);
-height: 100px;
+height: 80px;
 z-index: 5;
 }
 footer p{
@@ -147,7 +147,7 @@ text-align: center;
  max-width: 1300px;
 }
 #pln-cta p{
- font-size: 20pt;
+ font-size: 18pt;
  font-weight: 600;
  display: block;
  width: 100%;

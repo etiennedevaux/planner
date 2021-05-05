@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0354";
+var jsfileversion="0358";
 
 //Global Variables
 var dlat=51.477976;
@@ -22,6 +22,10 @@ function aaMapShow() {
 function domLoaded() {
 
     //* Event Listeners *//
+        //* Event Listener for Get Started Button *//
+            document.getElementById("pln-cta-primary").addEventListener("click", function(event) {
+                showMenuComponent("FlightParameters");
+            });
 
         //*Event Listeners for Location Page*//
             document.getElementById("pln-Postcode").addEventListener("keyup", function(event) {
@@ -71,6 +75,7 @@ var y = document.getElementById(sect + 'Span');
 y.style.textDecoration = 'underline';
 
 document.getElementById('JSSerNo').textContent='.'+jsfileversion;
+window.history.pushState("","UAV Flight Planner Home","#"+sect+"-Top");
 }
 
 function GetMap(lat, long) {
@@ -342,7 +347,7 @@ function paramUpdate() {
                   flightCatMarker(document.getElementById("pln-flightcat-a1-so"),0); //* A1 - Fly Over Stay Over*//
                   flightCatMarker(document.getElementById("pln-flightcat-a1-po"),0); //* A1 - Fly Over Pass Over*//
                   flightCatMarker(document.getElementById("pln-flightcat-a2-5"),0); //* A2 - 5m*//
-                  flightCatMarker(document.getElementById("pln-flightcat-a2-30"),1); //* A2 - 30m*//
+                  flightCatMarker(document.getElementById("pln-flightcat-a2-30"),0); //* A2 - 30m*//
                   flightCatMarker(document.getElementById("pln-flightcat-a2-50"),1); //* A2 - 50m*//
                   flightCatMarker(document.getElementById("pln-flightcat-a3"),1); //* A3 - 50m and 150m from congested areas*//
                }
