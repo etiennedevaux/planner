@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0358";
+var jsfileversion="0359";
 
 //Global Variables
 var dlat=51.477976;

@@ -4,17 +4,18 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0182";
+--cssfileversion: "0186";
 --footergrey:#999999cc;;
 }
 *{
  margin: 0;
  padding: 0;
+ border: 0;
 }
 body{
-font-family: Lato;
-background-color: var(--bgroundshade);
-margin: 0px;
+ font-family: Lato;
+ background-color: var(--bgroundshade);
+ margin: 0;
 }
 div.bground{
     width: 100%;
@@ -258,4 +259,7 @@ text-align: center;
  width: 100px;
 }
 .pln-dronecat-desc{
+}
+.row{
+ margin: 0;
 }

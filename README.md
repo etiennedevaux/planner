@@ -5,8 +5,8 @@ README.md
 ## Version Details
 README Version: 0044;  
 HTML Version: 0104;  
-CSS Version: 0182;  
-JavaScript Version: 0358;
+CSS Version: 0186;  
+JavaScript Version: 0359;
 
 # Key Issues, Errors and Bug Fixes
 
