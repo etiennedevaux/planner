@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0293";
+var jsfileversion="0354";
 
 //Global Variables
 var dlat=51.477976;
@@ -40,10 +40,9 @@ function domLoaded() {
             };
             
             //* Hover Event Listeners for Boxes *//
-var fcBox= document.getElementsByClassName("pln-flightcat");
+var fcBox= document.querySelectorAll(".pln-flightcat, .pln-dronecat");
                         for (var i = 0; i < fcBox.length; i++) {
-                fcBox[i].addEventListener('mouseover', function(){paramHlight(this,1);});
-fcBox[i].addEventListener('mouseout', function(){paramHlight(this, 0);});
+                fcBox[i].addEventListener('mouseover', function(){paramHlight(this);});
             };
 
         //* Event Listener for Flight Parameters reset *//
@@ -458,15 +457,29 @@ function noFly() {
          flightCatMarker(document.getElementById("pln-flightcat-a3"),0); //* A3 - 50m and 150m from congested areas*//
 }
 
-function paramHlight(elem, onoff) {
+function paramHlight(elem) {
 
-if (onoff == 1) {
- elem.style.borderColor="red";
-}
+ //* Arrays to define highlight styles, highlighted and original values*//
+    var hLStyleJS = ["borderWidth","backgroundColor","height","position","fontSize","zIndex"];
+    var hLStyleCSS = ["border-width","background-color","height","position", "font-size", "z-index"];
+    var hLStyleOldValue =[];
+    var hLStyleNewValue = ["3px", "#ffffff","120px","relative", "14pt","6"];
 
-if (onoff == 0) {
- elem.attributeStyleMap.clear();
-}
+
+ //* Take current values and apply new values*//
+    for (i=0; i < hLStyleJS.length; i++) {
+        hLStyleOldValue.push(window.getComputedStyle(elem).getPropertyValue(hLStyleCSS[i])); 
+        eval("elem.style." + hLStyleJS[i] + "='" + hLStyleNewValue[i] +"'");
+    }
+     elem.children[1].style.fontSize="14pt";
+
+    //* Event Listener to Revert to original values *//
+    elem.addEventListener('mouseout', function(){
+        for (i=0; i < hLStyleJS.length; i++) {
+            eval("elem.style." + hLStyleJS[i] + "='" + hLStyleOldValue[i] +"'");
+        }
+     elem.children[1].style.fontSize="10pt";
+    });
 
 }
 
