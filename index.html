@@ -98,7 +98,6 @@ Location
 <!-- Evaluate the competencies of the remote pilot all can be selected -->
  <div id="pln-competencies" class="col-4">
   <h1 class="pln-params-h1">Competencies</h1>
-  <p class="pln-params-p">Select below all the certifications and competencies that you have completed.</p>
 
     <!-- Read the Manual -->
     <div id="pln-rtm" class="pln-comp">
@@ -166,13 +165,21 @@ Location
     </div>
 
 
+
+
+<div class="pln-param-instruct">
+<p>
+<span class="pln-step">Step One</span>
+Select above all the competencies, skills and certifications that you currently hold.</p>
+</div>
  </div>
+
  <!-- End of Competencies Section-->
 
 <!-- Choose the Category of Drone, only one can be selected -->
  <div id="pln-dronecategories" class="col-4">
  <h1 class="pln-params-h1">Drone Categories</h1>
-  <p class="pln-params-p">Select below the category for the drone you intend to fly.  Refer to the CAA if not sure.</p>
+
     <div class="pln-dronecat">
       <div class="pln-dronecat-head">
         <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c01" value="option1" class="pln-param-input">
@@ -288,12 +295,19 @@ Location
         <p>A drone that is over 2kg and has no built-in flight controls.  Typically a model aircraft.</p>
       </div>
     </div>
+
+<div class="pln-param-instruct">
+<p class='pln-step'>Step Two</p>
+<p>Select below the category for the drone you intend to fly.  Refer to the CAA <a href='https://publicapps.caa.co.uk/modalapplication.aspx?appid=11&mode=detail&id=415'>CAP 722</a> if not sure.</p>
+</div>
   </div>
+
+
  <!-- End of Drone Categories-->
 <!-- List the flight categories, mark those available with the drone and pilot competency combination -->
  <div id="pln-flightcategories" class="col-4">
    <h1 class="pln-params-h1">Flight Categories</h1>
-    <p class="pln-params-p">Below are descriptions of the flight categories that you can undertake with the combination of drone and competencies that you have indicated.</p>
+   
     
     <!-- A1 Fly Over Stay Over -->
     <div id="pln-flightcat-a1-so" class="pln-flightcat">
@@ -341,9 +355,18 @@ Location
       <div class="pln-flightcat-desc">
         <p>Minimum separation of 50m from uninvolved people AND you must remain over 150m from congested areas.</p>
       </div>
-    </div>
-    
-  </div>
+</div>
+
+
+<div class="pln-param-instruct">
+<p>
+
+Select above all the competencies, skills and certifications that you currently hold.</p>
+<span class="pln-step">Step One</span>
+</div>
+ </div>
+
+ <!-- End of Competencies Section-->
 <div id="pln-param-reset" class="btn btn-primary">Reset</div>
 </section>
 </div>
@@ -355,40 +378,75 @@ Location
 <a id='Location-Top'></a>
 <section>
 <div class="row">
- <div id="pln-geo" class="col-2">
-    <h1 class="pln-h1">Location Details</h1>
+  
+  <div id="pln-geo" class="col-2">
+      <h1 class="pln-h1">Location Details</h1>
 
-    <!-- Following form dervied from Bootstrap https://getbootstrap.com/docs/4.1/components/forms/ !-->
-    <form>
-      <div class="form-group">
-        <label for="pln-Postcode">Postcode</label>
-        <input type="text" class="form-control" id="pln-Postcode" aria-describedby="UK Postcode" placeholder="Enter postcode">
-      </div>
-      <div class="form-group">
-        <label for="pln-Latitude">Latitude</label>
-        <input type="number" class="form-control" id="pln-Latitude" name="plnLat" placeholder="Decimal Latitude">
-        <label for="pln-Longitude">Longitude</label>
-        <input type="number" class="form-control" id="pln-Longitude" name="plnLong" placeholder="Decimal Longitdue">
-        <small id="latlongHelp" class="form-text text-muted">You may wish to further localise the latitude and longitude</small>
-      </div>
-      
-      <div class="btn btn-primary" id="pln-Recenter">Re-Centre Maps</div>
-    </form>
-<div class="pln-Attribution">
-        <p>Contains OS data © Crown copyright and database right 2021</p>
-        <p>Contains Royal Mail data © Royal Mail copyright and database right 2021</p>
-        <p>Source: Office for National Statistics licensed under the Open Government Licence v.3.0</p>
-      </div>
+      <!-- Following form dervied from Bootstrap https://getbootstrap.com/docs/4.1/components/forms/ !-->
+      <form>
+        <div class="form-group">
+          <label for="pln-Postcode">Postcode</label>
+          <input type="text" class="form-control" id="pln-Postcode" aria-describedby="UK Postcode" placeholder="Enter postcode">
+        </div>
+        <div class="form-group">
+          <label for="pln-Latitude">Latitude</label>
+          <input type="number" class="form-control" id="pln-Latitude" name="plnLat" placeholder="Decimal Latitude">
+          <label for="pln-Longitude">Longitude</label>
+          <input type="number" class="form-control" id="pln-Longitude" name="plnLong" placeholder="Decimal Longitdue">
+          <small id="latlongHelp" class="form-text text-muted">You may wish to further localise the latitude and longitude</small>
+        </div>
+        
+        <div class="btn btn-primary" id="pln-Recenter">Re-Centre Maps</div>
+      </form>
+    </div>
+
+ <div class="col-5">
+   <div id="pln-osmap">
+    <p>OS Map</p>
+   </div>
+   <div class="pln-param-instruct">
+    <p class="pln-params-p">
+      <span class="pln-step">Step Three</span>
+      Check the drone safety map, to ensure that your flight is in an area where it is OK to fly and review any hazards shown.
+    </p>
+   </div>
  </div>
- <div id="pln-osmap" class="col-5">
-   <p>OS Map</p>
- </div>
- <div  id="pln-satview" class="col-5">
+
+  
+<div class="col-5">
+ <div  id="pln-satview">
    <p>Satellite View</p>
  </div>
 </div>
+
+</div>
+
+
 <div class="row">
- <div class="btn btn-primary" onclick="droneSafetyMap(51.477976,0.000001);">Drone Safety Map</div>
+ 
+<div id="pln-flsummary"><p>You should be flying in the open category A2, so you must maintain a minimum horizontal separation of 50m from uninvolved people.</p></div>
+</div>
+
+<div class="row">
+<div class="pln-param-instruct" class="col-5">
+  <p class="pln-params-p"><span class="pln-step">Step Three</span>Check the ordnance survey and satellite maps, we recommend you also look at the Street View for your location if it is available.</p>
+</div>
+
+<div class="pln-param-instruct" class="col-5">
+  <p class="pln-params-p"><span class="pln-step">Step Four</span>Select the menu at the top left of the drone safety map and subnmit your flight report.  We wish you a safe and enjoyable flight.</p>
+</div>
+</div>
+
+<div class="row">
+ <div class="btn btn-primary" onclick="droneSafetyMap(51.477976,0.000001);" class="col-12">Drone Safety Map</div>
+</div>
+
+<div class="row">
+<div class="pln-Attribution">
+  <p>Contains OS data © Crown copyright and database right 2021</p>
+  <p>Contains Royal Mail data © Royal Mail copyright and database right 2021</p>
+  <p>Source: Office for National Statistics licensed under the Open Government Licence v.3.0</p>
+</div>
 </div>
 </section>
 </div>
@@ -398,6 +456,6 @@ Location
 <!-- Placeholder for Footer Links -->
 <p class='enquiry'>For Enquiries Please Email: Stephen.J.Clarke@hotmail.co.uk</p>
 <p class='d-none d-lg-inline footer-sm'>Created by Stephen Clarke on behalf of The Code Institute 
-||&nbsp;Last update on 05/05/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0104</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
+||&nbsp;Last update on 07/05/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0141</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
 </body>
 </html>

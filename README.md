@@ -3,9 +3,9 @@ README.md
 # Website Title: UAV Flight Planner
 
 ## Version Details
-README Version: 0044;  
-HTML Version: 0104;  
-CSS Version: 0186;  
+README Version: 0045;  
+HTML Version: 0141;  
+CSS Version: 0231;  
 JavaScript Version: 0359;
 
 # Key Issues, Errors and Bug Fixes
@@ -313,4 +313,6 @@ Note that no checkboxes or radio buttons are selected at the start, the flight c
 ## 11.2 Code Sources
 
 The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)
+
+Scrolling banner Adapted from https://www.html.am/html-codes/marquees/html-scrolling-text.cfm
 
