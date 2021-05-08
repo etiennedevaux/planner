@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0359";
+var jsfileversion="0376";
 
 //Global Variables
 var dlat=51.477976;
@@ -36,7 +36,21 @@ function domLoaded() {
             });
 
         //*Event Listeners for Flight Parameters Page*//
-            //* Click Event listeners for selector *//
+            //* Click Event listeners for competency options *//
+           var inputBoxes= document.getElementsByClassName("pln-comp-input");
+
+            for (var i = 0; i < inputBoxes.length; i++) {
+                inputBoxes[i].addEventListener('click', function(){paramUpdate(1);});
+            };
+
+            //* Click Event listeners for competency options *//
+            var inputBoxes= document.getElementsByClassName("pln-drone-input");
+
+            for (var i = 0; i < inputBoxes.length; i++) {
+                inputBoxes[i].addEventListener('click', function(){paramUpdate(2);});
+            };
+
+         //* Click Event listeners for selector *//
            var inputBoxes= document.getElementsByClassName("pln-param-input");
 
             for (var i = 0; i < inputBoxes.length; i++) {
@@ -44,7 +58,7 @@ function domLoaded() {
             };
             
             //* Hover Event Listeners for Boxes *//
-var fcBox= document.querySelectorAll(".pln-flightcat, .pln-dronecat");
+                var fcBox= document.querySelectorAll(".pln-flightcat, .pln-dronecat");
                         for (var i = 0; i < fcBox.length; i++) {
                 fcBox[i].addEventListener('mouseover', function(){paramHlight(this);});
             };
@@ -190,7 +204,24 @@ function gmapRecenter(map) {
    GetMap(document.getElementById("pln-Latitude").value,document.getElementById("pln-Longitude").value);
 }
 
-function paramUpdate() {
+function paramUpdate(step) {
+
+    //*Highlight Steps*//
+     switch(step) {
+      case 1:
+       document.getElementById("pln-step-one").style.fontWeight="200";
+       document.getElementById("pln-step-one").style.backgroundColor="#ffffff00";      
+       document.getElementById("pln-step-two").style.fontWeight="900";
+       document.getElementById("pln-step-two").style.backgroundColor="#ffffffff";  
+       break;
+     
+      case 2:
+       document.getElementById("pln-step-two").style.fontWeight="200";
+       document.getElementById("pln-step-two").style.backgroundColor="#ffffff00"; 
+       document.getElementById("pln-result-a").style.fontWeight="900";
+       document.getElementById("pln-result-a").style.backgroundColor="#ffffffff"; 
+       break;
+     }
 
    //* Reset Flight Categories *//
       flightCatReset();
@@ -401,21 +432,21 @@ function paramUpdate() {
       }
 }
 
-function flightCatMarker(elem, yesno) {
+function flightCatMarker(elem, status) {
 
  //* Display Flights that can be conducted *//
- if (yesno == 1){
-  elem.style.color="#33a532";
+ if (status == 1){
+  elem.style.color="#209020";
  }
 
  //* Display Flights that can not be conducted *//
- if (yesno == 0){
-  elem.style.color = "#555555";
+ if (status == 0){
+  elem.style.color = "#995555";
   elem.style.textDecoration = "line-through";
  }
 
  //* Reset Flights to original *//
- if (yesno == 2){
+ if (status == 2){
   elem.attributeStyleMap.clear();
  }
 
@@ -434,14 +465,28 @@ for (i=0; i<fcats.length; i++) {
 
 function paramReset() {
 
-var dcats=document.getElementsByClassName("pln-param-input");
+    var dcats = document.getElementsByClassName("pln-param-input");
 
-var i;
-for (i=0; i < dcats.length; i++) {
- dcats[i].checked = false;
-}
+    var i;
+    for (i = 0; i < dcats.length; i++) {
+        dcats[i].checked = false;
+    }
 
-flightCatReset();
+    //* Reset Steps *//
+
+    //* Step One *//
+    document.getElementById("pln-step-one").style.fontWeight = "900";
+    document.getElementById("pln-step-one").style.backgroundColor = "#ffffffff";
+
+    //* Step Two *//
+    document.getElementById("pln-step-two").style.fontWeight = "200";
+    document.getElementById("pln-step-two").style.backgroundColor = "#ffffff00";
+
+    //* Results *//
+    document.getElementById("pln-result-a").style.fontWeight = "200";
+    document.getElementById("pln-result-a").style.backgroundColor = "#ffffff00";
+
+    flightCatReset();
 }
 
 function allFly() {

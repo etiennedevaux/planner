@@ -4,13 +4,10 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0231";
+--cssfileversion: "0262";
 --footergrey:#999999cc;;
-}
-*{
- margin: 0;
- padding: 0;
- border: 0;
+--flightallowed:#209020;;
+--flightnotallowed:#995555;;
 }
 body{
  font-family: Lato;
@@ -37,10 +34,27 @@ div.MenuComponent{
  margin-top: 100px;
  margin-bottom: 60px;
 }
-.pln-step{
+.pln-param-instruct{
+ font-size: 14pt;
+ background-color: #ffffffff;
  font-weight: 900;
+ line-height: 1;
+ margin: 0;
+ border-radius: 2px;
+ padding: 2px;
+}
+.pln-step{
  font-size: 14pt;
  margin: 2px 10px 2px 0;
+}
+*{
+ margin: 0;
+ padding: 0;
+ border: 0;
+}
+.pln-steps{
+ background-color: var(--footergrey);
+ padding: 5px;
 }
 /* CSS for the Gallery element */
 #Gallery{
@@ -78,6 +92,9 @@ margin: 0 10% 0 50px;
 .menu_span{
  color: #ffffff;
  margin: 0 50px;
+}
+.nav-item{
+ cursor: pointer;
 }
 footer{
  position: fixed;
@@ -229,7 +246,7 @@ text-align: center;
 }
 /* Styling that applies to all elements in the flight categories column */
 #pln-flightcategories{
- color: #554400;
+ color: #de8f00;
  height: 800px;
 }
 .pln-comp-head{
@@ -255,19 +272,40 @@ text-align: center;
  z-index: 10;
  display: none;
  margin-left: 30px;
- width: 100px;
+ width: 120px;
+ position: absolute;
+ bottom: 20px;
+ left: 10px;
 }
 .pln-dronecat-desc{
 }
-.pln-param-instruct{
- font-size: 14pt;
+#pln-step-one{
+ font-weight: 900;
  background-color: #ffffffff;
- position: absolute;
- bottom: 50px;
- height: 80px;
+}
+#pln-step-two{
+ font-weight: 300;
+ background-color: #ffffff00;
+}
+#pln-result-a{
+ font-weight: 100;
+ background-color: #ffffff00;
+}
+.pln-comp, .pln-dronecat, .pln-flightcat{
+ background-color: #dddddddd;
+}
+.pln-flight-yes{
+ color: var(--flightallowed);
+}
+.pln-flight-no{
+ color: var(--flightnotallowed);
+ text-decoration: line-through;
 }
 .row{
  margin: 0;
+}
+.pln-flightcat-head{
+ font-weight: 900;
 }
 @keyframes hero-zoom{
  from{
