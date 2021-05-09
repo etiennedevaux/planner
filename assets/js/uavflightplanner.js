@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0415";
+var jsfileversion="0463";
 
 //Global Variables
 var dlat=51.477976;
@@ -32,11 +32,16 @@ originalFlSummary=document.getElementById("pln-flsummary").innerHTML;
             });
 
         //*Event Listeners for Location Page*//
-            document.getElementById("pln-Postcode").addEventListener("keyup", function(event) {
+            document.getElementById("pln-postcode").addEventListener("keyup", function(event) {
             event.preventDefault();
                 if (event.keyCode === 13) {
-                    getPostcodeData(document.getElementById("pln-Postcode").value);
+                    getPostcodeData(document.getElementById("pln-postcode").value);
                 }
+            });
+
+            document.getElementById("pln-postcode").addEventListener("blur", function(event) {
+            event.preventDefault();
+            getPostcodeData(document.getElementById("pln-postcode").value);
             });
 
         //*Event Listeners for Flight Parameters Page*//
@@ -73,10 +78,25 @@ originalFlSummary=document.getElementById("pln-flsummary").innerHTML;
        //* Event Listener for Flight Parameters review Location Button *//
             document.getElementById("pln-next-location").addEventListener("click", function(event) {
                 showMenuComponent("Location");
-});
+            });
+
+       //* Event Listener for Drone Safety Map from within instructions *//
+            document.getElementById("pln-dsmap-1").addEventListener("click", function(event) {
+                droneSafetyMap();
+            });
+
+
 
     //* End of Event Listeners
 
+//* Styling for first instruction step one on the Parameters page * //
+instrDisplay("pln-step-one",1);
+
+//* Styling for third instruction step three on the Location Page * //
+instrDisplay("pln-step-three",1);
+
+//* Styling for the Flight Summary on the Location Page * //
+instrDisplay("pln-flsummary",1);
 }
 
 function showMenuComponent(sect) {
@@ -124,8 +144,8 @@ var loc = new Microsoft.Maps.Location(lat,long);
 
 function initialize() {
 
-var latid=document.getElementById("pln-Latitude").value;
-var longid=document.getElementById("pln-Longitude").value;
+var latid=document.getElementById("pln-latitude").value;
+var longid=document.getElementById("pln-longitude").value;
 
 if(latid == null | latid == undefined | latid == "") {latid=51.477976;}
 if(longid == null | longid == undefined | longid == "") {longid=0.000001;}
@@ -139,14 +159,20 @@ if(longid == null | longid == undefined | longid == "") {longid=0.000001;}
         });
 
 //* Add event listeners for map adjustments *//
-document.getElementById("pln-Recenter").addEventListener("click", function(){gmapRecenter(map)});
+document.getElementById("pln-recenter").addEventListener("click", function(){
+  gmapRecenter(map);
+  instrDisplay("pln-step-three",2);
+  instrDisplay("pln-step-four",1);
+});
+
+
         }
 
-function droneSafetyMap(lat, long) {
+function droneSafetyMap() {
 
 //* Take Lat and Long from form*//
-var lat=document.getElementById("pln-Latitude").value;
-var lng=document.getElementById("pln-Longitude").value;
+var lat=document.getElementById("pln-latitude").value;
+var lng=document.getElementById("pln-longitude").value;
 
 //* Set lat and lng to default values if null*//
 if(lat == undefined | lat == null | lat == "" ) {lat=dlat;}
@@ -159,6 +185,10 @@ var url="https://dronesafetymap.com/#loc=" + lat + "," + lng + "," + "15";
 
 //* Check to see if the Map is already open and close if it is*//
 closePopupIfOpen('win');
+
+//* Display Final Instruction *//
+instrDisplay("pln-step-four",2);
+instrDisplay("pln-step-five",1);
 
 //* Open Drone Safety Map in popup *//
 var winsize="top=50,left=50,width=" + wd + ",height=" + ht;
@@ -192,8 +222,8 @@ const baseURL = "https://api.getthedata.com/postcode/" + postcode;
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var rsp=JSON.parse(this.responseText);
-            document.getElementById("pln-Latitude").value=rsp.data.latitude;
-document.getElementById("pln-Longitude").value=rsp.data.longitude;
+            document.getElementById("pln-latitude").value=rsp.data.latitude;
+document.getElementById("pln-longitude").value=rsp.data.longitude;
         }
     };
 
@@ -203,14 +233,14 @@ document.getElementById("pln-Longitude").value=rsp.data.longitude;
 
 //* Function to recentre the Google Map in accordance with co-ordinates in the parameters section, also resets the zoom to 15*//
 function gmapRecenter(map) {
-    var latnew=Number(document.getElementById("pln-Latitude").value);
-    const lngnew=Number(document.getElementById("pln-Longitude").value);
+    var latnew=Number(document.getElementById("pln-latitude").value);
+    const lngnew=Number(document.getElementById("pln-longitude").value);
     const loca={ lat: latnew ,  lng: lngnew };
     map.setCenter(loca);
     map.setZoom(15)
 
    //* Also recentre Bing Map at the same time
-   GetMap(document.getElementById("pln-Latitude").value,document.getElementById("pln-Longitude").value);
+   GetMap(document.getElementById("pln-latitude").value,document.getElementById("pln-longitude").value);
 }
 
 function paramUpdate(step) {
@@ -218,18 +248,14 @@ function paramUpdate(step) {
     //*Highlight Steps*//
      switch(step) {
       case 1:
-       document.getElementById("pln-step-one").style.fontWeight="200";
-       document.getElementById("pln-step-one").style.backgroundColor="#ffffff00";      
-       document.getElementById("pln-step-two").style.fontWeight="900";
-       document.getElementById("pln-step-two").style.backgroundColor="#ffffffff";  
+       instrDisplay("pln-step-two",1);
+       instrDisplay("pln-step-one",2);
        break;
      
       case 2:
-       document.getElementById("pln-step-two").style.fontWeight="200";
-       document.getElementById("pln-step-two").style.backgroundColor="#ffffff00"; 
-       document.getElementById("pln-result-a").style.fontWeight="900";
-       document.getElementById("pln-result-a").style.backgroundColor="#ffffffff"; 
-       document.getElementById("pln-next-location").style.display="block"; 
+       instrDisplay("pln-step-two",2);
+       instrDisplay("pln-result-a",1);
+       document.getElementById("pln-next-location").style.display="inline";
        break;
      }
 
@@ -504,17 +530,15 @@ function paramReset() {
     //* Reset Steps *//
 
     //* Step One *//
-    document.getElementById("pln-step-one").style.fontWeight = "900";
-    document.getElementById("pln-step-one").style.backgroundColor = "#ffffffff";
+       instrDisplay("pln-step-two",1);
+
 
     //* Step Two *//
-    document.getElementById("pln-step-two").style.fontWeight = "200";
-    document.getElementById("pln-step-two").style.backgroundColor = "#ffffff00";
+       instrDisplay("pln-step-two",0);
 
     //* Results *//
-    document.getElementById("pln-result-a").style.fontWeight = "200";
-    document.getElementById("pln-result-a").style.backgroundColor = "#ffffff00";
-
+       instrDisplay("pln-result-a",0);
+              document.getElementById("pln-next-location").style.display="none";
     flightCatReset();
 }
 
@@ -607,5 +631,34 @@ flSummary=originalFlSummary;
 
 }
 
+}
+
+function instrDisplay(instrid,status) {
+
+ switch(status) {
+   case 0:
+    document.getElementById(instrid).style.backgroundColor="#ffffff00";
+    document.getElementById(instrid).style.fontWeight="200";
+    document.getElementById(instrid).style.borderStyle="none";
+    break;
+
+   case 1:
+    document.getElementById(instrid).style.backgroundColor="#ffffffff";
+    document.getElementById(instrid).style.fontWeight="900";
+    document.getElementById(instrid).style.borderStyle="solid";
+    document.getElementById(instrid).style.borderColor= "#007bff";
+    document.getElementById(instrid).style.borderWidth= "3px";
+    break;
+
+   case 2:
+    document.getElementById(instrid).style.backgroundColor="#ffffff00";
+    document.getElementById(instrid).style.fontWeight="900";
+    document.getElementById(instrid).style.borderStyle="solid";
+    document.getElementById(instrid).style.borderColor= "#007bff";
+    document.getElementById(instrid).style.borderWidth= "1px";
+    break;
+
+  default:
+ }
 }
 

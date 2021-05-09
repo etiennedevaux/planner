@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0267";
+--cssfileversion: "0291";
 --footergrey:#999999cc;;
 --flightallowed:#209020;;
 --flightnotallowed:#995555;;
@@ -34,17 +34,18 @@ div.bground{
 /* Styling for the 'Virtual Page' div elements */
 div.MenuComponent{
  padding: 0 0 120px 0;
- margin-top: 100px;
  margin-bottom: 60px;
+ margin-top: 100px;
 }
 .pln-param-instruct{
  font-size: 14pt;
- background-color: #ffffffff;
- font-weight: 900;
+ background-color: #ffffff00;
+ font-weight: 300;
  line-height: 1;
  margin: 0;
  border-radius: 2px;
  padding: 2px;
+ min-height: 50px;
 }
 .pln-step{
  font-size: 14pt;
@@ -200,7 +201,7 @@ text-align: center;
 .pln-notice{
  font-weight: 800;
  background-color: #ccccccbb;
- font-size: 18pt;
+ font-size: 14pt;
 }
 .pln-notice-header{
  font-weight: 900;
@@ -291,8 +292,6 @@ text-align: center;
 .pln-dronecat-desc{
 }
 #pln-step-one{
- font-weight: 900;
- background-color: #ffffffff;
 }
 #pln-step-two{
  font-weight: 300;
@@ -331,4 +330,31 @@ text-align: center;
     transform: scale(1);
     background-image: blur(1px);
   }
+}
+#pln-dsmap-1, #pln-param-rtn{
+ margin: 0;
+ background-color: #0078ff;
+ color: #ffffff;
+ padding: 1px;
+ border-radius: 3px;
+ cursor: pointer;
+ font-size: 11pt;
+}
+#pln-step-four-1{
+ padding-right: 1px;
+}
+#pln-step-four-2{
+ padding-left: 1px;
+}
+#pln-recenter{
+ margin: 10px auto;
+ width: 80%;
+}
+#pln-dsmap-2{
+ margin: 10px auto;
+ width: 80%;
+}
+#pln-flsummary{
+ font-size: 14pt;
+ text-align: center;
 }
