@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0303";
+--cssfileversion: "0312";
 --footergrey:#999999cc;;
 --flightallowed:#209020;;
 --flightnotallowed:#995555;;
@@ -341,7 +341,7 @@ text-align: center;
     background-image: blur(1px);
   }
 }
-#pln-dsmap-1, #pln-param-rtn{
+#pln-dsmap-1, #pln-param-rtn, #pln-stepfour-next{
  margin: 0;
  background-color: #0078ff;
  color: #ffffff;
@@ -358,7 +358,7 @@ text-align: center;
 }
 #pln-recenter{
  margin: 10px auto;
- width: 80%;
+ width: 100%;
 }
 #pln-dsmap-2{
  margin: 10px auto;
@@ -367,4 +367,21 @@ text-align: center;
 #pln-flsummary{
  font-size: 14pt;
  text-align: center;
+ background-color: var(--footergrey);
+}
+#pln-geo{
+ height: 100%;
+ padding: 0;
+}
+#pln-maps{
+ padding: 0;
+}
+.pln-location-frm{
+ padding: 5px;
+}
+.pln-steps-location{
+ padding: 0;
+}
+ #pln-stepfour-next{
+ margin: 0 0 3px 10px;
 }

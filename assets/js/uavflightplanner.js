@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0463";
+var jsfileversion="0485";
 
 //Global Variables
 var dlat=51.477976;
@@ -32,12 +32,13 @@ originalFlSummary=document.getElementById("pln-flsummary").innerHTML;
             });
 
         //*Event Listeners for Location Page*//
-            document.getElementById("pln-postcode").addEventListener("keyup", function(event) {
-            event.preventDefault();
-                if (event.keyCode === 13) {
-                    getPostcodeData(document.getElementById("pln-postcode").value);
-                }
-            });
+document.getElementById("pln-postcode").addEventListener("keyup", function(event) {
+event.preventDefault();
+if (event.keyCode === 13) {
+getPostcodeData(document.getElementById("pln-postcode").value);
+}
+});
+
 
             document.getElementById("pln-postcode").addEventListener("blur", function(event) {
             event.preventDefault();
@@ -85,6 +86,13 @@ originalFlSummary=document.getElementById("pln-flsummary").innerHTML;
                 droneSafetyMap();
             });
 
+        //* Event Listener for Step Four Next Button *//
+            document.getElementById("pln-stepfour-next").addEventListener("click", function(event) {
+                instrDisplay("pln-step-four",2);
+                instrDisplay("pln-step-five",1);
+            });
+
+
 
 
     //* End of Event Listeners
@@ -96,7 +104,7 @@ instrDisplay("pln-step-one",1);
 instrDisplay("pln-step-three",1);
 
 //* Styling for the Flight Summary on the Location Page * //
-instrDisplay("pln-flsummary",1);
+instrDisplay("pln-flsummary",2);
 }
 
 function showMenuComponent(sect) {
@@ -166,7 +174,8 @@ document.getElementById("pln-recenter").addEventListener("click", function(){
 });
 
 
-        }
+
+}
 
 function droneSafetyMap() {
 
@@ -187,8 +196,8 @@ var url="https://dronesafetymap.com/#loc=" + lat + "," + lng + "," + "15";
 closePopupIfOpen('win');
 
 //* Display Final Instruction *//
-instrDisplay("pln-step-four",2);
-instrDisplay("pln-step-five",1);
+instrDisplay("pln-step-five",2);
+instrDisplay("pln-step-six",1);
 
 //* Open Drone Safety Map in popup *//
 var winsize="top=50,left=50,width=" + wd + ",height=" + ht;
@@ -597,32 +606,32 @@ switch(flightcat){
 
 //* A1 - Fly Over - Stay Over *//
 case 1:
-flSummary.innerHTML="<p>You can fly close to and over people, and maintain a position over people.  There is no minimum separation and avoid flying over crowds.</p>";
+flSummary.innerHTML="<p>You can fly close to and over people, and maintain a position over people.  There is no minimum separation, avoid flying over crowds and ensure you have the land owner's permission.</p>";
 break;
 
 //* A1 - Fly Over - Pass Over *//
 case 2:
-flSummary.innerHTML="<p>You can fly over people, but only to pass over them. There is no minimum separation and avoid flying over crowds.</p>";
+flSummary.innerHTML="<p>You can fly over people, but only to pass over them. There is no minimum separation, avoid flying over crowds and ensure you have the land owner's permission.</p>";
 break;
 
 //* A2 - Close to People - 5m *//
 case 3:
-flSummary.innerHTML="<p>You must fly in low speed mode and remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 5 metres, from uninvolved people.</p>";
+flSummary.innerHTML="<p>You must fly in low speed mode and remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 5 metres, from uninvolved people. Avoid flying over crowds and ensure you have the land owner's permission.</p>";
 break;
 
 //* A2 - Close to People - 30m *//
 case 4:
-flSummary.innerHTML="<p>You must remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 30 metres, from uninvolved people.</p>";
+flSummary.innerHTML="<p>You must remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 30 metres, from uninvolved people.  Ensure you have the land owner's permission.</p>";
 break;
 
 //* A2 - Close to People - 50m *//
 case 5:
-flSummary.innerHTML="<p>You must remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 50 metres, from uninvolved people.</p>";
+flSummary.innerHTML="<p>You must remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 50 metres, from uninvolved people.  Ensure you have the land owner's permission.</p>";
 break;
 
 //* A3 - Far from people - 50m *//
 case 6:
-flSummary.innerHTML="<p>You must remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 50 metres, from uninvolved people and be over 150 metres from any congested area.</p>";
+flSummary.innerHTML="<p>You must remain at least the same horizontal distance as the height of your aircraft (1:1 rule), down to a minimum of 50 metres, from uninvolved people and be over 150 metres from any congested area.  Ensure you have the land owner's permission.</p>";
 break;
 
 //* Any other case *//
