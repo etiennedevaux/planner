@@ -58,16 +58,17 @@ Location
 <div style='display: none;' class='MenuComponent' id='HomePage'>
 <a id='HomePage-Top'></a>
 <section id='pln-welcome' class='pln-cta'>
-
- <div class='row'>
+<!-- Primary Call to Action -->
+<div class='row'>
    <div id='pln-cta' class='col-10'>
-     <p>Drones, UAVs (unmanned aerial vehicles) and traditional model aircraft are all becoming increasingly popular - this site will help you to plan safe and enjoyable flights.<br>
-     We will look first at you and your drone, we will then consider the location you plan to fly to see it is safe and legal.</p>
+     <p>Drones, UAVs (unmanned aerial vehicles) and traditional model aircraft are becoming increasingly popular.</p>
+     <p>You are just six short steps away from planning a safe, leagal and enjoyable flight - we look forward to seeing the footage.</p>
      <div class="row">
       <div id="pln-cta-primary" class='btn btn-primary col-8'>Get Started</div>
     </div>
    </div>
- </div>
+</div>
+<!-- End of Primary Call to Action -->
 <div class="pln-notice-container col-8">
     <div class="row">
         <div class="col-2 pln-notice-header">
@@ -87,33 +88,21 @@ Location
 <div style='display: none;' class='MenuComponent' id='FlightParameters'>
 <a id='FlightParameters-Top'></a>
 <section>
-<!-- Guidance Bar taking the user through the steps to plan the flight, covering Steps One and Two and the results, which carry over to the Location Page -->
-<div class="row pln-steps">
-    <!-- Step One-->
-    <div class='col-4'>
-        <p id="pln-step-one" class="pln-param-instruct"><span class="pln-step">Step One</span>Select your competencies,
-            skills and certifications.</p>
-    </div>
-    <!-- Step Two-->
-    <div class='col-4'>
-        <p id="pln-step-two" class="pln-param-instruct"><span class="pln-step">Step Two</span>Select the drone category.
-            Refer to the CAA <a
-                href='https://publicapps.caa.co.uk/modalapplication.aspx?appid=11&mode=detail&id=415'>CAP 722</a> for
-            guidance.</p>
-    </div>
-    <!-- Results from Step One and Step Two-->
-    <div class='col-3'>
-        <p id="pln-result-a" class="pln-param-instruct">Permitted flight categories in <span class="pln-flight-yes">Green</span>, others <span class="pln-flight-no">Crossed out in Red</span>.
-        </p>
-    </div>
-    <div class="col-1">
-        <div id="pln-next-location" class="btn btn-primary">Next</div>
-    </div>
-</div>
 <div class="row">
 
 <!-- Evaluate the competencies of the remote pilot all can be selected -->
  <div id="pln-competencies" class="col-4">
+
+<!-- Step One-->
+<div class="row pln-steps">
+
+    <div class='col-12'>
+        <p id="pln-step-one" class="pln-param-instruct"><span class="pln-step">Step One</span>Select your competencies,
+            skills and certifications.</p>
+    </div>
+</div>
+<!-- End of Step One-->
+
   <h1 class="pln-params-h1">Competencies</h1>
 
     <!-- Read the Manual -->
@@ -187,6 +176,17 @@ Location
 
 <!-- Choose the Category of Drone, only one can be selected -->
  <div id="pln-dronecategories" class="col-4">
+
+<!-- Step Two-->
+<div class="row pln-steps">
+    <div class='col-12'>
+        <p id="pln-step-two" class="pln-param-instruct"><span class="pln-step">Step Two</span>Select the drone category.
+            Refer to the CAA <a href='https://publicapps.caa.co.uk/modalapplication.aspx?appid=11&mode=detail&id=415'>CAP 722</a> for guidance.</p>
+    </div>
+</div>
+<!-- End of Step Two-->
+
+
  <h1 class="pln-params-h1">Drone Categories</h1>
 
     <div class="pln-dronecat">
@@ -312,6 +312,19 @@ Location
  <!-- End of Drone Categories-->
 <!-- List the flight categories, mark those available with the drone and pilot competency combination -->
  <div id="pln-flightcategories" class="col-4">
+
+<!-- Results from Step One and Step Two-->
+<div class="row pln-steps">
+    <div class='col-10'>
+        <p id="pln-result-a" class="pln-param-instruct">Permitted flight categories in <span class="pln-flight-yes">Green</span>, others <span class="pln-flight-no">Crossed out in Red</span>.
+        </p>
+    </div>
+    <div class="col-2 pln-btn-next">
+        <div id="pln-next-location" class="btn btn-primary">Next</div>
+    </div>
+</div>
+<!-- End of Results from Step One and Step Two-->
+
    <h1 class="pln-params-h1">Flight Categories</h1>
    
     
@@ -453,7 +466,7 @@ Location
 <!-- Placeholder for Footer Links -->
 <p class='enquiry'>For Enquiries Please Email: Stephen.J.Clarke@hotmail.co.uk</p>
 <p class='d-none d-lg-inline footer-sm'>Created by Stephen Clarke on behalf of The Code Institute 
-||&nbsp;Last update on 09/05/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0188</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
+||&nbsp;Last update on 10/05/2021||&nbsp;<span class='footer-sm' id='HTMLSerNo'>0193</span>.<span class='footer-sm' id='CSSSerNo'></span><span  class='footer-sm' id='JSSerNo'></span></p></footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AqXZ0hvITdpn5g-2a8bbicLdCTTJgoQHACH441QxLNJDdc_Qlpl6-3BHR0_lGQpJ' async defer></script>

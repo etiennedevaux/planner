@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0291";
+--cssfileversion: "0303";
 --footergrey:#999999cc;;
 --flightallowed:#209020;;
 --flightnotallowed:#995555;;
@@ -59,6 +59,7 @@ div.MenuComponent{
 .pln-steps{
  background-color: var(--footergrey);
  padding: 5px;
+ color: #000000;
 }
 .pln-btn{
  background-color: #007bff;
@@ -202,6 +203,7 @@ text-align: center;
  font-weight: 800;
  background-color: #ccccccbb;
  font-size: 14pt;
+ max-width: 1200px;
 }
 .pln-notice-header{
  font-weight: 900;
@@ -230,6 +232,7 @@ text-align: center;
  height: 67px;
  padding: 3px;
  font-size: 10pt;
+ margin: 0 5px;
 }
 .pln-flightcat{
  border: 2px solid;
@@ -255,11 +258,13 @@ text-align: center;
 #pln-dronecategories{
  color: #000055;
  height: 800px;
+ padding: 0;
 }
 /* Styling that applies to all elements in the flight categories column */
 #pln-flightcategories{
  color: #de8f00;
  height: 800px;
+ padding: 0;
 }
 .pln-comp-head{
  height: 40px;
@@ -273,12 +278,13 @@ text-align: center;
 #pln-competencies{
  color: #000000;
  height: 800px;
+ padding: 0;
 }
 /* Styling for headers of sections on the flight parameters page. */
 .pln-params-h1{
  font-weight: 600;
  font-size: 24pt;;
- margin: 10px 0;
+ margin: 10px 0 10px 3px;
 }
 #pln-param-reset{
  z-index: 10;
@@ -303,6 +309,7 @@ text-align: center;
 }
 .pln-comp, .pln-dronecat, .pln-flightcat{
  background-color: #dddddddd;
+ margin: 0 5px;
 }
 .pln-flight-yes{
  color: var(--flightallowed);
@@ -313,6 +320,9 @@ text-align: center;
 }
 #pln-next-location{
  display: none;
+}
+.pln-btn-next{
+ margin: auto;
 }
 .row{
  margin: 0;
