@@ -4,7 +4,7 @@
 /* Variable */
 :root{
 --menubuttonwidth: %;
---cssfileversion: "0312";
+--cssfileversion: "0313";
 --footergrey:#999999cc;;
 --flightallowed:#209020;;
 --flightnotallowed:#995555;;
@@ -291,8 +291,8 @@ text-align: center;
  display: none;
  margin-left: 30px;
  width: 120px;
- position: absolute;
- bottom: 20px;
+ position: fixed;
+ bottom: 10px;
  left: 10px;
 }
 .pln-dronecat-desc{

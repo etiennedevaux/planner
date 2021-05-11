@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0487";
+var jsfileversion="0489";
 
 //Global Variables
 var dlat=51.477976;
@@ -582,7 +582,7 @@ function paramHlight(elem) {
     var hLStyleJS = ["borderWidth","backgroundColor","height","position","fontSize","zIndex"];
     var hLStyleCSS = ["border-width","background-color","height","position", "font-size", "z-index"];
     var hLStyleOldValue =[];
-    var hLStyleNewValue = ["3px", "#ffffff","120px","relative", "14pt","6"];
+    var hLStyleNewValue = ["3px", "#ffffff","120px","relative", "14pt","12"];
 
 
  //* Take current values and apply new values*//
