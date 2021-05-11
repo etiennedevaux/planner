@@ -1,6 +1,7 @@
 /* Imported Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
 /* Variable */
 :root{
 --menubuttonwidth: %;
@@ -8,13 +9,15 @@
 --footergrey:#999999cc;;
 --flightallowed:#209020;;
 --flightnotallowed:#995555;;
-}
+}
+
 /* Styling to apply by default to all body elements. */
 body{
  font-family: Lato;
  background-color: var(--bgroundshade);
  margin: 0;
-}
+}
+
 /* Styling for the site-wide background image */
 div.bground{
     width: 100%;
@@ -30,13 +33,15 @@ div.bground{
     background-position: center center;
     opacity: 0.3;
     filter: grayscale(0.9);
-}
+}
+
 /* Styling for the 'Virtual Page' div elements */
 div.MenuComponent{
  padding: 0 0 120px 0;
  margin-bottom: 60px;
  margin-top: 100px;
-}
+}
+
 .pln-param-instruct{
  font-size: 14pt;
  background-color: #ffffff00;
@@ -46,21 +51,25 @@ div.MenuComponent{
  border-radius: 2px;
  padding: 2px;
  min-height: 50px;
-}
+}
+
 .pln-step{
  font-size: 14pt;
  margin: 2px 10px 2px 0;
-}
+}
+
 *{
  margin: 0;
  padding: 0;
  border: 0;
-}
+}
+
 .pln-steps{
  background-color: var(--footergrey);
  padding: 5px;
  color: #000000;
-}
+}
+
 .pln-btn{
  background-color: #007bff;
  color: #ffffff;
@@ -68,47 +77,76 @@ div.MenuComponent{
  padding: 2px;
  border-radius: 2px;
  cursor: pointer;
-}
-/* CSS for the Gallery element */
+}
+
+/* CSS for the Navigaton element */
 #Gallery{
 margin-bottom: 0px;
-}
+}
+
+#HomePageButton{
+  margin-left: 80px;
+}
+
+
+.nav-item {
+  width: 100%;
+}
+
+#menu{
+  background-color: #000000;
+  width: 80%;
+  z-index: 12;
+}
+
+.MenuButton{
+  width: 100%;
+}
+
 .navbar navbar-nav a{
 font-weight: bold;
-}
+}
+
 .navbar{
     margin-bottom: 0;
     border: 0;
     width: 100%;
-    background-color:  rgba(0,0,0,.9);
+    background-color:  rgba(0,0,0,1);
     position: fixed;
     top: 0;
     height: 100px;
     z-index: 5;
-}
+}
+
 .navbar .navbar-toggler{
 border: 0;
-}
+}
+
 .navbar .navbar-toggler{
 border: 0;
-}
+}
+
 nav{
 width: 100%;
 padding: 0px;
 margin: 0px 0px 0px 0px;
 display: block;
 background-color: #000000cc;
-}
+}
+
 #nav{
 margin: 0 10% 0 50px;
-}
+}
+
 .menu_span{
  color: #ffffff;
  margin: 0 50px;
-}
+}
+
 .nav-item{
  cursor: pointer;
-}
+}
+
 footer{
  position: fixed;
  bottom: 0;
@@ -117,45 +155,55 @@ footer{
  background-color: var(--footergrey);
  height: 60px;
  z-index: 5;
-}
+}
+
 footer p{
 color: #ffffffff;
 margin: 0;
-}
+}
+
 #CSSSerNo::before{
 content: var(--cssfileversion);
-}
+}
+
 .footer-sm{
  font-size: 100%;
  color: #fff;
-}
+}
+
 .social-networks{
 text-align: center;
 margin: 5px 0;
-}
+}
+
 .social-networks i{
 font-size: 160%;
 margin: 0 1% 0;
 padding: 3px 5% 0;
 color: #ffffffff;
-}
+}
+
 .social-networks li{
 display: inline;
-}
+}
+
 #CSSSerNo::before{
 content: var(--cssfileversion);
-}
+}
+
 .logoleft{
 border-radius: 50%;
 width: 80px;
 padding: 0;
 margin: 0 10px 0 0;
 border-width: 0;
-}
+}
+
 header{
 overflow: hidden;
 margin: 0;
-}
+}
+
 .header-lg{
 font-size: 130%;
 font-weight: 500;
@@ -163,7 +211,8 @@ margin: 0;
 padding: 0;
 line-height: 100%;
 text-align: center;
-}
+}
+
 .header-sm{
 font-size: 90%;
 font-weight: 300;
@@ -172,7 +221,8 @@ padding: 0;
 line-height: 100%;
 letter-spacing: 1px;
 text-align: center;
-}
+}
+
 #pln-cta{
  background-image: url("../images/home_image.jpg");
  background-size: cover;
@@ -182,7 +232,8 @@ text-align: center;
  max-width: 1300px;
     animation-name: hero-zoom;
     animation-duration: 3s;
-}
+}
+
 #pln-cta p{
  font-size: 18pt;
  font-weight: 600;
@@ -193,39 +244,48 @@ text-align: center;
  border: 1px black solid;
  border-radius: 10px;
  padding: 5px;
-}
+}
+
 #pln-cta-primary{
  margin: auto;
     animation-name: hero-zoom;
     animation-duration: 5s;
-}
+}
+
 .pln-notice{
  font-weight: 800;
  background-color: #ccccccbb;
  font-size: 14pt;
  max-width: 1200px;
-}
+}
+
 .pln-notice-header{
  font-weight: 900;
  font-size: 20pt;
  background-color: #ccccccbb;
-}
+}
+
 .pln-notice-container{
  margin: auto;
  border: 3px solid brown;
-}
+ max-width: 1000px;
+}
+
 #pln-osmap{
  height: 600px;
-}
+}
+
 #pln-satview{
  height: 600px;
-}
+}
+
 /* Styling for competency boxes on the flight parameters page */
 .pln-comp{
  border: 2px solid black;
  padding: 5px;
  height: 120px;
-}
+}
+
 /* Styling for drone category boxes on the flight parameters page */
 .pln-dronecat{
  border: 2px solid black;
@@ -233,59 +293,70 @@ text-align: center;
  padding: 3px;
  font-size: 10pt;
  margin: 0 5px;
-}
+}
+
 .pln-flightcat{
  border: 2px solid;
  height: 100px;
  padding: 5px;
-}
+}
+
 /* Labels for the competencies on the flight parameters page. */
 .pln-comp-lbl{
  font-size: 110%;
  font-weight: 600;
-}
+}
+
 /* Styling for competency checkboxes */
 .pln-comp input{
  margin-left: 5px;
-}
+}
+
 /* Styling for description box for competencies. */
 .pln-comp-desc{
  display: flex;
  align-items: center;
  font-size: 12pt;
-}
+}
+
 /* Styling that applies to all elements in the drone categories column */
 #pln-dronecategories{
  color: #000055;
  height: 800px;
  padding: 0;
-}
+}
+
 /* Styling that applies to all elements in the flight categories column */
 #pln-flightcategories{
  color: #de8f00;
  height: 800px;
  padding: 0;
-}
+}
+
 .pln-comp-head{
  height: 40px;
-}
+}
+
 .pln-dronecat-head{
  height: 25px;
  font-weight: 600;
  font-size: 14pt;
-}
+}
+
 /* Styling that applies to all elements in the competencies column */
 #pln-competencies{
  color: #000000;
  height: 800px;
  padding: 0;
-}
+}
+
 /* Styling for headers of sections on the flight parameters page. */
 .pln-params-h1{
  font-weight: 600;
  font-size: 24pt;;
  margin: 10px 0 10px 3px;
-}
+}
+
 #pln-param-reset{
  z-index: 10;
  display: none;
@@ -294,42 +365,54 @@ text-align: center;
  position: fixed;
  bottom: 10px;
  left: 10px;
-}
+}
+
 .pln-dronecat-desc{
-}
+}
+
 #pln-step-one{
-}
+}
+
 #pln-step-two{
  font-weight: 300;
  background-color: #ffffff00;
-}
+}
+
 #pln-result-a{
  font-weight: 100;
  background-color: #ffffff00;
-}
+}
+
 .pln-comp, .pln-dronecat, .pln-flightcat{
  background-color: #dddddddd;
  margin: 0 5px;
-}
+}
+
 .pln-flight-yes{
  color: var(--flightallowed);
-}
+}
+
 .pln-flight-no{
  color: var(--flightnotallowed);
  text-decoration: line-through;
-}
+}
+
 #pln-next-location{
  display: none;
-}
+}
+
 .pln-btn-next{
  margin: auto;
-}
+}
+
 .row{
  margin: 0;
-}
+}
+
 .pln-flightcat-head{
  font-weight: 900;
-}
+}
+
 @keyframes hero-zoom{
  from{
     transform: scale(0.99);
@@ -340,7 +423,8 @@ text-align: center;
     transform: scale(1);
     background-image: blur(1px);
   }
-}
+}
+
 #pln-dsmap-1, #pln-param-rtn, #pln-stepfour-next{
  margin: 0;
  background-color: #0078ff;
@@ -349,39 +433,109 @@ text-align: center;
  border-radius: 3px;
  cursor: pointer;
  font-size: 11pt;
-}
+}
+
 #pln-step-four-1{
  padding-right: 1px;
-}
+}
+
 #pln-step-four-2{
  padding-left: 1px;
-}
+}
+
 #pln-recenter{
  margin: 10px auto;
  width: 100%;
-}
+}
+
 #pln-dsmap-2{
  margin: 10px auto;
  width: 80%;
-}
+}
+
 #pln-flsummary{
  font-size: 14pt;
  text-align: center;
  background-color: var(--footergrey);
-}
+}
+
 #pln-geo{
  height: 100%;
  padding: 0;
-}
+}
+
 #pln-maps{
  padding: 0;
-}
+}
+
 .pln-location-frm{
  padding: 5px;
-}
+}
+
 .pln-steps-location{
  padding: 0;
-}
+}
+
  #pln-stepfour-next{
  margin: 0 0 3px 10px;
-}
+}
+
+
+/*MEDIA QUERIES*/
+  /* For extra-wide 4k screens */
+  @media screen and (min-width: 2400px){
+ 
+  }
+  
+  /* Equivalent to Bootstrap Extra Extra Large */
+  @media screen and (min-width: 2000px){
+   
+  }
+ 
+ /* Equivalent to Bootstrap Extra Large */
+  @media screen and (max-width: 1999px){
+  
+  }
+ 
+ /* Equivalent to Bootstrap Large */
+  @media screen and (max-width: 1199px){
+   .pln-param-instruct {
+     font-size: 12pt;
+   }
+
+   .pln-dronecat-desc {
+    font-size: 10pt;
+    line-height: 1;
+  }
+
+  .pln-flightcat-desc {
+    font-size: 10pt;
+    line-height: 1;
+  }
+
+  .pln-comp-desc {
+    font-size: 11pt;
+    line-height: 1;
+  }
+  }
+ 
+ /* Equivalent to Bootstrap Medium */
+ @media screen and (max-width: 991px){
+  .pln-param-instruct {
+    font-size: 10pt;
+  }
+
+ 
+ }
+  
+ /* Equivalent to Bootstrap Small */
+ @media screen and (max-width: 767px){
+  
+ }
+
+ /* Additional breakpoint for timeline display */
+ @media screen and (max-width: 600px) {
+ 
+ }
+ 
+ 
