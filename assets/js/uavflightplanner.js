@@ -1,5 +1,5 @@
 // Global Variables
-var jsfileversion="0485";
+var jsfileversion="0487";
 
 //Global Variables
 var dlat=51.477976;
@@ -47,17 +47,17 @@ getPostcodeData(document.getElementById("pln-postcode").value);
 
         //*Event Listeners for Flight Parameters Page*//
             //* Click Event listeners for competency options *//
-           var inputBoxes= document.getElementsByClassName("pln-comp-input");
+           var inputBoxes= document.getElementsByClassName("pln-comp");
 
             for (var i = 0; i < inputBoxes.length; i++) {
-                inputBoxes[i].addEventListener('click', function(){paramUpdate(1);});
+                inputBoxes[i].addEventListener('click', function(){paramUpdate(1, this);});
             };
 
             //* Click Event listeners for competency options *//
-            var inputBoxes= document.getElementsByClassName("pln-drone-input");
+            var inputBoxes= document.getElementsByClassName("pln-dronecat");
 
             for (var i = 0; i < inputBoxes.length; i++) {
-                inputBoxes[i].addEventListener('click', function(){paramUpdate(2);});
+                inputBoxes[i].addEventListener('click', function(){paramUpdate(2, this);});
             };
 
          //* Click Event listeners for selector *//
@@ -252,7 +252,10 @@ function gmapRecenter(map) {
    GetMap(document.getElementById("pln-latitude").value,document.getElementById("pln-longitude").value);
 }
 
-function paramUpdate(step) {
+function paramUpdate(step, thisbox) {
+
+//* check the relevant box *//
+thisbox.getElementsByTagName("INPUT")[0].checked="true";
 
     //*Highlight Steps*//
      switch(step) {
