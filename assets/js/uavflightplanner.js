@@ -1,5 +1,5 @@
 //* Global Variables *//
-var jsfileversion = "0489";
+var jsfileversion = "0490";
 var dlat = 51.477976;
 var dlng = 0.000001;
 var originalFlSummary;
@@ -232,9 +232,6 @@ function closePopupIfOpen(popupName) {
 function recenterMaps() {
    GetMap(document.getElementById("plnLatitude").value, document.getElementById("plnLongitude").value);
 }
-
-
-alert(document.getElementById("plnPostcode").value);
 
 
 function getPostcodeData(postcode) {
