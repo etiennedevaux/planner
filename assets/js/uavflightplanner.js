@@ -1,5 +1,5 @@
 //* Global Variables *//
-var jsfileversion = "0490";
+var jsfileversion = "0491";
 var dlat = 51.477976;
 var dlng = 0.000001;
 var originalFlSummary;
@@ -272,6 +272,7 @@ function gmapRecenter(map) {
 
 function paramUpdate(step, thisbox) {
 
+   alert("BP 1");
    //* check the relevant box *//
    if (thisbox.getElementsByTagName("INPUT")[0].checked) { thisbox.getElementsByTagName("INPUT")[0].checked = false; }
    else { thisbox.getElementsByTagName("INPUT")[0].checked = true; }
