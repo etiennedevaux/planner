@@ -377,6 +377,7 @@ function paramReset() {
 
 
 function allFly() {
+   alert("AllFly");
    flightCatMarker(document.getElementById("pln-flightcat-a1-so"), 1); //* A1 - Fly Over Stay Over*//
    flightCatMarker(document.getElementById("pln-flightcat-a1-po"), 1); //* A1 - Fly Over Pass Over*//
    flightCatMarker(document.getElementById("pln-flightcat-a2-5"), 1); //* A2 - 5m*//
