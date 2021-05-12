@@ -542,7 +542,7 @@ text-align: center;
   #pln-osmap, #pln-satview {
     height: 300px;
   }
-  #FlightParameters, #Location, #HomePage {
+  .MenuComponent {
     padding-top: 100px;
   }
 
