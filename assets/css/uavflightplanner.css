@@ -263,12 +263,14 @@ text-align: center;
  font-weight: 900;
  font-size: 20pt;
  background-color: #ccccccbb;
+ padding: 3px;
 }
 
 .pln-notice-container{
  margin: auto;
  border: 3px solid brown;
  max-width: 1000px;
+ padding: 0;
 }
 
 #pln-osmap{
@@ -525,6 +527,24 @@ text-align: center;
     font-size: 10pt;
   }
 
+  #pln-cta {
+    margin: 0;
+  }
+
+  #HomePageButton {
+    margin-left: 0;
+  }
+
+  #menu {
+    width: 40%;
+  }
+
+  #pln-osmap, #pln-satview {
+    height: 300px;
+  }
+  #FlightParameters, #Location {
+    padding-top: 100px;
+  }
  
  }
   

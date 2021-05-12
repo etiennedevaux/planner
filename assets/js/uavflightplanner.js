@@ -138,6 +138,7 @@ function showMenuComponent(sect) {
 
    document.getElementById('JSSerNo').textContent = '.' + jsfileversion;
    window.history.pushState("", "UAV Flight Planner Home", "#" + sect + "-Top");
+   document.getElementById(sect).scrollIntoView();
 }
 
 
