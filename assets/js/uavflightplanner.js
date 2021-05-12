@@ -473,29 +473,5 @@ function topFlightCat(flightcat) {
 
 function instrDisplay(instrid, status) {
 
-   switch (status) {
-      case 0:
-         document.getElementById(instrid).style.backgroundColor = "#ffffff00";
-         document.getElementById(instrid).style.fontWeight = "200";
-         document.getElementById(instrid).style.borderStyle = "none";
-         break;
-
-      case 1:
-         document.getElementById(instrid).style.backgroundColor = "#ffffffff";
-         document.getElementById(instrid).style.fontWeight = "900";
-         document.getElementById(instrid).style.borderStyle = "solid";
-         document.getElementById(instrid).style.borderColor = "#007bff";
-         document.getElementById(instrid).style.borderWidth = "3px";
-         break;
-
-      case 2:
-         document.getElementById(instrid).style.backgroundColor = "#ffffff00";
-         document.getElementById(instrid).style.fontWeight = "900";
-         document.getElementById(instrid).style.borderStyle = "solid";
-         document.getElementById(instrid).style.borderColor = "#007bff";
-         document.getElementById(instrid).style.borderWidth = "1px";
-         break;
-
-      default:
-   }
+   alert("jjjj");
 }
