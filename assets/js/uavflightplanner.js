@@ -281,8 +281,7 @@ function paramUpdate(step, thisbox) {
 
    
 
-   //* Reset Flight Categories *//
-   flightCatReset();
+   alert("PU");
 
    //* Display Reset Button*//
    document.getElementById("pln-param-reset").style.display = "inline";
