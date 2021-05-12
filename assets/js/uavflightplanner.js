@@ -384,7 +384,6 @@ function allFly() {
    flightCatMarker(document.getElementById("pln-flightcat-a2-50"), 1); //* A2 - 50m*//
    flightCatMarker(document.getElementById("pln-flightcat-a3"), 1); //* A3 - 50m and 150m from congested areas*//
 
-   topFlightCat(1);
 }
 
 
