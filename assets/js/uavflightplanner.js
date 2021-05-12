@@ -279,19 +279,7 @@ function paramUpdate(step, thisbox) {
    if (thisbox.getElementsByTagName("INPUT")[0].checked) { thisbox.getElementsByTagName("INPUT")[0].checked = false; }
    else { thisbox.getElementsByTagName("INPUT")[0].checked = true; }
 
-   //*Highlight Steps*//
-   switch (step) {
-      case 1:
-         instrDisplay("pln-step-two", 1);
-         instrDisplay("pln-step-one", 2);
-         break;
-
-      case 2:
-         instrDisplay("pln-step-two", 2);
-         instrDisplay("pln-result-a", 1);
-         document.getElementById("pln-next-location").style.display = "inline";
-         break;
-   }
+   
 
    //* Reset Flight Categories *//
    flightCatReset();
@@ -311,18 +299,16 @@ function paramUpdate(step, thisbox) {
    var a2coc = document.getElementById("pln-comp-a2coc-chk");
    var gvc = document.getElementById("pln-comp-gvc-chk");
 
-   //* Switch case for each drone type, only one drone type can be selected at a time*//
+   //* Eles If case for each drone type, only one drone type can be selected at a time*//
 
   if (selectedDrone == 0) {
 
          //* Rule 1 - C0 no camera - each category as a separate line for easy maintenance*//
          if (rtm.checked == true) {
             allFly();
-            topFlightCat(1);
          }
          else {
             noFly();
-            topFlightCat();
          }
 
       }
