@@ -1,5 +1,5 @@
 //* Global Variables *//
-var jsfileversion = "0492";
+var jsfileversion = "0493";
 var dlat = 51.477976;
 var dlng = 0.000001;
 var originalFlSummary;
@@ -288,6 +288,7 @@ function paramUpdate(step, thisbox) {
       }
 
    //* Reset Flight Categories *//
+   alert("BP 3");
    flightCatReset();
 
    //* Display Reset Button*//
@@ -306,7 +307,7 @@ function paramUpdate(step, thisbox) {
    var gvc = document.getElementById("pln-comp-gvc-chk");
 
    //* Select case for each drone type, only one drone type can be selected at a time*//
-
+   alert("BP 4");
    if (selectedDrone == 0) {
 
           //* Rule 1 - C0 no camera - each category as a separate line for easy maintenance*//
@@ -504,6 +505,7 @@ function paramUpdate(step, thisbox) {
 
          noFly();
    }
+   alert("BP 7");
 }
 
 
@@ -618,6 +620,7 @@ function paramHlight(elem) {
 
 function topFlightCat(flightcat) {
 
+   alert("BP 10");
    var flSummary = document.getElementById("pln-flsummary")
    if (flightcat == 1) {
       //* A1 - Fly Over - Stay Over *//
