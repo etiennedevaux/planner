@@ -524,14 +524,14 @@ function flightCatMarker(elem, status) {
 
    //* Reset Flights to original *//
    if (status == 2) {
-      elem.attributeStyleMap.clear();
+      // *elem.attributeStyleMap.clear(); *//
    }
 
 }
 
 
 function flightCatReset() {
-
+alert("in flight cat reset")
    var fcats = document.getElementsByClassName("pln-flightcat");
 
    var i;
@@ -663,6 +663,8 @@ function topFlightCat(flightcat) {
 function instrDisplay(instrid, status) {
 
    alert("BP 2");
+   alert(status);
+   alert(instrid);
    if (status == 0) {
 
          document.getElementById(instrid).style.backgroundColor = "#ffffff00";
