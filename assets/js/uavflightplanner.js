@@ -1,5 +1,5 @@
 //* Global Variables *//
-var jsfileversion = "0491";
+var jsfileversion = "0492";
 var dlat = 51.477976;
 var dlng = 0.000001;
 var originalFlSummary;
@@ -659,6 +659,7 @@ function topFlightCat(flightcat) {
 
 function instrDisplay(instrid, status) {
 
+   alert("BP 2");
    if (status == 0) {
 
          document.getElementById(instrid).style.backgroundColor = "#ffffff00";
