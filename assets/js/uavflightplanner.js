@@ -33,6 +33,15 @@ function domLoaded() {
       showMenuComponent("FlightParameters");
    });
 
+   //* Event Listener for Drone Safety Map Button *//
+   document.getElementById("pln-dronesafety").addEventListener("click", function (event) {
+      droneSafetyMap();
+      instrDisplay("pln-step-three", 2);
+      instrDisplay("pln-step-four", 2);
+      instrDisplay("pln-step-five", 2);
+      instrDisplay("pln-step-six", 1);
+   });
+
    //*Event Listeners for Location Page*//
    document.getElementById("pln-postcode").addEventListener("keyup", function (event) {
       event.preventDefault();
@@ -94,6 +103,7 @@ function domLoaded() {
    document.getElementById("pln-stepfour-next").addEventListener("click", function (event) {
       instrDisplay("pln-step-four", 2);
       instrDisplay("pln-step-five", 1);
+      document.getElementById("pln-stepfour-next").style.display="none";
    });
 
    //* End of Event Listeners

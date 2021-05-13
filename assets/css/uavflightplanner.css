@@ -47,26 +47,27 @@ div.bground{
 .pln-btn-fixed {
   position: fixed;
   z-index: 10;
-  bottom: 10px;
+  bottom: 5px;
   display: none;
   width: 120px;
-  height: 35px;
+  height: 30px;
+  padding: 0px;
+  margin:0;
 }
 
 .pln-btn-right {
-  right: 10px;
+  right: 5px;
 }
 
 .pln-btn-left {
-  left: 10px;
+  left: 5px;
 }
 
 #pln-next-location{
- }
+}
 
- #pln-param-reset{
-  
- }
+#pln-param-reset{
+}
 
  #pln-dronesafety {
    display: block;
@@ -583,12 +584,7 @@ text-align: center;
     padding-top: 100px;
   }
 
-  #pln-next-location{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-   }
- 
+   
  }
   
  /* Equivalent to Bootstrap Small */
