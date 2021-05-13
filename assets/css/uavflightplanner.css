@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
 
-/* Variable */
+/* || Variables */
 :root{
 --menubuttonwidth: %;
 --cssfileversion: "0314";
@@ -11,11 +11,19 @@
 --flightnotallowed:#995555;;
 }
 
-/* Styling to apply by default to all body elements. */
+/* || Styling to apply by default to all body elements. */
 body{
  font-family: Lato;
  background-color: var(--bgroundshade);
  margin: 0;
+}
+
+/*Styling for Attributions */
+.pln-attrib {
+  font-size: 10pt;
+  font-weight: 700;
+  position: fixed;
+  bottom: 50px;
 }
 
 /* Styling for the site-wide background image */
@@ -35,11 +43,42 @@ div.bground{
     filter: grayscale(0.9);
 }
 
+/* Styling for 'fixed' buttons */
+.pln-btn-fixed {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  display: none;
+  width: 120px;
+  height: 35px;
+}
+
+.pln-btn-right {
+  right: 10px;
+}
+
+.pln-btn-left {
+  left: 10px;
+}
+
+#pln-next-location{
+ }
+
+ #pln-param-reset{
+  
+ }
+
+ #pln-dronesafety {
+   display: block;
+   width: 150px;
+ }
+
+ /* End of Styling for Fixed Buttons */
+
 /* Styling for the 'Virtual Page' div elements */
 div.MenuComponent{
- padding: 0 0 120px 0;
+ padding: 100px 0 120px 0;
  margin-bottom: 60px;
- margin-top: 100px;
 }
 
 .pln-param-instruct{
@@ -273,13 +312,21 @@ text-align: center;
  padding: 0;
 }
 
-#pln-osmap{
- height: 600px;
-}
+/* || Styling for Location Page */
 
-#pln-satview{
- height: 600px;
-}
+  #pln-mapping {
+    margin-bottom: 20px;
+  }
+
+  #pln-osmap{
+  height: 580px;
+  }
+
+  #pln-satview{
+  height: 580px;
+  }
+
+/* || End of Styling for Location Page */
 
 /* Styling for competency boxes on the flight parameters page */
 .pln-comp{
@@ -359,15 +406,7 @@ text-align: center;
  margin: 10px 0 10px 3px;
 }
 
-#pln-param-reset{
- z-index: 10;
- display: none;
- margin-left: 30px;
- width: 120px;
- position: fixed;
- bottom: 10px;
- left: 10px;
-}
+
 
 .pln-dronecat-desc{
 }
@@ -399,9 +438,7 @@ text-align: center;
  text-decoration: line-through;
 }
 
-#pln-next-location{
- display: none;
-}
+
 
 .pln-btn-next{
  margin: auto;

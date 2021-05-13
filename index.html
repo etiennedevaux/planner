@@ -346,14 +346,12 @@
 
           <!-- Results from Step One and Step Two-->
           <div class="row pln-steps">
-            <div class='col-10'>
+            <div class='col-12'>
               <p id="pln-result-a" class="pln-param-instruct">Permitted flight categories in <span
                   class="pln-flight-yes">Green</span>, others <span class="pln-flight-no">Crossed out in Red</span>.
               </p>
             </div>
-            <div class="col-2 pln-btn-next">
-              <div id="pln-next-location" class="btn btn-primary">Next</div>
-            </div>
+            
           </div>
           <!-- End of Results from Step One and Step Two-->
 
@@ -416,7 +414,10 @@
         </div>
 
         <!-- End of Flight Categories Section-->
-        <div id="pln-param-reset" class="btn btn-primary">Reset</div>
+        <!-- Flight Category 'Fixed' buttons -->
+        <div id="pln-next-location" class="btn btn-primary pln-btn-fixed pln-btn-right">Next</div>
+        <div id="pln-param-reset" class="btn btn-primary pln-btn-fixed pln-btn-left">Reset</div>
+        <!-- End of Flight Category 'Fixed' buttons -->
     </section>
   </div>
   <!--  End of FlightParameters menu section-->
@@ -433,7 +434,7 @@
               Parameters</a> page to determine your flight category.</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="pln-mapping">
         <!-- Location Section -->
         <div id="pln-geo" class="col-sm-12 col-md-2">
 
@@ -441,7 +442,7 @@
           <div class="row">
             <div class='col-12 pln-steps-location'>
               <p id="pln-step-three" class="pln-param-instruct"><span class="pln-step">Step Three</span>Enter a
-                location.</p>
+                location and Re-Centre Maps.</p>
             </div>
           </div>
           <!--  End of Step Three-->
@@ -470,7 +471,7 @@
             <!-- Step Four-->
             <div class='col-12 pln-steps-location'>
               <p id="pln-step-four" class="pln-param-instruct"><span class="pln-step">Step Four</span>Review the
-                Ordnance Survey and Satellite maps against the flight category.<a id="pln-stepfour-next">Next</a></p>
+                Ordnance Survey and Satellite maps against the flight category.</p>
             </div>
             <!-- End of Step Four -->
 
@@ -500,8 +501,7 @@
       <div class="row">
         <!-- Step Five-->
         <div class='col-12 pln-steps-location' id="pln-step-five-1">
-          <p id="pln-step-five" class="pln-param-instruct"><span class="pln-step">Step Five</span>View the <a
-              id="pln-dsmap-1">Drone Safety Map</a> for air restrictions and ground hazards.</p>
+          <p id="pln-step-five" class="pln-param-instruct"><span class="pln-step">Step Five</span>Review the Drone Safety Map for air restrictions and ground hazards.</p>
         </div>
         <!-- End of Step Five-->
       </div>
@@ -513,13 +513,14 @@
         </div>
         <!-- End of Step Six-->
       </div>
-      <div class="row">
-        <div class="col-4">Contains OS data � Crown copyright and database right 2021</div>
+      <div class="pln-attrib">
+          <p>Contains OS data  Crown copyright and database right 2021. || Contains Royal Mail data  Royal Mail copyright and database right 2021. || Source: Office for National Statistics licensed under the Open Government Licence v.3.0</p>
 
-        <div class="col-4">Contains Royal Mail data � Royal Mail copyright and database right 2021</div>
-
-        <div class="col-4">Source: Office for National Statistics licensed under the Open Government Licence v.3.0</div>
       </div>
+      <!-- Location 'Fixed' buttons-->
+      <div id="pln-stepfour-next" class="btn btn-primary pln-btn-fixed pln-btn-right">Next</div>
+      <div id="pln-dronesafety" class="btn btn-primary pln-btn-fixed pln-btn-left">Drone Safety Map</div>
+      <!-- End of Location 'Fixed' buttons-->
     </section>
   </div>
   <!--  End of Location menu section-->

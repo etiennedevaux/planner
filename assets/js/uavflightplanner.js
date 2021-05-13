@@ -1,8 +1,8 @@
 //* Global Variables *//
-var jsfileversion = "0494";
-var dlat = 51.477976;
-var dlng = 0.000001;
-var originalFlSummary;
+   var jsfileversion = "0494";
+   var dlat = 51.477976;
+   var dlng = 0.000001;
+   var originalFlSummary;
 
 
 //* Derived from The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  *//
@@ -18,7 +18,6 @@ function aaMapShow() {
       });
    });
 }
-
 
 //* Function aiming to consolidate all onload scripts into a single place, keeping the HTML cleaner *//
 function domLoaded() {
@@ -91,19 +90,11 @@ function domLoaded() {
       showMenuComponent("Location");
    });
 
-   //* Event Listener for Drone Safety Map from within instructions *//
-   document.getElementById("pln-dsmap-1").addEventListener("click", function (event) {
-      droneSafetyMap();
-   });
-
-   //* Event Listener for Step Four Next Button *//
+  //* Event Listener for Step Four Next Button *//
    document.getElementById("pln-stepfour-next").addEventListener("click", function (event) {
       instrDisplay("pln-step-four", 2);
       instrDisplay("pln-step-five", 1);
    });
-
-
-
 
    //* End of Event Listeners
 
@@ -116,7 +107,6 @@ function domLoaded() {
    //* Styling for the Flight Summary on the Location Page * //
    instrDisplay("pln-flsummary", 2);
 }
-
 
 function showMenuComponent(sect) {
    var elements = document.getElementsByClassName('MenuComponent');
@@ -184,6 +174,7 @@ function initialize() {
    document.getElementById("pln-recenter").addEventListener("click", function () {
       gmapRecenter(map);
       instrDisplay("pln-step-three", 2);
+      document.getElementById("pln-stepfour-next").style.display="block";
       instrDisplay("pln-step-four", 1);
    });
 
@@ -665,7 +656,7 @@ function instrDisplay(instrid, status) {
    } else if (status == 1) {
 
 
-      document.getElementById(instrid).style.backgroundColor = "#ffffffff";
+      document.getElementById(instrid).style.backgroundColor = "#bbd2e2cc";
       document.getElementById(instrid).style.fontWeight = "900";
       document.getElementById(instrid).style.borderStyle = "solid";
       document.getElementById(instrid).style.borderColor = "#007bff";
