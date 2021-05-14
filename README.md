@@ -2,60 +2,78 @@ README.md
 
 # Website Title: UAV Flight Planner
 
-## Version Details
-README Version: 0045;  
-HTML Version: 0221;  
-CSS Version: 0313;  
-JavaScript Version: 0489;
+In January 2021 a new set of rules covering the use of Unmanned Aerial Vehicles, UAVs or commonly 'drones', in the UK were introduced by the UK CAA, civil aviation authority.
 
-README.md
+These rules introduced the concept of 'Open' category flights, which took a combination of pilot qualifications and drone categories to determine the parameters within which pilots should fly.
 
-# Website Title: Warwickshire Search and Rescue
+Even experienced drone pilots, let alone new and inexperienced users, find the rules complex and difficult to navigate.  They are contained within this [CAA publication](https://publicapps.caa.co.uk/modalapplication.aspx?appid=11&mode=detail&id=415) of over 230 pages.
 
-This project is a real-world project.  Warwickshire Search and Rescue is an operational Lowland Rescue Team.
-
-The Website is functional, but is considered no longer fully fit for purpose and needs a significant overhaul.
-
-[Warwickshire Search and Rescue Website](http://www.warksar.org.uk/)
-
-This project addresses the first stage of that overhaul by bringing a fully working version to the leadership of that organisation, with a view to full production implementation.
+This site distills the key information, and presents in a single screen, allowing users to either define the flights they wish to conduct or, of equal importance, explore how their own qualifications and the drones they wish to fly will determine the safe and legal flight categories.  One of the key factors people wish to know is the minimum separation, which refers to the minimum horizontal distance they need to maintain from people not involved in the flight.
 
 ## Version Details
-HTML Version: 0999;  
-CSS Version: 0999;  
-JavaScript Version: 0999;  
+README Version: 0046;  
+HTML Version: 0223;  
+CSS Version: 0315;  
+JavaScript Version: 0495;
 
-This represents the final version for Milestone Project 1.  The next release will be further development for the client organisation, and will be Version 1000.
+This represents the final version for Milestone Project 2.  The next release will be further development and inclusion in the websites of relevant partner organisations.
 
-## 1  The Warwickshire Search and Rescue 
+## 1  UAV Flight Planner
 
 ### 1.1 The Development Lifecycle
 
 #### 1.1.1 Strategy
 
-The current Warwickshire Search and Rescue Website has been in place for some time, and whilst some parts have had recent updates most of it has not.
+The new CAA rules on the use drones are based on the European Legislation, and bring a strong degree of harmonisation and move in a direction that matches the level of regulation to the risks represented by the combination of the drone and the qualifications of the pilot.  However, the new structure is, especially when first reviewed, complex and is further complicated by the addition of transitional arrangements for existing drones.
 
-Critical information is accurate, but some details are now out of date.
+The strategic goals for the site, in discussion between the developer and the organisational leadership,  are to   
 
-Some functions within the site are duplicating work done elsewhere, e.g. via social media or the D4H readiness and response website.
+**Provide Easy to Access Information on the New Drone Rules, in particular the flight categories that can be undertaken**  
+**Provide Simple and Relevant Access to Mapping Tools that Assist Flight Planing**  
+**Engage New and Recent Pilots in a simnple, but structured flight planning process** 
+**Provide Rapid Access to Key Tools that may be of use to pilots at all levels of experience, without the need to follow all steps in a process** 
 
-However, the site is still the primary point of contact for the public in general and is an essential tool to support fundraising - without which the organisation would cease to exist.
 
-The intial discussions on the website strategy focused on the Stages of Philanthropy, which help people to map out how a person might go from basic curiosity about the organisation to becoming an actual donor.
-
-The website strategy, therefore, is based on the concept of nurtuting potential donors, and minimizing barriers to giving for actual donors.
-
-The agreed strategic goals for the site, in discussion between the developer and the organisational leadership,  are to   
-
-**Inform**  
-**Communicate**  
-**Engage**  
-
-Engagement will include support, participation and donations.  The participation aspect currently being of low importance as a recruitment cycle has just finished.  But from a development perspective this is still an important aspect.
 
 #### 1.1.2 Scope
 
-The Scope was agreed between the organisational leadership and the developer:
+The potential scope is considerable, however the are a number of online services available that provide planning support for drone pilots, e.g. DroneCloud, DroneDesk, SkyDemon.  Having reviewed these they all tend to provide a mapping software, some provide risk assessment but none, as yet, assist pilots in the evaluation of their drone and skills to define the open category flights that are available to them.  
+
+So this is the first part of the scope is to provide a single page (single screen on desktops but scrollable on mobile devices) that shows immediately the link between qualifications, drone category and permitted flight categories.
+
+The second part of the scope is to provide access to existing, free to use, mapping software.
+
+The final part of the scope is to provide guidance that can be used for inexperienced pilots, but that does not prevent experienced pilots from gaining low-click access to the resources they need.
+
+##### 1.1.2.1 Flight Categories
+
+The flight categories page needs to represent all of the pilot competencies, those being familiarity, training and qualifications, of which there are five, drone categories, of which there are effectively nine once subcategories are included, and the flight categories, of which there are six if subcategories are included.
+
+The need is for pilots, or potential pilots, to select the items over which they have control, those being there qualification level and the single drone they intend to use and to then apply the CAA rules to show the flight categories that are available.
+
+Multiple competencies can be selected.
+
+Only one drone at a time can be selected.
+
+Flight categories will all be shown, but marked clearly as to whether or not they are available.
+
+Pilots or prospective pilots need an easy way of changing parameters to see what effect that might have on the available flights.
+
+See the post-scoping wireframe ![Flight Parameters Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_scope_2.png)
+
+
+##### 1.1.2.2 Mapping Software
+
+
+##### 1.1.2.3 Planning Guidance
+
+
+##### 1.1.2.4 Out of Scope
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# NOTES
+
+
 
 Maintaining a website is an ongoing task, if well designed that task may be light in total hours.  From time to time more major reviews and updates may be required.  
 Ongoing maintenance might include areas such as events, annual reports, a photo gallery and maybe a video gallery.  
@@ -74,6 +92,8 @@ Possible future sprints were:
 2. Media review - focusing on quality, currency and impact of visual and audio content
 
 3. Strategic review - reviewing current functionality and deciding on additional pages and tools for future sprints
+
+# NOTES
 
 #### 1.1.3 Structure
 

@@ -1,5 +1,5 @@
 //* Global Variables *//
-   var jsfileversion = "0494";
+   var jsfileversion = "0495";
    var dlat = 51.477976;
    var dlng = 0.000001;
    var originalFlSummary;
