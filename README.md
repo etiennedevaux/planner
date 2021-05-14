@@ -62,11 +62,48 @@ Pilots or prospective pilots need an easy way of changing parameters to see what
 See the post-scoping wireframe ![Flight Parameters Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_scope_2.png)
 
 
-##### 1.1.2.2 Mapping Software
+##### 1.1.2.2 Flight Location
 
+###### 1.1.2.2.1 Flight Description
+
+If a flight category has been selected on the Flight Parameters page then the description of what that flight category permits should be at the top of the Flight Location page, so that the user does not have to change pages to check and be reminded of the restrictions they have, for example the distance they need to maintain from un-involved people or how close they can be to a built-up area.
+
+If a flight category has not been selected the user will be invited to return to that page to choose a category, but it is not mandated as they may be doing that via other means, such as a paper-based risk assessment.
+
+###### 1.1.2.2.2 Planning Steps
+
+###### 1.1.2.2.3 Postcode Database 
+
+The site is aimed at users with a wide range of mapping skills.  Even for experienced commercial pilots precise mapping data is often not available for target locations, especially as commissioning clients do not generally know the co-ordinates for the filming locations.  However, all UK locations are covered by a postcode, e.g. SW1A 1AA (Buckingham Palace) or SW19 5AG (Wimbledon All England Lawn Tennis).  The UK Royal Mail manages the postcode database, and makes the information, which in includes latitude and longitude for all postcodes, available via a public API.
+
+Accessing this API so that the user can enter a postcode and be given a mappable latitude and longitude is the first requirement.
+
+###### 1.1.2.2.4 Bing Maps
+
+Bing Maps is considered an important tool amongst UK-based UAV pilots, as it provides full UK Ordnance Survey mapping, and is the only mainstream free tool to do so.  So Bing Maps will display immediately to the right of the longitude and latitude.  This will be achieved using the Microsoft Bing Maps APIs.  The maps will default to the OS Map view, with other views remaining available via the interface.
+
+###### 1.1.2.2.5 Google Maps
+
+Google Maps is also considered an important tool amongst UAV pilots as it provides the most up to date and detailed aerial views, plus the ability to select a street level view.  When combined with a traditional map, such as the UK ordnance survey, this provides thorough insite into the environment.  This insight ensures that a drone pilot can become familiar with a location that they have never visited.  Seeing this alongside the OS Map saves switching between maps and helps the pilot to align visual images with mapped features at a glance.
+
+###### 1.1.2.2.6 Altitude Angel
+
+The above maps are extremely powerful and detailed, but they do not contain any information about the flight restrictions that may apply in an area, for example flight restriction zones, railway lines or nuclear installations.
+
+Altitude Angel produce mapping layers that provide all of this information.  Those are available via APIs and via the freely accessible Drone Safety Map - the APIs were considered and tested as part of the POC for this project but the freely accessible version better met the overall requirements.
+
+This map is incorporated as a layer that goes over the embedded maps, this can be seen by clicing on the link below
+
+
+[Drone Safety Map](https://youtu.be/tMLuqcFOD-I)
 
 ##### 1.1.2.3 Planning Guidance
 
+The flight planning process is intuitive to experienced drone pilots, but may not be so for new and less experienced pilots, especially since the introduction of the new rules.  
+
+
+
+See the post-scoping wireframe ![Flight Location Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_location_scope_2.png)
 
 ##### 1.1.2.4 Out of Scope
 
