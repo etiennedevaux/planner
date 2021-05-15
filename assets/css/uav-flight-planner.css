@@ -2,124 +2,130 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
 
-/* || Variables */
-:root{
---menubuttonwidth: %;
---cssfileversion: "0315";
---footergrey:#999999cc;;
---flightallowed:#209020;;
---flightnotallowed:#995555;;
-}
+/* || VARIABLES */
+  :root{
+  --menubuttonwidth: %;
+  --cssfileversion: "0315";
+  --footergrey:#999999cc;;
+  --flightallowed:#209020;;
+  --flightnotallowed:#995555;;
+  }
+/* END OF VARIABLES */
 
-/* || Styling to apply by default to all body elements. */
-body{
- font-family: Lato;
- background-color: var(--bgroundshade);
- margin: 0;
-}
+/* || GLOBAL ELEMENTS */
+  body{
+  font-family: Lato;
+  background-color: var(--bgroundshade);
+  margin: 0;
+  }
 
-/*Styling for Attributions */
-.pln-attrib {
-  font-size: 10pt;
-  font-weight: 700;
-  position: fixed;
-  bottom: 50px;
-}
-
-/* Styling for the site-wide background image */
-div.bground{
-    width: 100%;
-    height: 100%;
-    background-image: URL("../images/ingenuity.png"); 
-    z-index: -1;
-    padding: 0px;
+  /*Attributions */
+  .pln-attrib {
+    font-size: 10pt;
+    font-weight: 700;
     position: fixed;
-    background-size: cover;
-    margin: 0px;
+    bottom: 50px;
+  }
 
-    animation-fill-mode: forwards;
-    background-position: center center;
-    opacity: 0.3;
-    filter: grayscale(0.9);
-}
+  /* Styling for the site-wide background image */
+  div.bground{
+      width: 100%;
+      height: 100%;
+      background-image: URL("../images/ingenuity.png"); 
+      z-index: -1;
+      padding: 0px;
+      position: fixed;
+      background-size: cover;
+      margin: 0px;
 
-/* Styling for 'fixed' buttons */
-.pln-btn-fixed {
-  position: fixed;
-  z-index: 10;
-  bottom: 5px;
-  display: none;
-  width: 120px;
-  height: 30px;
-  padding: 0px;
-  margin:0;
-}
+      animation-fill-mode: forwards;
+      background-position: center center;
+      opacity: 0.3;
+      filter: grayscale(0.9);
+  }
 
-.pln-btn-right {
-  right: 5px;
-}
+  /* Fixed Buttons */
+  .pln-btn-fixed {
+    position: fixed;
+    z-index: 10;
+    bottom: 30px;
+    display: none;
+    width: 120px;
+    height: 30px;
+    padding: 0px;
+    margin:0;
+  }
 
-.pln-btn-left {
-  left: 5px;
-}
+  .pln-btn-right {
+    right: 5px;
+    margin-right: 25%;
+  }
 
-#pln-next-location{
-}
+  .pln-btn-left {
+    left: 5px;
+    margin-left: 25%;
+  }
 
-#pln-param-reset{
-}
+  #pln-next-location{
+  }
 
- #pln-dronesafety {
-   display: block;
-   width: 150px;
- }
+  #pln-param-reset{
+  }
 
- /* End of Styling for Fixed Buttons */
+  #pln-dronesafety {
+    display: block;
+    width: 150px;
+  }
 
-/* Styling for the 'Virtual Page' div elements */
-div.MenuComponent{
- padding: 100px 0 120px 0;
- margin-bottom: 60px;
-}
+  /* End of Styling for Fixed Buttons */
 
-.pln-param-instruct{
- font-size: 14pt;
- background-color: #ffffff00;
- font-weight: 300;
- line-height: 1;
- margin: 0;
- border-radius: 2px;
- padding: 2px;
- min-height: 50px;
-}
+  /* Styling for the 'Virtual Page' div elements */
+  div.MenuComponent{
+  padding: 100px 0 120px 0;
+  margin-bottom: 60px;
+  }
 
-.pln-step{
- font-size: 14pt;
- margin: 2px 10px 2px 0;
-}
+  .pln-param-instruct{
+  font-size: 14pt;
+  background-color: #ffffff00;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0;
+  border-radius: 2px;
+  padding: 2px;
+  min-height: 50px;
+  }
 
-*{
- margin: 0;
- padding: 0;
- border: 0;
-}
+  .pln-step{
+  font-size: 14pt;
+  margin: 2px 10px 2px 0;
+  color: rgb(146, 10, 10);
+  }
 
-.pln-steps{
- background-color: var(--footergrey);
- padding: 5px;
- color: #000000;
-}
+  *{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
 
-.pln-btn{
- background-color: #007bff;
- color: #ffffff;
- margin: 2px;
- padding: 2px;
- border-radius: 2px;
- cursor: pointer;
-}
+  .pln-steps{
+  background-color: var(--footergrey);
+  padding: 5px;
+  color: #000000;
+  }
 
-/* CSS for the Navigaton element */
+  .pln-btn{
+  background-color: #007bff;
+  color: #ffffff;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  }
+/* END OF GLOBAL ELEMENTS */
+
+/* || NAVIGATION */
+
 #Gallery{
 margin-bottom: 0px;
 }
@@ -127,7 +133,6 @@ margin-bottom: 0px;
 #HomePageButton{
   margin-left: 80px;
 }
-
 
 .nav-item {
   width: 100%;
@@ -186,6 +191,61 @@ margin: 0 10% 0 50px;
 .nav-item{
  cursor: pointer;
 }
+/* END OF NAVIGATION */
+
+/* || HOME PAGE */
+  #pln-cta{
+    background-image: url("../images/home_image.jpg");
+    background-size: cover;
+    margin: 20px auto;
+    background-position: center center;
+    padding: 10% 10% 15px;
+    max-width: 1300px;
+      animation-name: hero-zoom;
+      animation-duration: 3s;
+  }
+  
+  #pln-cta p{
+    font-size: 18pt;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    background-color: #ccccccbb;
+    margin-top: 50px;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  #pln-cta-primary{
+    margin: auto;
+      animation-name: hero-zoom;
+      animation-duration: 5s;
+  }
+  
+  .pln-notice{
+    font-weight: 800;
+    background-color: #ccccccbb;
+    font-size: 14pt;
+    max-width: 1200px;
+  }
+  
+  .pln-notice-header{
+    font-weight: 900;
+    font-size: 20pt;
+    background-color: #ccccccbb;
+    padding: 3px;
+  }
+  
+  .pln-notice-container{
+    margin: auto;
+    border: 3px solid brown;
+    max-width: 1000px;
+    padding: 0;
+  }
+/* END OF HOME PAGE */
+
+/* || FOOTER */
 
 footer{
  position: fixed;
@@ -209,27 +269,15 @@ content: var(--cssfileversion);
 .footer-sm{
  font-size: 100%;
  color: #fff;
-}
-
-.social-networks{
-text-align: center;
-margin: 5px 0;
-}
-
-.social-networks i{
-font-size: 160%;
-margin: 0 1% 0;
-padding: 3px 5% 0;
-color: #ffffffff;
-}
-
-.social-networks li{
-display: inline;
+ margin-top: 30px;
 }
 
 #CSSSerNo::before{
 content: var(--cssfileversion);
 }
+
+/* END OF FOOTER */
+
 
 .logoleft{
 border-radius: 50%;
@@ -263,57 +311,7 @@ letter-spacing: 1px;
 text-align: center;
 }
 
-#pln-cta{
- background-image: url("../images/home_image.jpg");
- background-size: cover;
- margin: 20px auto;
- background-position: center center;
- padding: 10% 10% 15px;
- max-width: 1300px;
-    animation-name: hero-zoom;
-    animation-duration: 3s;
-}
-
-#pln-cta p{
- font-size: 18pt;
- font-weight: 600;
- display: block;
- width: 100%;
- background-color: #ccccccbb;
- margin-top: 50px;
- border: 1px black solid;
- border-radius: 10px;
- padding: 5px;
-}
-
-#pln-cta-primary{
- margin: auto;
-    animation-name: hero-zoom;
-    animation-duration: 5s;
-}
-
-.pln-notice{
- font-weight: 800;
- background-color: #ccccccbb;
- font-size: 14pt;
- max-width: 1200px;
-}
-
-.pln-notice-header{
- font-weight: 900;
- font-size: 20pt;
- background-color: #ccccccbb;
- padding: 3px;
-}
-
-.pln-notice-container{
- margin: auto;
- border: 3px solid brown;
- max-width: 1000px;
- padding: 0;
-}
-
-/* || Styling for Location Page */
+/* || LOCATION PAGE */
 
   #pln-mapping {
     margin-bottom: 20px;
@@ -327,7 +325,9 @@ text-align: center;
   height: 580px;
   }
 
-/* || End of Styling for Location Page */
+/* END OF LOCATION PAGE */
+
+/* || FLIGHT PARAMETERS */
 
 /* Styling for competency boxes on the flight parameters page */
 .pln-comp{
@@ -453,17 +453,9 @@ text-align: center;
  font-weight: 900;
 }
 
-@keyframes hero-zoom{
- from{
-    transform: scale(0.99);
-    background-image: blur(10px);
+/* END OF FLIGHT PARAMETERS */
 
-  }
-  to{
-    transform: scale(1);
-    background-image: blur(1px);
-  }
-}
+/* || LOCATION PAGE */
 
 #pln-dsmap-1, #pln-param-rtn, #pln-stepfour-next{
  margin: 0;
@@ -497,6 +489,7 @@ text-align: center;
  font-size: 14pt;
  text-align: center;
  background-color: var(--footergrey);
+ color: #920a0a;
 }
 
 #pln-geo{
@@ -519,9 +512,24 @@ text-align: center;
  #pln-stepfour-next{
  margin: 0 0 3px 10px;
 }
+/* END OF LOCATION PAGE */
+
+/* || ANIMATIONS */
+@keyframes hero-zoom{
+  from{
+     transform: scale(0.99);
+     background-image: blur(10px);
+ 
+   }
+   to{
+     transform: scale(1);
+     background-image: blur(1px);
+   }
+ }
+ /* END OF ANIMATIONS */
 
 
-/*MEDIA QUERIES*/
+/* || MEDIA QUERIES*/
   /* For extra-wide 4k screens */
   @media screen and (min-width: 2400px){
  
@@ -584,11 +592,20 @@ text-align: center;
     padding-top: 100px;
   }
 
+  
    
  }
   
  /* Equivalent to Bootstrap Small */
  @media screen and (max-width: 767px){
+  .pln-btn-right {
+    margin-right: 0;
+  }
+  
+  .pln-btn-left {
+    margin-left: 0;
+  }
+
   
  }
 
