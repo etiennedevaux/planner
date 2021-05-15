@@ -3,7 +3,7 @@
 
 <head>
   <!-- Meta Tags-->
-  <meta http-equiv='Content-Type' content='text/html; charset=' UTF-8'>
+  <meta charset="UTF-8">
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
   <meta name='author' content='Stephen Clarke: The Code Institue'>
@@ -53,6 +53,9 @@
         <li class='nav-item mr-2'>
           <a href='#Location-Top' class='nav-link MenuButton' id='LocationButton' onclick='showMenuComponent("Location")' data-toggle='collapse' data-target='#navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>Location</a>
         </li>
+        <li class='nav-item mr-2'>
+          <a href='https://youtu.be/A2oBukSW9L0' class='nav-link MenuButton' id='HelpButton'   onclick='helpVideo()' data-toggle='collapse' aria-expanded='false' aria-label='Toggle navigation'><i class="far fa-question-circle pln-help"></i></a>
+        </li>
               </ul>
     </div>
 </nav>
@@ -62,6 +65,7 @@
   <div style='display: none;' class='MenuComponent' id='HomePage'>
     <a id='HomePage-Top'></a>
     <section id='pln-welcome' class='pln-cta'>
+      <h1 class="pln-semantic-only">Home Page</h1>
       <!-- Primary Call to Action -->
       <div class='row'>
         <div id='pln-cta' class='col-12 col-md-10'>
@@ -138,7 +142,7 @@
           <div id="pln-opid" class="pln-comp">
             <div class="pln-comp-head">
               <label class="pln-comp-lbl" for="pln-comp-opid-chk">
-                <p>Operator ID</p>
+                Operator ID
               </label>
               <input type="checkbox" id="pln-comp-opid-chk" class="pln-param-input pln-comp-input">
             </div>
@@ -151,7 +155,7 @@
           <div id="pln-flyid" class="pln-comp">
             <div class="pln-comp-head">
               <label class="pln-comp-lbl" for="pln-comp-flyid-chk">
-                <p>Flyer ID</p>
+                Flyer ID
               </label>
               <input type="checkbox" id="pln-comp-flyid-chk" class="pln-param-input pln-comp-input">
             </div>
@@ -165,7 +169,7 @@
           <div id="pln-a2coc" class="pln-comp">
             <div class="pln-comp-head">
               <label class="pln-comp-lbl" for="pln-comp-a2coc-chk">
-                <p>A2 CoC</p>
+                A2 CoC
               </label>
               <input type="checkbox" id="pln-comp-a2coc-chk" class="pln-param-input pln-comp-input">
             </div>
@@ -179,7 +183,7 @@
           <div id="pln-gvc" class="pln-comp">
             <div class="pln-comp-head">
               <label class="pln-comp-lbl" for="pln-comp-gvc-chk">
-                <p>GVC</p>
+                GVC
               </label>
               <input type="checkbox" id="pln-comp-gvc-chk" class="pln-param-input pln-comp-input">
             </div>
@@ -215,7 +219,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c01" value="option1"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-c01">
-                <p>C0 - Toy or no camera</p>
+                C0 - Toy or no camera
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -230,7 +234,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c02" value="option2"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-c02">
-                <p>C0 - Camera</p>
+                C0 - Camera
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -244,7 +248,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c1" value="option3"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-c1">
-                <p>C1 - Certified</p>
+                C1 - Certified
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -258,7 +262,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-a1t" value="option4"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-a1t">
-                <p>A1 - Transition</p>
+                A1 - Transition
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -272,7 +276,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c2ls" value="option5"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-c2ls">
-                <p>C2 - Low Speed</p>
+                C2 - Low Speed
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -286,7 +290,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c2" value="option6"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-c2">
-                <p>C2</p>
+                C2
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -300,7 +304,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-a2t" value="option7"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-a2t">
-                <p>A2 - Transition</p>
+                A2 - Transition
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -314,7 +318,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c3" value="option8"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-c3">
-                <p>C3</p>
+                C3
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -328,7 +332,7 @@
               <input type="radio" name="pln-dronecat-radios" id="pln-dronecat-radio-c4" value="option9"
                 class="pln-param-input pln-drone-input">
               <label for="pln-dronecat-radio-c4">
-                <p>C4</p>
+                C4
               </label>
             </div>
             <div class="pln-dronecat-desc">
@@ -418,6 +422,7 @@
         <div id="pln-next-location" class="btn btn-primary pln-btn-fixed pln-btn-right">Next</div>
         <div id="pln-param-reset" class="btn btn-primary pln-btn-fixed pln-btn-left">Reset</div>
         <!-- End of Flight Category 'Fixed' buttons -->
+    </div>
     </section>
   </div>
   <!--  End of FlightParameters menu section-->
@@ -450,11 +455,10 @@
           <h1 class="pln-h1">Location</h1>
 
           <!-- Following form dervied from Bootstrap https://getbootstrap.com/docs/4.1/components/forms/ !-->
-          <form class="pln-location-frm">
+          <form id="UK-Postcode" class="pln-location-frm">
             <div class="form-group">
-              <label for="pln-Postcode">Postcode (Enter when complete)</label>
-              <input type="text" class="form-control" id="pln-postcode" aria-describedby="UK Postcode"
-                placeholder="Enter postcode">
+              <label for="pln-postcode">Postcode (Enter when complete)</label>
+              <input type="text" class="form-control" id="pln-postcode" aria-describedby="UK-Postcode" placeholder="Enter postcode">
             </div>
             <div class="form-group">
               <label for="pln-latitude">Latitude</label>
@@ -535,12 +539,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script type='text/javascript'
-    src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AqXZ0hvITdpn5g-2a8bbicLdCTTJgoQHACH441QxLNJDdc_Qlpl6-3BHR0_lGQpJ'
-    async defer></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWmo-Ndb3YTzwMWSHAzg8an9dM9WDOlMk&callback=initialize&libraries=&v=weekly"
-    async></script>
+  <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AqXZ0hvITdpn5g-2a8bbicLdCTTJgoQHACH441QxLNJDdc_Qlpl6-3BHR0_lGQpJ' async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWmo-Ndb3YTzwMWSHAzg8an9dM9WDOlMk&callback=initialize&libraries=&v=weekly" async></script>
   <script src='assets/js/uav-flight-planner.js'></script>
 </body>
 

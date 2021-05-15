@@ -1,9 +1,9 @@
 //* Global Variables *//
-   var jsfileversion = "0500";
+   var jsfileversion = "0495";
    var dlat = 51.477976;
    var dlng = 0.000001;
    var originalFlSummary;
-   var i;
+
 
 //* Derived from The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  *//
 function aaMapShow() {
@@ -50,6 +50,7 @@ function domLoaded() {
       }
    });
 
+
    document.getElementById("pln-postcode").addEventListener("blur", function (event) {
       event.preventDefault();
       getPostcodeData(document.getElementById("pln-postcode").value);
@@ -57,51 +58,53 @@ function domLoaded() {
 
    //*Event Listeners for Flight Parameters Page*//
 
-      //* Click Event listeners for Competencies *//
-      var inputBoxes = document.getElementsByClassName("pln-comp");
 
-      for (i = 0; i < inputBoxes.length; i++) {
-         inputBoxes[i].addEventListener('click', function () {paramUpdate(1, this); });
-      }
 
-      //* Click Event listeners for Drone Categories *//
-      var inputCompBoxes = document.getElementsByClassName("pln-dronecat");
+   //* Click Event listeners for competency options *//
+   var inputBoxes = document.getElementsByClassName("pln-comp");
 
-      for (i = 0; i < inputCompBoxes.length; i++) {
-         inputCompBoxes[i].addEventListener('click', function () { paramUpdate(2, this); });
-      }
+   for (var i = 0; i < inputBoxes.length; i++) {
+      inputBoxes[i].addEventListener('click', function () { paramUpdate(1, this); });
+   };
 
-      //* Click Event listeners for selectors *//
-      var inputCheckBoxes = document.getElementsByClassName("pln-param-input");
+   //* Click Event listeners for competency options *//
+   var inputBoxes = document.getElementsByClassName("pln-dronecat");
 
-      for (i = 0; i < inputCheckBoxes.length; i++) {
-         inputCheckBoxes[i].addEventListener('click', function () {
-            if (this.checked) { this.checked = false; }
-            else { this.checked = true; }
+   for (var i = 0; i < inputBoxes.length; i++) {
+      inputBoxes[i].addEventListener('click', function () { paramUpdate(2, this); });
+   };
 
-         });
-      }
+   //* Click Event listeners for selector *//
+   var inputBoxes = document.getElementsByClassName("pln-param-input");
 
-      //* Hover Event Listeners for Boxes *//
-      var fcBox = document.querySelectorAll(".pln-flightcat, .pln-dronecat");
-      for (i = 0; i < fcBox.length; i++) {
-         fcBox[i].addEventListener('mouseover', function () { paramHlight(this); });
-      }
+   for (var i = 0; i < inputBoxes.length; i++) {
+      inputBoxes[i].addEventListener('click', function () {
+         if (this.checked) { this.checked = false; }
+         else { this.checked = true; }
 
-      //* Event Listener for Flight Parameters reset *//
-      document.getElementById("pln-param-reset").addEventListener('click', function () { paramReset(); });
-
-      //* Event Listener for Flight Parameters review Location Button *//
-      document.getElementById("pln-next-location").addEventListener("click", function (event) {
-         showMenuComponent("Location");
       });
+   };
 
-   //* Event Listener for Step Four Next Button *//
-      document.getElementById("pln-stepfour-next").addEventListener("click", function (event) {
-         instrDisplay("pln-step-four", 2);
-         instrDisplay("pln-step-five", 1);
-         document.getElementById("pln-stepfour-next").style.display="none";
-      });
+   //* Hover Event Listeners for Boxes *//
+   var fcBox = document.querySelectorAll(".pln-flightcat, .pln-dronecat");
+   for (var i = 0; i < fcBox.length; i++) {
+      fcBox[i].addEventListener('mouseover', function () { paramHlight(this); });
+   };
+
+   //* Event Listener for Flight Parameters reset *//
+   document.getElementById("pln-param-reset").addEventListener('click', function () { paramReset(); });
+
+   //* Event Listener for Flight Parameters review Location Button *//
+   document.getElementById("pln-next-location").addEventListener("click", function (event) {
+      showMenuComponent("Location");
+   });
+
+  //* Event Listener for Step Four Next Button *//
+   document.getElementById("pln-stepfour-next").addEventListener("click", function (event) {
+      instrDisplay("pln-step-four", 2);
+      instrDisplay("pln-step-five", 1);
+      document.getElementById("pln-stepfour-next").style.display="none";
+   });
 
    //* End of Event Listeners
 
@@ -124,10 +127,10 @@ function showMenuComponent(sect) {
    var x = document.getElementById(sect);
    x.style.display = 'block';
 
-   var menuElements = document.getElementsByClassName('MenuButton');
+   var elements = document.getElementsByClassName('MenuButton');
 
-   for (i = 0; i < menuElements.length; i++) {
-      menuElements[i].style.textDecoration = '';
+   for (var i = 0; i < elements.length; i++) {
+      elements[i].style.textDecoration = '';
    }
 
    var y = document.getElementById(sect + 'Button');
@@ -142,10 +145,13 @@ function showMenuComponent(sect) {
 function GetMap(lat, long) {
    var map = new Microsoft.Maps.Map('#pln-osmap', {});
 
+
+
    //Center the map on the user's location.
 
    if (lat == undefined) { lat = 51.4779760; }
    if (long == undefined) { long = 0.000001; }
+
 
    //* var loc = new Microsoft.Maps.Location(51.4779760,0.000001);*//
    var loc = new Microsoft.Maps.Location(lat, long);
@@ -154,6 +160,7 @@ function GetMap(lat, long) {
    //Add a pushpin at the user's location.
    var pin = new Microsoft.Maps.Pushpin(loc);
    map.entities.push(pin);
+
 }
 
 
@@ -162,8 +169,8 @@ function initialize() {
    var latid = document.getElementById("pln-latitude").value;
    var longid = document.getElementById("pln-longitude").value;
 
-   if (latid == null || latid == undefined || latid == "") { latid = 51.477976; }
-   if (longid == null || longid == undefined || longid == "") { longid = 0.000001; }
+   if (latid == null | latid == undefined | latid == "") { latid = 51.477976; }
+   if (longid == null | longid == undefined | longid == "") { longid = 0.000001; }
 
    const loc = { lat: latid, lng: longid };
 
@@ -180,7 +187,11 @@ function initialize() {
       document.getElementById("pln-stepfour-next").style.display="block";
       instrDisplay("pln-step-four", 1);
    });
+
+
+
 }
+
 
 function droneSafetyMap() {
 
@@ -189,8 +200,8 @@ function droneSafetyMap() {
    var lng = document.getElementById("pln-longitude").value;
 
    //* Set lat and lng to default values if null*//
-   if (lat == undefined || lat == null || lat == "") { lat = dlat; }
-   if (lng == undefined || lng == null || lng == "") { lng = dlng; }
+   if (lat == undefined | lat == null | lat == "") { lat = dlat; }
+   if (lng == undefined | lng == null | lng == "") { lng = dlng; }
 
    //* Match dimensions of popup to div on page *//
    var ht = document.getElementById("pln-osmap").offsetHeight;
@@ -206,8 +217,10 @@ function droneSafetyMap() {
 
    //* Open Drone Safety Map in popup *//
    var winsize = "top=50,left=50,width=" + wd + ",height=" + ht;
-   window.open(url, '_blank', winsize);
+   var win = window.open(url, '_blank', winsize);
+
 }
+
 
 //*Taken from https://stackoverflow.com/questions/3311293/javascript-bring-window-to-front-if-already-open-in-window-open*//
 function closePopupIfOpen(popupName) {
@@ -216,9 +229,11 @@ function closePopupIfOpen(popupName) {
    }
 }
 
+
 function recenterMaps() {
    GetMap(document.getElementById("plnLatitude").value, document.getElementById("plnLongitude").value);
 }
+
 
 function getPostcodeData(postcode) {
 
@@ -226,6 +241,7 @@ function getPostcodeData(postcode) {
    postcode = postcode.toUpperCase();
 
    const baseURL = "https://api.getthedata.com/postcode/" + postcode;
+
 
    var xhr = new XMLHttpRequest();
 
@@ -241,6 +257,7 @@ function getPostcodeData(postcode) {
    xhr.send();
 }
 
+
 //* Function to recentre the Google Map in accordance with co-ordinates in the parameters section, also resets the zoom to 15*//
 function gmapRecenter(map) {
    var latnew = Number(document.getElementById("pln-latitude").value);
@@ -252,6 +269,7 @@ function gmapRecenter(map) {
    //* Also recentre Bing Map at the same time
    GetMap(document.getElementById("pln-latitude").value, document.getElementById("pln-longitude").value);
 }
+
 
 function paramUpdate(step, thisbox) {
 
@@ -359,6 +377,7 @@ function paramUpdate(step, thisbox) {
       }
    } else if (selectedDrone == 4) {
 
+
       //* Rule 5 - C2 Certified in Low Speed Mode - each category as a separate line for easy maintenance*//
       if (rtm.checked == true && opid.checked == true && flyid.checked == true && a2coc.checked == true) {
          flightCatMarker(document.getElementById("pln-flightcat-a1-so"), 0); //* A1 - Fly Over Stay Over*//
@@ -456,7 +475,7 @@ function paramUpdate(step, thisbox) {
       else {
          noFly();
       }
-   } else if (selectedDrone == 7 || selectedDrone == 8) {
+   } else if (selectedDrone == 7 | selectedDrone == 8) {
 
       //* Rule 8 - C3 - each category as a separate line for easy maintenance, NB under current rules C3 and C4 can be combined, this may change*//
       if (rtm.checked == true && opid.checked == true && flyid.checked == true && gvc.checked == true) {
@@ -486,6 +505,7 @@ function paramUpdate(step, thisbox) {
    }
 }
 
+
 function flightCatMarker(elem, status) {
 
    //* Display Flights that can be conducted *//
@@ -504,7 +524,9 @@ function flightCatMarker(elem, status) {
       elem.style.color = "#de8f00";
       elem.style.textDecoration = "";
    }
+
 }
+
 
 function flightCatReset() {
    var fcats = document.getElementsByClassName("pln-flightcat");
@@ -513,7 +535,9 @@ function flightCatReset() {
    for (i = 0; i < fcats.length; i++) {
       flightCatMarker(fcats[i], 2);
    }
+
 }
+
 
 function paramReset() {
 
@@ -539,6 +563,7 @@ function paramReset() {
    flightCatReset();
 }
 
+
 function allFly() {
    flightCatMarker(document.getElementById("pln-flightcat-a1-so"), 1); //* A1 - Fly Over Stay Over*//
    flightCatMarker(document.getElementById("pln-flightcat-a1-po"), 1); //* A1 - Fly Over Pass Over*//
@@ -549,6 +574,7 @@ function allFly() {
 
    topFlightCat(1);
 }
+
 
 function noFly() {
    flightCatMarker(document.getElementById("pln-flightcat-a1-so"), 0); //* A1 - Fly Over Stay Over*//
@@ -561,6 +587,7 @@ function noFly() {
    topFlightCat(); //* Revert to original flight summary *//
 }
 
+
 function paramHlight(elem) {
 
    //* Arrays to define highlight styles, highlighted and original values*//
@@ -571,7 +598,6 @@ function paramHlight(elem) {
 
 
    //* Take current values and apply new values*//
-   var i;
    for (i = 0; i < hLStyleJS.length; i++) {
       hLStyleOldValue.push(window.getComputedStyle(elem).getPropertyValue(hLStyleCSS[i]));
       eval("elem.style." + hLStyleJS[i] + "='" + hLStyleNewValue[i] + "'");
@@ -588,9 +614,10 @@ function paramHlight(elem) {
 
 }
 
+
 function topFlightCat(flightcat) {
 
-   var flSummary = document.getElementById("pln-flsummary");
+   var flSummary = document.getElementById("pln-flsummary")
    if (flightcat == 1) {
       //* A1 - Fly Over - Stay Over *//
       flSummary.innerHTML = "<p>You can fly close to and over people, and maintain a position over people.  There is no minimum separation, avoid flying over crowds and ensure you have the land owner's permission.</p>";
@@ -624,21 +651,29 @@ function topFlightCat(flightcat) {
       //* Any other case *//
       flSummary = originalFlSummary;
    }
+
 }
+
+
 
 function instrDisplay(instrid, status) {
 
    if (status == 0) {
+
       document.getElementById(instrid).style.backgroundColor = "#ffffff00";
       document.getElementById(instrid).style.fontWeight = "200";
       document.getElementById(instrid).style.borderStyle = "none";
    } else if (status == 1) {
+
+
       document.getElementById(instrid).style.backgroundColor = "#bbd2e2cc";
       document.getElementById(instrid).style.fontWeight = "900";
       document.getElementById(instrid).style.borderStyle = "solid";
       document.getElementById(instrid).style.borderColor = "#007bff";
       document.getElementById(instrid).style.borderWidth = "3px";
    } else if (status == 2) {
+
+
       document.getElementById(instrid).style.backgroundColor = "#ffffff00";
       document.getElementById(instrid).style.fontWeight = "900";
       document.getElementById(instrid).style.borderStyle = "solid";

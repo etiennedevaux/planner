@@ -4,7 +4,6 @@
 
 /* || VARIABLES */
   :root{
-  --menubuttonwidth: %;
   --cssfileversion: "0315";
   --footergrey:#999999cc;;
   --flightallowed:#209020;;
@@ -17,6 +16,11 @@
   font-family: Lato;
   background-color: var(--bgroundshade);
   margin: 0;
+  }
+
+  /* Semantic Only Elements */
+  .pln-semantic-only {
+    display: none;
   }
 
   /*Attributions */
@@ -37,11 +41,12 @@
       position: fixed;
       background-size: cover;
       margin: 0px;
-
       animation-fill-mode: forwards;
       background-position: center center;
-      opacity: 0.3;
+      opacity: 0.2;
       filter: grayscale(0.9);
+      animation-name: bground-blur;
+      animation-duration: 3s;
   }
 
   /* Fixed Buttons */
@@ -191,6 +196,11 @@ margin: 0 10% 0 50px;
 .nav-item{
  cursor: pointer;
 }
+
+.pln-help{
+  font-size: 150%;
+  color: #ffffffff;
+}
 /* END OF NAVIGATION */
 
 /* || HOME PAGE */
@@ -201,9 +211,7 @@ margin: 0 10% 0 50px;
     background-position: center center;
     padding: 10% 10% 15px;
     max-width: 1300px;
-      animation-name: hero-zoom;
-      animation-duration: 3s;
-  }
+   }
   
   #pln-cta p{
     font-size: 18pt;
@@ -215,12 +223,6 @@ margin: 0 10% 0 50px;
     border: 1px black solid;
     border-radius: 10px;
     padding: 5px;
-  }
-  
-  #pln-cta-primary{
-    margin: auto;
-      animation-name: hero-zoom;
-      animation-duration: 5s;
   }
   
   .pln-notice{
@@ -457,7 +459,7 @@ text-align: center;
 
 /* || LOCATION PAGE */
 
-#pln-dsmap-1, #pln-param-rtn, #pln-stepfour-next{
+#pln-dsmap-1, #pln-param-rtn {
  margin: 0;
  background-color: #0078ff;
  color: #ffffff;
@@ -509,21 +511,18 @@ text-align: center;
  padding: 0;
 }
 
- #pln-stepfour-next{
- margin: 0 0 3px 10px;
-}
 /* END OF LOCATION PAGE */
 
 /* || ANIMATIONS */
-@keyframes hero-zoom{
+@keyframes bground-blur{
   from{
-     transform: scale(0.99);
-     background-image: blur(10px);
+     transform: scale(1);
+     filter: blur(10px);
  
    }
    to{
-     transform: scale(1);
-     background-image: blur(1px);
+     transform: scale(1.1);
+     filter: blur(1px);
    }
  }
  /* END OF ANIMATIONS */

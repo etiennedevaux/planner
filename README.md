@@ -1,5 +1,119 @@
 README.md
 
+ove Running
+In this section, you will include one or two paragraphs providing an overview of your project. Essentially, this part is your sales pitch. At this stage, you should have a name for your project so use it! Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience.
+
+For example; Love Running is a site that hopes to help keep people motivated to meet up for runs on a regular basis in Dublin, Ireland. The site will be targeted toward runners who are looking for a way to socialise and keep themselves fit. Love Running will be useful for runners to see exactly when and where they should be to join the running club.
+
+Responsice Mockup
+
+Features
+In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+
+Existing Features
+Navigation Bar
+
+Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
+This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button.
+Nav Bar
+
+The landing page image
+
+The landing includes a photograph with text overlay to allow the user to see exactly which location this site would be applicable to.
+This section introduces the user to Love Running with an eye catching animation to grab their attention
+Landing Page
+
+Club Ethos Section
+
+The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall.
+This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise.
+Club Ethos
+
+Meetup Times section
+
+This section will allow the user to see exactly when the meetups will happen, where they will be located and how long the run will be in kilometers.
+This section will be updated as these times change to keep the user up to date.
+Meetup Times
+
+The Footer
+
+The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user.
+The footer is valuable to the user as it encourages them to keep connected via social media
+Footer
+
+Gallery
+
+The gallery will provide the user with supporting images to see what the meet ups look like.
+This section is valuable to the user as they will be able to easily identify the types of events the organisation puts together.
+Gallery
+
+The Sign Up Page
+
+This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address.
+Sign Up
+
+For some/all of your features, you may choose to reference the specific project files that implement them.
+
+In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+
+Features Left to Implement
+Another feature idea
+Testing
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+Validator Testing
+HTML
+No errors were returned when passing through the official W3C validator
+CSS
+No errors were found when passing through the official (Jigsaw) validator
+Unfixed Bugs
+You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+
+Deployment
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+In the GitHub repository, navigate to the Settings tab
+From the source section drop-down menu, select the Master Branch
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html
+
+Credits
+In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
+
+You can break the credits section up into Content and Media, depending on what you have included in your project.
+
+Content
+The text for the Home page was taken from Wikipedia Article A
+Instructions on how to implement form validation on the Sign Up page was taken from Specific YouTube Tutorial
+The icons in the footer were taken from Font Awesome
+Media
+The photos used on the home and sign up page are from This Open Source site
+The images used for the gallery page were taken from this other open source site
+Congratulations on completing your Readme, you have made another big stride in the direction of being a developer!
+
+Other General Project Advice
+Below you will find a couple of extra tips that may be helpful when completing your project. Remember that each of these projects will become part of your final portfolio so it’s important to allow enough time to showcase your best work!
+
+One of the most basic elements of keeping a healthy commit history is with the commit message. When getting started with your project, read through this article by Chris Beams on How to Write a Git Commit Message
+
+Make sure to keep the messages in the imperative mood
+When naming the files in your project directory, make sure to consider meaningful naming of files, point to specific names and sections of content.
+
+For example, instead of naming an image used ‘image1.png’ consider naming it ‘landing_page_img.png’. This will ensure that there are clear file paths kept.
+Do some extra research on good and bad coding practices, there are a handful of useful articles to read, consider reviewing the following list when getting started:
+
+Writing Your Best Code
+HTML & CSS Coding Best Practices
+Google HTML/CSS Style Guide
+Getting started with your Portfolio Projects can be daunting, planning your project can make it a lot easier to tackle, take small steps to reach the final outcome and enjoy the process!
+
 # Website Title: UAV Flight Planner
 
 In January 2021 a new set of rules covering the use of Unmanned Aerial Vehicles, UAVs or commonly 'drones', in the UK were introduced by the UK CAA, civil aviation authority.
@@ -1590,4 +1704,280 @@ The POC file was provided by Altitude Angel and was taken from the sample source
 
 Scrolling banner Adapted from https://www.html.am/html-codes/marquees/html-scrolling-text.cfm
 
+
+# 12 Code Testing Sites
+
+## 12.1 JSHINT
+
+Metrics
+There are 35 functions in this file.
+
+Function with the largest signature take 2 arguments, while the median is 0.
+
+Largest function has 149 statements in it, while the median is 4.
+
+The most complex function has a cyclomatic complexity value of 72 while the median is 1.
+
+Ten warnings
+
+** The following Four Warnings Have Been Checked and Work Efficiently
+68	Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (paramUpdate)
+75	Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (paramUpdate)
+92	Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (paramHlight)
+
+** The following Five Warnings Occur in Code that was Adapted from the Google Code base, all functions work efficiently and correctly
+176	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+178	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+244	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+265	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+266	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+
+** Despite the warnings eval works effectively and efficiently in this case, to restructure the code without eval would create other complexities
+605	eval can be harmful.
+612	eval can be harmful.
+
+** The variables shown below are all defined in linked code libarries
+Four undefined variables
+11	$
+12	aa
+147	Microsoft
+158	Microsoft
+159	Microsoft
+162	Microsoft
+178	google
+
+** The Unused variables are function titles for functions called from the html part of the code
+Six unused variables
+10	aaMapShow
+24	domLoaded
+168	initialize
+234	recenterMaps
+689	helpVideo
+
+
+## 12.2 Jigsaw CSS Validator
+
+The CSS files produced no errors and had the following warnings
+
+The warnings all refer to CSS variables used to simplify the CSS structure
+Warnings (6)
+URI : uav-flight-planner.css
+2		Imported style sheets are not checked in direct input and file upload modes
+3		Imported style sheets are not checked in direct input and file upload modes
+7		--cssfileversion is an unknown vendor extension
+8		--footergrey is an unknown vendor extension
+9		--flightallowed is an unknown vendor extension
+10		--flightnotallowed is an unknown vendor extension
+
+
+
+## 12.3 HTNL Validator - https://validator.w3.org/
+
+Initial Pass
+
+Use the Message Filtering button below to hide/show particular messages, and to see total counts of errors and warnings.
+Message Filtering
+Error: The character encoding was not declared. Proceeding using windows-1252.
+
+Error: Quote ' in attribute name. Probable cause: Matching quote missing somewhere earlier.
+
+At line 6, column 70
+
+charset=' UTF-8'>↩  <meta name
+
+Warning: Attribute utf-8' is not serializable as XML 1.0.
+
+From line 6, column 3; to line 6, column 71
+
+Tags-->↩  <meta http-equiv='Content-Type' content='text/html; charset=' UTF-8'>↩  <me
+
+Error: Attribute utf-8' not allowed on element meta at this point.
+
+From line 6, column 3; to line 6, column 71
+
+Tags-->↩  <meta http-equiv='Content-Type' content='text/html; charset=' UTF-8'>↩  <me
+
+Attributes for element meta:
+Global attributes
+name — Metadata name
+http-equiv — Pragma directive
+content — Value of the element
+charset — Character encoding declaration
+Error: Bad value text/html; charset= for attribute content on element meta: The empty string is not a valid character encoding name.
+
+From line 6, column 3; to line 6, column 71
+
+Tags-->↩  <meta http-equiv='Content-Type' content='text/html; charset=' UTF-8'>↩  <me
+
+Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+
+From line 67, column 5; to line 67, column 46
+
+></a>↩    <section id='pln-welcome' class='pln-cta'>↩     
+
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 144, column 17; to line 144, column 19
+
+          <p>Operat
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 157, column 17; to line 157, column 19
+
+          <p>Flyer 
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 171, column 17; to line 171, column 19
+
+          <p>A2 CoC
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 185, column 17; to line 185, column 19
+
+          <p>GVC</p
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 221, column 17; to line 221, column 19
+
+          <p>C0 - T
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 236, column 17; to line 236, column 19
+
+          <p>C0 - C
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 250, column 17; to line 250, column 19
+
+          <p>C1 - C
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 264, column 17; to line 264, column 19
+
+          <p>A1 - T
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 278, column 17; to line 278, column 19
+
+          <p>C2 - L
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 292, column 17; to line 292, column 19
+
+          <p>C2</p>
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 306, column 17; to line 306, column 19
+
+          <p>A2 - T
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 320, column 17; to line 320, column 19
+
+          <p>C3</p>
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+From line 334, column 17; to line 334, column 19
+
+          <p>C4</p>
+
+Contexts in which element p may be used:
+Where flow content is expected.
+Content model for element label:
+Phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant label elements.
+Error: End tag section seen, but there were open elements.
+
+From line 424, column 5; to line 424, column 14
+
+s -->↩    </section>↩  </d
+
+Error: Unclosed element div.
+
+From line 108, column 7; to line 108, column 23
+
+on>↩      <div class="row">↩↩    
+
+Warning: The type attribute is unnecessary for JavaScript resources.
+
+From line 541, column 3; to line 543, column 16
+
+script>↩  <script type='text/javascript'↩    src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AqXZ0hvITdpn5g-2a8bbicLdCTTJgoQHACH441QxLNJDdc_Qlpl6-3BHR0_lGQpJ'↩    async defer></scri
+
+Error: The value of the for attribute of the label element must be the ID of a non-hidden form control.
+
+From line 458, column 15; to line 458, column 40
+
+          <label for="pln-Postcode">Postco
+
+Error: The aria-describedby attribute must point to an element in the same document.
+
+From line 459, column 15; to line 460, column 45
+
+          <input type="text" class="form-control" id="pln-postcode" aria-describedby="UK Postcode"↩                placeholder="Enter postcode">↩     
+
+Error: The aria-describedby attribute must point to an element in the same document.
+
+From line 459, column 15; to line 460, column 45
+
+          <input type="text" class="form-control" id="pln-postcode" aria-describedby="UK Postcode"↩                placeholder="Enter postcode">↩     
 
