@@ -25,11 +25,9 @@
 
   /*Attributions */
   .pln-attrib {
-    font-size: 10pt;
+    font-size: 9pt;
     font-weight: 700;
-    position: fixed;
-    bottom: 50px;
-  }
+   }
 
   /* Styling for the site-wide background image */
   div.bground{
@@ -546,24 +544,49 @@ text-align: center;
  
  /* Equivalent to Bootstrap Large */
   @media screen and (max-width: 1199px){
-   .pln-param-instruct {
-     font-size: 12pt;
-   }
+    .pln-param-instruct {
+      font-size: 10pt;
+    }
+    .pln-dronecat-desc {
+      font-size: 10pt;
+      line-height: 1;
+    }
 
-   .pln-dronecat-desc {
-    font-size: 10pt;
-    line-height: 1;
-  }
+    .pln-flightcat-desc {
+      font-size: 10pt;
+      line-height: 1;
+    }
 
-  .pln-flightcat-desc {
-    font-size: 10pt;
-    line-height: 1;
-  }
+    .pln-comp-desc {
+      font-size: 11pt;
+      line-height: 1;
+    }
 
-  .pln-comp-desc {
-    font-size: 11pt;
-    line-height: 1;
-  }
+    #pln-osmap, #pln-satview {
+      height: 450px;
+      }
+
+    .pln-h1 {
+      font-size: 14pt;
+    }
+
+    .form-group label{
+      margin: 0;
+      line-height: 1;
+    }
+    .pln-attrib {
+      font-size: 8pt;
+      line-height: 1;
+    }
+    .form-control {
+      font-size: 9pt;
+    }
+    .form-group {
+      margin: 0;
+    }
+    #pln-recenter {
+      margin: 0 auto;
+    }
   }
  
  /* Equivalent to Bootstrap Medium */
