@@ -19,21 +19,28 @@ The strategic goals for the site are to:
 * Engage New and Recent Pilots in a simnple, but structured flight planning process** 
 * Provide Rapid Access to Key Tools that may be of use to pilots at all levels of experience, without the need to follow all steps in a process** 
 
-#### 1.1.2 Scope
+#### 1.1.2 Features in Scope
 
-The potential scope is considerable, however the are a number of online services available that provide planning support for drone pilots, e.g. DroneCloud, DroneDesk, SkyDemon.  Having reviewed these they all tend to provide a mapping software, some provide risk assessment but none, as yet, assist pilots in the evaluation of their drone and skills to define the open category flights that are available to them.  
+##### 1.1.2.1 Project Scope
 
-So this is the first part of the scope is to provide a single page (single screen on desktops but scrollable on mobile devices) that shows immediately the link between qualifications, drone category and permitted flight categories.
+The potential scope for this project was considerable, however the are a number of online services available that provide planning support for drone pilots, e.g. DroneCloud, DroneDesk, SkyDemon.  Having reviewed these they all tend to provide mapping software, some provide risk assessment but none, as yet, assist pilots in the evaluation of their drone and skills to define the open category flights that are available to them.  
 
-The second part of the scope is to provide access to existing, free to use, mapping software.
+The scope for this project was therefore to provide the following:
 
-The final part of the scope is to provide guidance that can be used for inexperienced pilots, but that does not prevent experienced pilots from gaining low-click access to the resources they need.
+* An engaging introductory page that starts users on the planning process
+* A method of entering relevant qualifications and capabilities alongside the intended category of drone to be flown, to provide the user with information on the types of flights they can conduct.
+* Access to mapping resources and data, to enable the user to assess the suitability of the location for the flight.
+* To guide the user through a simple planning process.
+
+##### 1.1.2.2 Project Features
+
+The following features were implemented to achieve the above scope
 
 ##### 1.1.2.1 Flight Categories
 
 The flight categories page needs to represent all of the pilot competencies, those being familiarity, training and qualifications, of which there are five, drone categories, of which there are effectively nine once subcategories are included, and the flight categories, of which there are six if subcategories are included.
 
-The need is for pilots, or potential pilots, to select the items over which they have control, those being there qualification level and the single drone they intend to use and to then apply the CAA rules to show the flight categories that are available.
+The need, that this site will address, is for pilots, or potential pilots, to select their qualification level and the drone they intend to use, and to then apply the CAA rules to show the flight categories that are available.
 
 Multiple competencies can be selected.
 
