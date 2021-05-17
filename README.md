@@ -1,16 +1,59 @@
-## Version Details
-README Version: 0047;  
+# README Version Details
+README Version: 0048;  
 HTML Version: 0223;  
 CSS Version: 0315;  
 JavaScript Version: 0495;
 
-## 1  UAV Flight Planner
+# 1  UAV Flight Planner Description
 
-### 1.1 The Development Lifecycle
+## 1.1 Project Summary
 
-#### 1.1.1 Strategy
+The UAV (Unmanned Aerial Vehicles, commonly known as drones) Flight Planner helps remote pilots to understand how to plan flights under the CAA rules introduced at the start of 2021.
 
 The new CAA rules on the use drones are based on the European Legislation, and bring a strong degree of harmonisation and move in a direction that matches the level of regulation to the risks represented by the combination of the drone and the qualifications of the pilot.  However, the new structure is, especially when first reviewed, complex and is further complicated by the addition of transitional arrangements for existing drones.
+
+The goals for the site are to:   
+
+* Provide Easy to Access Information on the New Drone Rules, in particular the flight categories that can be undertaken
+* Provide Simple and Relevant Access to Mapping Tools that Assist Flight Planing 
+* Engage New and Recent Pilots in a simnple, but structured flight planning process
+* Provide Rapid Access to Key Tools that may be of use to pilots at all levels of experience, without the need to follow all steps in the process 
+
+## 1.2 Responsive Mockup
+
+The site itself will have three main pages, a link to open an external service in a Javascript generated page and a help link that will generated a new page with an embedded  YouTube video that walks a user through the key functionality of the site. 
+
+The three main pages need to be adapted for the different devices.  The two generated pages will open in a small window on the desktop version and will open as separate full screen tabs on tablets and mobile phones.
+
+Desktop use is probably the main means of access to the site, but the site does need to be available on tablets and mobile phones.
+
+The page designs shown below evolved during the development process, with iterative adaptation of the scope.  Earlier versions are on GitHub.  The mockups were created using the [Pencil Project Wireframe Designer](https://pencil.evolus.vn/), the source files are on GitHub should collaborators wish to revisit them.
+
+### 1.2.1 Desktop Mockups
+
+The Home Page is designed to engage the user, give a clear call to action and also provide easy navigation to other parts of the site
+
+![Home Page](https://etiennedevaux.github.io/planner/project-documents/wireframes/home_desktop_v2.png)  
+
+The flight parameters page aims to keep all of the flight options on a single page and to show the result of those selections alongside.  
+
+![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_v2.png) 
+
+The location page shows Bing Ordnance Survey Mapping alongside a Google Maps satellite view.  The are step by step instructions and a space for geolocation information.
+
+![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_location_desktop_v2.png) 
+
+
+
+### 1.2.2 Tablet Mockups
+
+### 1.2.3 Mobile Phoen Mockups
+
+
+
+# 2 The Development Lifecycle
+
+#### 1.1.1 Strategy
 
 The strategic goals for the site are to:   
 
