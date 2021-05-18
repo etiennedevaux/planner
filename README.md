@@ -111,7 +111,9 @@ When opening on a tablet or mobile phone it will open in a new tab, taking up th
 
 The site itself, prodived by Altitude Angel, is responsive and therefore does not require any additional refactoring for different devices.
 
-# 2 The Development Lifecycle
+# 2 Features
+
+# 3 The Development Lifecycle
 
 #### 1.1.1 Strategy
 
