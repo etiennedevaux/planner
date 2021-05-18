@@ -111,22 +111,17 @@ When opening on a tablet or mobile phone it will open in a new tab, taking up th
 
 The site itself, prodived by Altitude Angel, is responsive and therefore does not require any additional refactoring for different devices.
 
-# 2 Features
+### 1.2.5 Help Page  
 
-# 3 The Development Lifecycle
+The Help Page is available at all times. 
 
-#### 1.1.1 Strategy
+When opening on a desktop device the help page opens in a separate window, of a predetermined size, created in Javascript with the YouTube embed code being added.  The embedded video does a walk-through of a simple flight plan.
 
-The strategic goals for the site are to:   
+![Help Page](https://etiennedevaux.github.io/planner/project-documents/wireframes/help_page.png)
 
-* Provide Easy to Access Information on the New Drone Rules, in particular the flight categories that can be undertaken**  
-* Provide Simple and Relevant Access to Mapping Tools that Assist Flight Planing**  
-* Engage New and Recent Pilots in a simnple, but structured flight planning process** 
-* Provide Rapid Access to Key Tools that may be of use to pilots at all levels of experience, without the need to follow all steps in a process** 
+When opening on a tablet or mobile phone it will open in a new tab, taking up the full screen space available.
 
-#### 1.1.2 Features in Scope
-
-##### 1.1.2.1 Project Scope
+# 2 Scope of Features
 
 The potential scope for this project was considerable, however the are a number of online services available that provide planning support for drone pilots, e.g. DroneCloud, DroneDesk, SkyDemon.  Having reviewed these they all tend to provide mapping software, some provide risk assessment but none, as yet, assist pilots in the evaluation of their drone and skills to define the open category flights that are available to them.  
 
@@ -137,71 +132,118 @@ The scope for this project was therefore to provide the following:
 * Access to mapping resources and data, to enable the user to assess the suitability of the location for the flight.
 * To guide the user through a simple planning process.
 
-##### 1.1.2.2 Project Features
+## 2.1 Project Features
 
 The following features were implemented to achieve the above scope
 
-##### 1.1.2.1 Flight Categories
+### 2.1.1 Home Page
 
-The flight categories page needs to represent all of the pilot competencies, those being familiarity, training and qualifications, of which there are five, drone categories, of which there are effectively nine once subcategories are included, and the flight categories, of which there are six if subcategories are included.
+The home page brings in a hero image, with navigation, a footer and a link to start the planning process.  This page acts as gateway to the flight planning process.
+
+### 2.1.2 Navigation
+
+The Navigation is provided via a high-contrast area at top of the site, that remains in place for all pages.  Ensuring that the user always has easy access to any part of the site.  
+
+The navigation bar uses simple Javascript routines to show and hide parts of the site, to provide separate pages whilst maintaining the complete site with a single HTML file.
+
+Also on the Navigation bar is a link to a Help section.  
+
+### 2.1.3 Footer
+
+At this stage the footer is not, in itself, functional.  It displays key information at all times.  That information includes contact information, authorship and version numbers for the HTML, CSS and Javascript.  The last of these is important when debugging.
+
+The footer is a fixed translucent  area of the screen, so that when scrolling is required the user can see that content is behind the footer and therefore below the main viewport.
+
+The space in the footer area is also used for fixed buttons, typically NEXT and RESET.  When required these use z-index settings to display over the footer.
+
+### 2.1.4 Help
+
+The Help Page is described in section 1.2.5  
+
+The page is, at this stage, an embedded YouTube video and provides the standard YouTube functionality.  The window can be closed in the usual way, and can be opened via the Navigation bar, which is always visible.
+
+### 2.1.5 Step by Step Instructions
+
+Throughout the planning process there is step by step guidance.  
+
+Each instruction has three styles, one so that it is visible but unobtrusive before it is reached, one to show that that step is active, and a third style to show that it has been completed.
+
+When GET STARTED is selected the first step is highlighted.  As the actions are completed so the highlighting changes to the next step, via Javascript.  
+
+The idea is that the steps are there to guide users, but users can use any of the other functionality at any time, without the need to follow every step in the default process.
+
+#### 2.1.6 Flight Parameters
+
+The Flight Paramters Page needs to represent all of the pilot competencies, those being familiarity, training and qualifications, of which there are five, drone categories, of which there are effectively nine once subcategories are included, and the flight categories, of which there are six if subcategories are included.
 
 The need, that this site will address, is for pilots, or potential pilots, to select their qualification level and the drone they intend to use, and to then apply the CAA rules to show the flight categories that are available.
 
+Each competency and drone category is selected via a checkbox.  
+
 Multiple competencies can be selected.
 
-Only one drone at a time can be selected.
+Only one drone at a time can be selected, this is delivered by making the drone categories a set of link radio buttons.
 
 Flight categories will all be shown, but marked clearly as to whether or not they are available.
 
 Pilots or prospective pilots need an easy way of changing parameters to see what effect that might have on the available flights.
 
-See the post-scoping wireframe ![Flight Parameters Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_scope_2.png)
+See the post-scoping wireframe ![Flight Parameters Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_v2.png)
 
 
-##### 1.1.2.2 Flight Location
+#### 2.1.7 Flight Location
 
-###### 1.1.2.2.1 Flight Description
+The Flight Location page has alot of information on a single screen.  This is so that a pilot can see that information together and consider all factors in a single context.  This gives the pilot a feel for the location, almost as if they had visited the location.
+
+##### 2.1.7.1 Flight Description
 
 If a flight category has been selected on the Flight Parameters page then the description of what that flight category permits should be at the top of the Flight Location page, so that the user does not have to change pages to check and be reminded of the restrictions they have, for example the distance they need to maintain from un-involved people or how close they can be to a built-up area.
 
+The flight category described on the location page will be a fuller description of the most exacting of the flight categories available.
+
 If a flight category has not been selected the user will be invited to return to that page to choose a category, but it is not mandated as they may be doing that via other means, such as a paper-based risk assessment.
 
-###### 1.1.2.2.2 Planning Steps
-
-###### 1.1.2.2.3 Postcode Database 
+##### 2.1.7.2 Geo-Location Data 
 
 The site is aimed at users with a wide range of mapping skills.  Even for experienced commercial pilots precise mapping data is often not available for target locations, especially as commissioning clients do not generally know the co-ordinates for the filming locations.  However, all UK locations are covered by a postcode, e.g. SW1A 1AA (Buckingham Palace) or SW19 5AG (Wimbledon All England Lawn Tennis).  The UK Royal Mail manages the postcode database, and makes the information, which in includes latitude and longitude for all postcodes, available via a public API.
 
-Accessing this API so that the user can enter a postcode and be given a mappable latitude and longitude is the first requirement.
+Accessing this API so that the user can enter a postcode and be given a mappable latitude and longitude is a key function from which following information draws.
 
-###### 1.1.2.2.4 Bing Maps
+##### 2.1.7.3 Bing Maps
 
-Bing Maps is considered an important tool amongst UK-based UAV pilots, as it provides full UK Ordnance Survey mapping, and is the only mainstream free tool to do so.  So Bing Maps will display immediately to the right of the longitude and latitude.  This will be achieved using the Microsoft Bing Maps APIs.  The maps will default to the OS Map view, with other views remaining available via the interface.
+Bing Maps is considered an important tool amongst UK-based UAV pilots, as it provides full UK Ordnance Survey mapping, and is the only mainstream free tool to do so.  So Bing Maps displays immediately to the right of the longitude and latitude.  This is achieved using the Microsoft Bing Maps APIs.  The Bing map defaults to the OS Map view, with other views remaining available via the interface.
 
-###### 1.1.2.2.5 Google Maps
+##### 2.1.7.4 Google Maps
 
 Google Maps is also considered an important tool amongst UAV pilots as it provides the most up to date and detailed aerial views, plus the ability to select a street level view.  When combined with a traditional map, such as the UK ordnance survey, this provides thorough insite into the environment.  This insight ensures that a drone pilot can become familiar with a location that they have never visited.  Seeing this alongside the OS Map saves switching between maps and helps the pilot to align visual images with mapped features at a glance.
 
-###### 1.1.2.2.6 Altitude Angel
+##### 2.1.7.5 Altitude Angel
 
 The above maps are extremely powerful and detailed, but they do not contain any information about the flight restrictions that may apply in an area, for example flight restriction zones, railway lines or nuclear installations.
 
 Altitude Angel produce mapping layers that provide all of this information.  Those are available via APIs and via the freely accessible Drone Safety Map - the APIs were considered and tested as part of the POC for this project but the freely accessible version better met the overall requirements.
 
-This map is incorporated as a layer that goes over the embedded maps, this can be seen by clicing on the link below
-
+This map is incorporated as a layer that goes over the embedded maps, this functionality can be seen by clicing on the link below
 
 [Drone Safety Map](https://youtu.be/tMLuqcFOD-I)
 
-##### 1.1.2.3 Planning Guidance
+#### 2.2 Further Developments  
 
-The flight planning process is intuitive to experienced drone pilots, but may not be so for new and less experienced pilots, especially since the introduction of the new rules.  
+As stated above the potential scope is huge, but then moves into competition with established online services.
 
+##### 2.2.1  API Based Integrations
 
+At present the site uses APIs to draw information from other services.  This integration could be made two way.  One example would be to feed flight locations back into the Altitude Angel flight logs.
 
-See the post-scoping wireframe ![Flight Location Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_location_scope_2.png)
+##### 2.2.2  One Page Summaries
 
-##### 1.1.2.4 Out of Scope
+When users have finished the flight planning process it would be good to have a one page summary of their flight plan.  This could be provided as a single web page, a printable page or a rich text formated email.
+
+#### 2.3 Out of Scope
+
+An obvious development would be for users to register and store records of their flight plans.
+
+However, this funcitonality is available though a number of services.  Instead it would be nore productive to use published or private APis to integrate with these services.  This site provides some functionality that those sites do not, and focussing on integrating that functionality would be the most efficient use of time for the most impactful outcome.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # NOTES
