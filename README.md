@@ -31,25 +31,85 @@ The page designs shown below evolved during the development process, with iterat
 
 ### 1.2.1 Desktop Mockups
 
+#### 1.2.1.1 Desktop Home Page
+
 The Home Page is designed to engage the user, give a clear call to action and also provide easy navigation to other parts of the site
 
-![Home Page](https://etiennedevaux.github.io/planner/project-documents/wireframes/home_desktop_v2.png)  
+![Home Page](https://etiennedevaux.github.io/planner/project-documents/wireframes/home_desktop_v2.png) 
+
+#### 1.2.1.2 Desktop Flight Parameters Page
 
 The flight parameters page aims to keep all of the flight options on a single page and to show the result of those selections alongside.  
 
 ![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_v2.png) 
 
+#### 1.2.1.3 Desktop Location Page
+
 The location page shows Bing Ordnance Survey Mapping alongside a Google Maps satellite view.  The are step by step instructions and a space for geolocation information.
 
-![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_location_desktop_v2.png) 
-
-
+![Location](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_location_desktop_v2.png) 
 
 ### 1.2.2 Tablet Mockups
 
-### 1.2.3 Mobile Phoen Mockups
+#### 1.2.2.1 Tablet Home Page  
+The Tablet version of the Home Page is designed to engage the user, give a clear call to action and also provide easy navigation to other parts of the site
 
+![Home Page](https://etiennedevaux.github.io/planner/project-documents/wireframes/home_tablet_v2.png) 
 
+However in recognition that tablet devices are generally smaller and lower resolution, the overall dimensions are slightly reduced and the text content is shortened.
+
+#### 1.2.2.2 Tablet Flight Parameters Page
+The Tablet version of the Flight Parameters page aims to keep all of the flight options on a single page and to show the result of those selections alongside.  
+
+![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_tablet_v2.png) 
+
+However, there is an important balance to draw between minimising scrolling and clarity of text.  User interactions and feedbackm may alter this, but the present page does have some vertical scrolling.  To make this more intutitive content at the bottom is shown behind a translucent footer, inviting the user to scroll downwards.
+
+#### 1.2.2.2 Tablet Location Page
+
+The location page shows Bing Ordnance Survey Mapping alongside a Google Maps satellite view.  The are step by step instructions and a space for geolocation information.
+
+![Location](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_location_desktop_v2.png)
+
+To work effectively for a tablet the spacing, fonts and element sizes have been condensed to maintain the single page without scrolling on most tablets.  
+
+### 1.2.3 Mobile Phone Mockups
+
+#### 1.2.3.1 Mobile Phone Home Page
+
+The Phone version of the Home Page is designed to engage the user, give a clear call to action and also provide easy navigation to other parts of the site
+
+![Home Page](https://etiennedevaux.github.io/planner/project-documents/wireframes/home_phone_v2.png) 
+
+However in recognition that phones are smaller, lower resolution, and often used in portrait mode, the overall dimensions are further reduced, the text content shortened, and margins and padding minimised.  The content on the home page is not extensive, so the user experience is not significantly reduced.
+
+#### 1.2.3.2 Mobile Phone Flight Parameters
+The Mobiile Phone version of the Flight Parameters page aims to keep all of the flight options on a single page with vertical only scrolling, and to show the result of the selections below the selectable parameters.  
+
+![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_phone_v2.png) 
+
+User interactions and feedback may alter this, but the present page has extensive vertical scrolling.  In general mobile phone users will be comofrtable with scrolling.  To make this more intutitive content at the bottom is shown behind a translucent footer, inviting the user to scroll downwards.  An alternative approach would be to have multiple sub-pages from a single parent page, and this may be considered for future implementations is user feedback suggests it.
+
+#### 1.2.3.3 Mobile Location Page
+
+The location page shows Bing Ordnance Survey Mapping alongside a Google Maps satellite view.  The are step by step instructions and a space for geolocation information.
+
+![Location](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_location_phone_v2.png)
+
+To work effectively on a mobile the key sections have been re-arranged vertically.  This does have the drawback of scrolling, but keeps the information on one page and scrolling is vertical only.
+spacing, fonts and element sizes have been condensed, but as the maps have scrolling within them it is necessary to maintain some space around them to aid easy navigation.  
+
+### 1.2.4 Drone Safety Map
+
+The drone safety map opens in a separate page, created by Javascript and loaded from the location page.
+
+![Drone Safety Map](https://etiennedevaux.github.io/planner/project-documents/wireframes/drone_safety_map.png)
+
+When opening on a desktop device the map opens in a separate window, of a predetermined size that will adjust to match the size of the embedded maps.
+
+When opening on a tablet or mobile phone it will open in a new tab, taking up the full screen space available.
+
+The site itself, prodived by Altitude Angel, is responsive and therefore does not require any additional refactoring for different devices.
 
 # 2 The Development Lifecycle
 
