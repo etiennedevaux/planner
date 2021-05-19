@@ -243,7 +243,52 @@ When users have finished the flight planning process it would be good to have a 
 
 An obvious development would be for users to register and store records of their flight plans.
 
-However, this funcitonality is available though a number of services.  Instead it would be nore productive to use published or private APis to integrate with these services.  This site provides some functionality that those sites do not, and focussing on integrating that functionality would be the most efficient use of time for the most impactful outcome.
+However, this functionality is available though a number of services.  Instead it would be nore productive to use published or private APis to integrate with these services.  This site provides some functionality that those sites do not, and focussing on integrating that functionality would be the most efficient use of time for the most impactful outcome.
+
+## 3 Validator Testing
+### 3.1 HTML W3C Validator
+
+No errors were returned when uploading the html to the official [W3C validator](https://validator.w3.org/).
+
+![W3C Validator](https://etiennedevaux.github.io/planner/project-documentsvalidators/w3c-html.png) 
+
+### 3.2 CSS
+No errors were found when uoloading the CSS to the official ([Jigsaw](https://jigsaw.w3.org/css-validator/)) validator.
+
+![JIgsaw Validator](https://etiennedevaux.github.io/planner/project-documentsvalidators/jigsaw-css.png) 
+
+There are six warnings, but these are not critical as they relate to external CSS, which is beyond scope to change and use of CSS variables, designed to simplify the management of the colour schemes.
+
+![JIgsaw Validator Warnings](https://etiennedevaux.github.io/planner/project-documentsvalidators-warnings/jigsaw-css.png) 
+
+### 3.3 Javascript
+Ten warnings were found when uoloading the Javascript to the official ([JSHint](https://jshint.com/)) validator.
+
+![JSHint Validator](https://etiennedevaux.github.io/planner/project-documents/validators/jshint-warnings.png) 
+
+The first three relate to the use of callback functions to create event listeners.  These have been checked and work as designed.
+
+The next five are from within the Google Maps code, specifically the initialise function.  As this code is supplied by Google it is out of scope to change it.
+
+The final two relate to the use of the eval command, this is used to ensure that property names, rather than property values are used.  These have been checked and work as designed.
+
+JSHint also identifed four undefined variables.
+
+![JSHint Undefined Variable Warnings](https://etiennedevaux.github.io/planner/project-documents/validators/jshint-undefined.png) 
+
+These are in code supplied by third-parties and are defined in external libraries.
+
+JSHint also indentified five unused variables.
+![JSHint Undefined Variable Warnings](https://etiennedevaux.github.io/planner/project-documents/validators/jshint-unused.png)  
+
+These are all referenced from within the HTML page.
+
+
+
+
+
+Unfixed Bugs
+You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # NOTES
