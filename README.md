@@ -191,11 +191,11 @@ Pilots or prospective pilots need an easy way of changing parameters to see what
 See the post-scoping wireframe ![Flight Parameters Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_v2.png)
 
 
-#### 2.1.7 Flight Location
+### 2.1.7 Flight Location
 
 The Flight Location page has alot of information on a single screen.  This is so that a pilot can see that information together and consider all factors in a single context.  This gives the pilot a feel for the location, almost as if they had visited the location.
 
-##### 2.1.7.1 Flight Description
+#### 2.1.7.1 Flight Description
 
 If a flight category has been selected on the Flight Parameters page then the description of what that flight category permits should be at the top of the Flight Location page, so that the user does not have to change pages to check and be reminded of the restrictions they have, for example the distance they need to maintain from un-involved people or how close they can be to a built-up area.
 
@@ -203,21 +203,21 @@ The flight category described on the location page will be a fuller description 
 
 If a flight category has not been selected the user will be invited to return to that page to choose a category, but it is not mandated as they may be doing that via other means, such as a paper-based risk assessment.
 
-##### 2.1.7.2 Geo-Location Data 
+#### 2.1.7.2 Geo-Location Data 
 
 The site is aimed at users with a wide range of mapping skills.  Even for experienced commercial pilots precise mapping data is often not available for target locations, especially as commissioning clients do not generally know the co-ordinates for the filming locations.  However, all UK locations are covered by a postcode, e.g. SW1A 1AA (Buckingham Palace) or SW19 5AG (Wimbledon All England Lawn Tennis).  The UK Royal Mail manages the postcode database, and makes the information, which in includes latitude and longitude for all postcodes, available via a public API.
 
 Accessing this API so that the user can enter a postcode and be given a mappable latitude and longitude is a key function from which following information draws.
 
-##### 2.1.7.3 Bing Maps
+#### 2.1.7.3 Bing Maps
 
 Bing Maps is considered an important tool amongst UK-based UAV pilots, as it provides full UK Ordnance Survey mapping, and is the only mainstream free tool to do so.  So Bing Maps displays immediately to the right of the longitude and latitude.  This is achieved using the Microsoft Bing Maps APIs.  The Bing map defaults to the OS Map view, with other views remaining available via the interface.
 
-##### 2.1.7.4 Google Maps
+#### 2.1.7.4 Google Maps
 
 Google Maps is also considered an important tool amongst UAV pilots as it provides the most up to date and detailed aerial views, plus the ability to select a street level view.  When combined with a traditional map, such as the UK ordnance survey, this provides thorough insite into the environment.  This insight ensures that a drone pilot can become familiar with a location that they have never visited.  Seeing this alongside the OS Map saves switching between maps and helps the pilot to align visual images with mapped features at a glance.
 
-##### 2.1.7.5 Altitude Angel
+#### 2.1.7.5 Altitude Angel
 
 The above maps are extremely powerful and detailed, but they do not contain any information about the flight restrictions that may apply in an area, for example flight restriction zones, railway lines or nuclear installations.
 
@@ -227,41 +227,42 @@ This map is incorporated as a layer that goes over the embedded maps, this funct
 
 [Drone Safety Map](https://youtu.be/tMLuqcFOD-I)
 
-#### 2.2 Further Developments  
+## 2.2 Further Developments  
 
 As stated above the potential scope is huge, but then moves into competition with established online services.
 
-##### 2.2.1  API Based Integrations
+### 2.2.1  API Based Integrations
 
 At present the site uses APIs to draw information from other services.  This integration could be made two way.  One example would be to feed flight locations back into the Altitude Angel flight logs.
 
-##### 2.2.2  One Page Summaries
+### 2.2.2  One Page Summaries
 
 When users have finished the flight planning process it would be good to have a one page summary of their flight plan.  This could be provided as a single web page, a printable page or a rich text formated email.
 
-#### 2.3 Out of Scope
+## 2.3 Out of Scope
 
 An obvious development would be for users to register and store records of their flight plans.
 
 However, this functionality is available though a number of services.  Instead it would be nore productive to use published or private APis to integrate with these services.  This site provides some functionality that those sites do not, and focussing on integrating that functionality would be the most efficient use of time for the most impactful outcome.
 
-## 3 Validator Testing
-### 3.1 HTML W3C Validator
+# 3 Validator Testing 
+
+## 3.1 HTML W3C Validator
 
 No errors were returned when uploading the html to the official [W3C validator](https://validator.w3.org/).
 
-![W3C Validator](https://etiennedevaux.github.io/planner/project-documentsvalidators/w3c-html.png) 
+![W3C Validator](https://etiennedevaux.github.io/planner/project-documents/validators/w3c-html.png) 
 
-### 3.2 CSS
+## 3.2 CSS
 No errors were found when uoloading the CSS to the official ([Jigsaw](https://jigsaw.w3.org/css-validator/)) validator.
 
-![JIgsaw Validator](https://etiennedevaux.github.io/planner/project-documentsvalidators/jigsaw-css.png) 
+![Jigsaw Validator](https://etiennedevaux.github.io/planner/project-documents/validators/jigsaw-css.png) 
 
 There are six warnings, but these are not critical as they relate to external CSS, which is beyond scope to change and use of CSS variables, designed to simplify the management of the colour schemes.
 
-![JIgsaw Validator Warnings](https://etiennedevaux.github.io/planner/project-documentsvalidators-warnings/jigsaw-css.png) 
+![Jigsaw Validator Warnings](https://etiennedevaux.github.io/planner/project-documents/validators/jigsaw-css-warnings.png) 
 
-### 3.3 Javascript
+## 3.3 Javascript
 Ten warnings were found when uoloading the Javascript to the official ([JSHint](https://jshint.com/)) validator.
 
 ![JSHint Validator](https://etiennedevaux.github.io/planner/project-documents/validators/jshint-warnings.png) 
@@ -283,12 +284,146 @@ JSHint also indentified five unused variables.
 
 These are all referenced from within the HTML page.
 
+## 3.4 Unfixed Bugs
+
+Use of eval is not recommended.  These sections of code will need to be reviewed to see if an improved solution can be found.
+
+Some of the styling used to emphasise instructions, steps and parameters is hard coded into the Javascript, it would be better practice to draw styling from the DOM, store it, apply the emphatic styling and then return it to the original.  This is done in some areas, but not throughout.
+
+# 4 Deployment
+
+## 4.1 GitHub Desktop
+
+### 4.1.1 Installing GitHub Desktop
+
+GitHub Desktop can be accessed from http://desktop.github.com
+
+1. Dowload the version for your local machine
+
+2. Run the installation program
+
+3. Run the program and sign-in to your GitHub account (to create a GitHub account go to http://www.github.com/join)
+
+4.  Choose FILE then CLONE REPOSITORY
+
+5.  Enter the URL https://github.com/etiennedevaux/planner
+
+6.  The repository will then be downloaded to your local machine in the directory shown in the CLONE REPOSITORY dialogue
+
+7.  File can be edited using your preferred editor, in my case I have used Visual Studio Code, but any common editor will work.
+
+8.  See the documentation at https://docs.github.com/en/desktop
+
+## 4.2 Running the Code
+
+1.  By default on a PC the repository will be created at c:\GitHub\planner, other directories can be chosen and the directory structure will be different on other operating systems 
+
+2.  Navigate to the repository directory  and run the file index.html using the browser of your choice
+
+3.  CSS, Javascript and site images are accessed by relative paths and are stored within the assets folder.  Some resources are drawn from third-party locations.  
+
+## 4.3 Editing the Code
+
+1.  The main html file index.html is stored on the root folder, which is at c:\GitHub\planner if using GitHub Desktop on a PC with the default folder setttings.
+
+2.  The index.html file can be edited with any text editor, including Notepad.exe on a PC.  HTML editing is more efficient with a specialist editor.  There are many available, such as [Visual Studio Code](https://code.visualstudio.com/) or [Brackets](http://brackets.io/).
+
+3.  The README.md file is also stored in the root and can be edited with the same set of tools.  
+
+4.  The README.md file is written using the Markdown language, focused on GitHub deployment.
+
+5.  Visual Studio Code includes a preview for the Markdown Language, although this is not identical to the GitHub display format.  Significant formating should be verified on GitHub before making extensive use in the source file.
+
+## 4.4 Commits
+
+Frequent commits have been made, all are labelled with at least a summary.  Most major commits also have a description.
+
+Commits are made both to update code, creating stable and re-usable versions, and to test that code working successfully as a local html file will work in the same way when viewed from the GitHub pages server.
+
+All major functional areas are committed once completed and tested.
+
+## 4.5 Push to Origin
+
+Frequent pushes to origin from GitHub desktop are important, as this ensures:
+
+1.  That committed code is stored in more than one place, ie on the desktop and in the cloud
+2.  That committed code is available to viewers, reviewers and collaborators using GitHub
+3.  If future issues occur then an audit trail back to a stable and working version of individual functions is available
+
+## 4.6 GitHub Branches
+Once tested the code is deployed on GitHub, using Github Desktop.  The code can be deployed to various branches to allow for testing and staging of changes and additions, whilst maintaining the integrity of the core.
+
+## 4.7 Github Main Branch
+
+The deployment goal at this stage is to be available for assessment on the Github platform.  Once tested locally it can then be deployed to a branch on GitHub, and when tested in that environment merged back into the main branch and left unchanged for assessment.
+
+Currently the latest version is on the Main branch.
+
+## 4.8 Live Deployment
+
+The site is designed to be deployed on any standard server.  For assessment it will be deployed as a GitHub page.  For production it will be deployed to Microsoft Azure and integrated into partner websites.
+
+### 4.8.1 GitHub Pages
+
+The goal for this round of development is to make the site available for
+
+1.  Assessment Purposes - so that the Code Institute can assess a stable and complete version.
+2.  Peer review, including review on different devices.
+
+Both of these are achieved by making the site available as an externally facing URL via the GitHub pages.
+
+To add GitHub pages to a site (or to change setting)
+
+1.  Logon to GitHub
+2.  Go to Repositories
+3.  Select the desired repository (e.g. warksar)
+4.  Go to Settings
+5.  Scroll down to the GitHub Pages section
+6.  In the Source section click on the dropdown (default value None, but maybe already configured to point to a given branch such as Main)
+7.  Select the desired branch to display and click on Save
+8.  Other settings such as a Theme are not necessary for this site
+
+The live link can be found here - https://etiennedevaux.github.io/planner/
+
+The GitHub repository can be found here - https://github.com/etiennedevaux/planner/
+
+### 4.9 Future Platforms
+
+The code may be deployed to a different server.  To make this deployment as simple as possible the site has been designed to for easy copying and using relative file paths to assets such as CSS, images and Javascript.
+
+To deploy to different server
+
+1.  It is assumed that a server is available, with a known domain and a root directory configured to serve an index.html file via the hypertext transfer protocol (http)
+2.  Copy the index.html file to the server root
+3.  Copy the assets folder and all of its sub-directories (css, images, js, audio and video) to the server root
+4.  Allow time for the uploads to be fully completed and for the target server to process those files, refer to documentation on the target server for precise estimates, but a few minutes is normally sufficient
+5.  Enter the domain (e.g. https://etiennedevaux.github.io/planner) into your browser, the index.html file should automatically load and should include the linked content in the assets subfolder.
+6. Folow the test procedures set out in this document
+7. Test the above on a Desktop machine, a Tablet and a Mobile phone.
+
+### 4.10 Index File
+
+The index.html file is the only html file for the site.  The single file contains all pages and all static html content.
+
+Javascript, contained in the file uav-flight-planner.js, displays and hides the content as required for each page of the site.
+
+## 4.11 Help Page
+The Help page is created via Javascript whenever the user selects the help icon.  The Javascript creates the page, and then inserts the embed code for a YouTube video, giving a brief walkthrough of the site.
+
+## 4.12 Drone Safety Map
+
+The Drone Safety Map page is created via Javascript whenever the user selects the help icon.  The Javascript creates the page, and then loads the HTML content from the URL https://www.dronesafetymap.com
 
 
+### 4.13 Assets
 
+The assets folder contains all of the supporting scripts, css and images needed to run the site.  The folder has sub-folders for Javascript (assets/js) CSS (assets/css) and images (assets/images).
 
-Unfixed Bugs
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+Video resources are hosted on the YouTube streaming service.
+
+### 4.14 Project Documents
+
+The Project Documents folder (project-documents) contains information and files that may be relevant to a collaborator, such as wireframes, background documentation, Proof of Concept files and other helpful content.  The files in the project-documents folder are not necessary for the site to function.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # NOTES
