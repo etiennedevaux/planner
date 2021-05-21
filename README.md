@@ -511,7 +511,23 @@ General testing will make sure that the page is loading, that the Javascript and
 
 1.  Go to the address https://etiennedevaux.github.io/planner/#HomePage-Top on a desktop or laptop device
 
-The Home Page should appear as ![Desktop Homepage](https://etiennedevaux.github.io/planner/projectdocuments/screenshots/desktop-homepage.png)
+The Home Page should appear as ![Desktop Homepage](https://etiennedevaux.github.io/planner/project-documents/screenshots/desktop-homepage.png)
+
+For this page, with the Hero Image and Get Started button to appear the html, CSS and Javascript files must all be loading correctly.
+
+2. Checking the three part serial number, e.g. 0223.0315.0500 shows the HTML version (0223), CSS version (0315) and Javascript version (0500)
+
+3. Next click on the ? to ensure that an embedded YouTube video page is displayed.
+
+4. From the top navigation bar click on Flight Parameters 
+
+The Flight Parameters should appear as ![Desktop Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/screenshots/desktop-fight_parameters.png)
+
+5. Click on the browser back button to return to the Home Page
+
+6. From the top navigation bar click on Flight Parameters 
+
+The Flight Parameters should appear as ![Desktop Location](https://etiennedevaux.github.io/planner/project-documents/screenshots/desktop-location.png)
 
 ## 8.2 Responsiveness Testing
 
