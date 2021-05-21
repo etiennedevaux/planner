@@ -505,8 +505,18 @@ https://code.jquery.com/jquery-3.3.1.slim.min.js
 
 # 8 Testing
 
-# 8.1 General Testing
+## 8.1 General Testing
 
-# 8.2 Responsiveness Testing
+## 8.2 Responsiveness Testing
 
-# 8.3 User Story Testing
+The site makes extensive use of Bootstrap to provide responsiveness.  The CSS also contains media breakpoints that mirror the Bootstrap breakpoints.
+
+## 8.3 User Story Testing
+
+There are two key user stories:
+
+* Inexperienced Pilots - who will take a guided, step-by-step, walk through the planning process.
+
+* Experienced Pilots - who will want to access key services and functions directly, without the need to complete each step.
+
+### 8.3.1
