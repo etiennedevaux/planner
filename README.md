@@ -507,6 +507,12 @@ https://code.jquery.com/jquery-3.3.1.slim.min.js
 
 ## 8.1 General Testing
 
+General testing will make sure that the page is loading, that the Javascript and CSS are loading and functioning.
+
+1.  Go to the address https://etiennedevaux.github.io/planner/#HomePage-Top on a desktop or laptop device
+
+The Home Page should appear as ![Desktop Homepage](https://etiennedevaux.github.io/planner/projectdocuments/screenshots/desktop-homepage.png)
+
 ## 8.2 Responsiveness Testing
 
 The site makes extensive use of Bootstrap to provide responsiveness.  The CSS also contains media breakpoints that mirror the Bootstrap breakpoints.
