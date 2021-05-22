@@ -537,6 +537,52 @@ The Flight Parameters should appear as ![Desktop Flight Parameters](https://etie
 
 The site makes extensive use of Bootstrap to provide responsiveness.  The CSS also contains media breakpoints that mirror the Bootstrap breakpoints.
 
+A demonstration of the site being tested for responsiveness is shown here [UAV Flight Planner Responsiveness Testing](https://youtu.be/2VMUyT7phdg)
+
+The key steps in the testing process are summarised below:
+
+1.  Load the latest deployed version, currently at https://etiennedevaux.github.io/planner/
+
+2.  Switch to the Google Chrome Developer Tools and go to the Responsive View
+
+3.  Start with screen at a resolution of at least 1500px by 900px, the larger the better.
+
+4.  From the bottom right hand corner gradually reduce the screen size to 1024px by 768px, check that the screen works well at all intermediate sizes
+
+5.  From the bottom right hand corner gradually reduce the screen width to 340px, check that the screen works well at all intermediate sizes
+
+6.  From the bottom right hand corner gradually reduce the screen height to 600px, check that the screen works well at all intermediate sizes
+
+7.  Switch the view to the iPad option, and ensure that it is in Landscape
+
+8.  From the Navigation Bar select the Flight Parameters option.
+
+9.  Ensure that the screen scrolls and that all information is clear
+
+10.  From the Navigation Bar select the Location option, ensure that all information is clearly visible
+
+11.  Switch the view to the iPhone 6/7/8 option
+
+12.  Use the Burger Menu to select the Home Page
+
+13.  Ensure that the key call to action is clear and easy to read
+
+14.  Select the Parameters page
+
+15.  Scroll down and check different boxes
+
+16.  Scroll down to check that the flight categories display clearly
+
+17.  Select the Location page
+
+18.  Scroll down to view the maps
+
+19.  Click on a map and scroll within the map frame
+
+
+
+
+
 ## 8.3 User Story Testing
 
 There are two key user stories:
