@@ -1,8 +1,8 @@
 # README Version Details
-README Version: 0048;  
-HTML Version: 0223;  
+README Version: 0049;  
+HTML Version: 0225;  
 CSS Version: 0315;  
-JavaScript Version: 0495;
+JavaScript Version: 0501;
 
 # 1  UAV Flight Planner Description
 
@@ -286,7 +286,25 @@ JSHint also indentified five unused variables.
 
 These are all referenced from within the HTML page.
 
-## 4.4 Unfixed Bugs
+## 4.4 Fixed Bugs
+
+### 4.4.1 SWITCH CASE and Safari 
+
+During user testing feedback from Mac users, and testing on Mobile devices, gave problems in the Javascript for calculating the permitted flight categories.  To overcome this the SWITCH CASE was changed to IF and ELSE IF statements.  The statement length is similar so this approach is equally effective and avoids some browser compatibility issues.  However, making this switch did not fully resolve the issue - but as it is an equally effective approach it was left in place.
+
+### 4.4.2 attributeStyleMap and Safari
+
+The user testing and iOS testing on tablets and phones would not work with the attrubuteStyleMap command as this is not yet available in some versions of Safari, up to Version 14.1.  This was therefore replaced by reading in the attribute styles from the DOM and storing them in arrays so that they could be re-applied.  This solution worked well.
+
+### 4.4.3 Small Text in Flight Categories and Drone Categories
+
+On smaller screens, including desktop screens, the text in the Drone Categories and Flight Categories needed to be very small to minimise scrolling.  However the text is important.  So an event handler was added so that when the mouse passed over the box the text is enlarged and emphasised.  As the mouse passes over this reverts to its original.  This also led to 4.4.2 which was resolved as above.
+
+### 4.4.4 Selecting Competencies and Drone Categories
+
+In the original design it was necessary to click on the actual radio button or checkbox.  This made the process slow, and users testing the interface, reported that this was not intuitive.  To overcome this an event handler was added to the full text box, such that the checkbox or radio button would be toggled when any part of the textbox was clicked.  This also had to handle the actual checkbox or radion button being clicked, as this would trigger two event handlers.
+
+## 4.5 Unfixed Bugs
 
 Use of eval is not recommended.  These sections of code will need to be reviewed to see if an improved solution can be found.
 
@@ -481,13 +499,28 @@ You can break the credits section up into Content and Media, depending on what y
 
 ## 7.2 Media Credits
 
+The site background image is taken from NASA, showing an artists impression of the Ingenuity drone on Mars.
+
 https://www.nasaspaceflight.com/2021/03/nasa-preparing-ingenuity-enabling-future-missions/
 
-Devaux Online
+The Hero Image on the Home Page was supplied from the photographic stock of Devaux Online.
 
 ## 7.3 Code Credits
 
-### 7.3.1 The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)
+### 7.3.1 Drone Safety Map  
+The POC file for the Drone Safety Map was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/).  In the final implementation a slightly different approach was used.
+
+### 7.3.2 Open Postcode API
+
+The API and code examples used to provide the Latitude and Longitude from a UK postcode, references to those are at [https://www.getthedata.com/open-postcode-geo-api](https://www.getthedata.com/open-postcode-geo-api)
+
+### 7.3.3 Bing Maps
+
+The API and code examples used to provide the embedded Bing Maps, with UK Ordnance Survey view, were obtained from [https://www.bingmapsportal.com/](https://www.bingmapsportal.com/)
+
+### 7.3.4 Google Maps
+
+The API and code examples used to provide the embedded Google Maps, with statellite view, were obtained from [https://developers.google.com/maps](https://developers.google.com/maps)
 
 ## 7.4 External Libraries
 
