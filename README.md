@@ -481,6 +481,10 @@ You can break the credits section up into Content and Media, depending on what y
 
 ## 7.2 Media Credits
 
+https://www.nasaspaceflight.com/2021/03/nasa-preparing-ingenuity-enabling-future-missions/
+
+Devaux Online
+
 ## 7.3 Code Credits
 
 ### 7.3.1 The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)
@@ -521,13 +525,13 @@ For this page, with the Hero Image and Get Started button to appear the html, CS
 
 4. From the top navigation bar click on Flight Parameters 
 
-The Flight Parameters should appear as ![Desktop Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/screenshots/desktop-fight_parameters.png)
+The Flight Parameters should appear as ![Desktop Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/screenshots/desktop-flight_parameters.png)
 
 5. Click on the browser back button to return to the Home Page
 
 6. From the top navigation bar click on Flight Parameters 
 
-The Flight Parameters should appear as ![Desktop Location](https://etiennedevaux.github.io/planner/project-documents/screenshots/desktop-location.png)
+   The Flight Parameters should appear as ![Desktop Location](https://github.com/etiennedevaux/planner/blob/main/project-documents/screenshots/desktop-location.png?raw=true)
 
 ## 8.2 Responsiveness Testing
 

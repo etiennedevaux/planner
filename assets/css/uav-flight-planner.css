@@ -207,8 +207,12 @@ margin: 0 10% 0 50px;
     background-size: cover;
     margin: 20px auto;
     background-position: center center;
-    padding: 10% 10% 15px;
+    padding: 10% 10% 15px 10%;
     max-width: 1300px;
+   }
+
+   #pln-cta-primary {
+     margin: auto;
    }
   
   #pln-cta p{
@@ -228,6 +232,7 @@ margin: 0 10% 0 50px;
     background-color: #ccccccbb;
     font-size: 14pt;
     max-width: 1200px;
+    padding: 10px 3px;
   }
   
   .pln-notice-header{
@@ -587,16 +592,16 @@ text-align: center;
     #pln-recenter {
       margin: 0 auto;
     }
+
+    .footer-sm{
+      margin-top: auto;
+    }
   }
  
  /* Equivalent to Bootstrap Medium */
  @media screen and (max-width: 991px){
   .pln-param-instruct {
     font-size: 10pt;
-  }
-
-  #pln-cta {
-    margin: 0;
   }
 
   #HomePageButton {
@@ -613,9 +618,7 @@ text-align: center;
   #FlightParameters, #Location {
     padding-top: 100px;
   }
-
   
-   
  }
   
  /* Equivalent to Bootstrap Small */
@@ -628,12 +631,13 @@ text-align: center;
     margin-left: 0;
   }
 
+  .footer-sm{
+    font-size: 8pt;
+  }
+
   
  }
 
- /* Additional breakpoint for timeline display */
- @media screen and (max-width: 600px) {
  
- }
  
  

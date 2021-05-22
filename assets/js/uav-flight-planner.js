@@ -133,6 +133,8 @@ function showMenuComponent(sect) {
    var y = document.getElementById(sect + 'Button');
    y.style.textDecoration = 'underline';
 
+   document.getElementById('navbarNavDropdown').className='navbar-collapse show';
+
    document.getElementById('JSSerNo').textContent = '.' + jsfileversion;
    window.history.pushState("", "UAV Flight Planner Home", "#" + sect + "-Top");
    document.getElementById(sect).scrollIntoView();
