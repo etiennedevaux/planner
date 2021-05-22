@@ -579,10 +579,6 @@ The key steps in the testing process are summarised below:
 
 19.  Click on a map and scroll within the map frame
 
-
-
-
-
 ## 8.3 User Story Testing
 
 There are two key user stories:
@@ -593,6 +589,56 @@ There are two key user stories:
 
 ### 8.3.1 Inexperienced Pilots
 
+Inexperienced pilots will follow the following user story:
+
+1.  Go to the address https://etiennedevaux.github.io/planner/#HomePage-Top on a desktop or laptop device
+
+2.  Click on the Get Started Button
+
+3.  Check that Step One is highlighted
+
+4.  On the Flight Parameters page select all the competencies that apply.  After the first selection Step Two should be highlighted and the Reset button displayed.  Competencies can be selected and changed at any point.
+
+5.  Select the Drone Category.  Only one Drone Category can be selected at a time.  Passing over the Drone Categories should highlight each one as the mouse passes over and away.
+
+6.  Once a drone category is selected the permitted flight categories should show as permitted or not and the Next Button should appear.
+
+7.  Click Next.
+
+8. On the Location Page the flight summary, at the top, should reflect the most stringent flight category. Step Three should be highlighted, inviting the user to enter a location.
+
+9.  Enter a UK postcode and press Enter, the Latitude and Longitude should be populated, these can be entered or adjusted independently of the Postcode
+
+10.  Recentre the maps, check that they show the same location and that it corresponds to the Latitude and Longitude.
+
+11.  Click Next, Step Five should be highlighed
+
+12.  Click on Drone Safety Map, check that the Drone Safety Map is the same size as the embedded maps.
+
+13.  Step Six should now be showing.
+
 
 ### 8.3.2 Experienced Pilots
+
+Experienced pilots will move directly to the service or services they most require, and that add value to their own processes:
+
+1.  Go to the address https://etiennedevaux.github.io/planner/#HomePage-Top on a desktop or laptop device
+
+2.  Navigate to the Flight Parameters page
+
+3.  On the Flight Parameters page select all the competencies that apply.  Competencies can be selected and changed at any point.
+
+4.  Select the Drone Category.  Only one Drone Category can be selected at a time.  Passing over the Drone Categories should highlight each one as the mouse passes over and away.
+
+5.  Once a drone category is selected the permitted flight categories should show as permitted or not and the Next Button should appear.
+
+6. On the Location Page the flight summary, at the top, should reflect the most stringent flight category. If no flight category has been selected the user is invited, but not required, to visit the flight parameters pages.
+
+7.  Enter a UK postcode and press Enter, the Latitude and Longitude should be populated, these can be entered or adjusted independently of the Postcode
+
+8.  Re-centre the maps, check that they show the same location and that it corresponds to the Latitude and Longitude.
+
+9.  Click on Drone Safety Map, check that the Drone Safety Map is the same size as the embedded maps.
+
+
 
