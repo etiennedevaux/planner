@@ -12,13 +12,25 @@
 /* END OF VARIABLES */
 
 /* || GLOBAL ELEMENTS */
-  body{
-  font-family: Lato;
-  background-color: var(--bgroundshade);
-  margin: 0;
+
+  *{
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 
-  /* Semantic Only Elements */
+  body{
+      font-family: Lato;
+      background-color: var(--bgroundshade);
+      margin: 0;
+  }
+
+  /* Bootstrap Customisation */
+  .row{
+    margin: 0;
+  }
+
+  /* Semantic Only Elements will aid search engines by providing semantic structure but do not appear to the user */
   .pln-semantic-only {
     display: none;
   }
@@ -31,20 +43,20 @@
 
   /* Styling for the site-wide background image */
   div.bground{
-      width: 100%;
-      height: 100%;
-      background-image: URL("../images/ingenuity.png"); 
-      z-index: -1;
-      padding: 0px;
-      position: fixed;
-      background-size: cover;
-      margin: 0px;
-      animation-fill-mode: forwards;
-      background-position: center center;
-      opacity: 0.2;
-      filter: grayscale(0.9);
-      animation-name: bground-blur;
-      animation-duration: 3s;
+    width: 100%;
+    height: 100%;
+    background-image: URL("../images/ingenuity.png"); 
+    z-index: -1;
+    padding: 0px;
+    position: fixed;
+    background-size: cover;
+    margin: 0px;
+    animation-fill-mode: forwards;
+    background-position: center center;
+    opacity: 0.2;
+    filter: grayscale(0.9);
+    animation-name: bground-blur;
+    animation-duration: 3s;
   }
 
   /* Fixed Buttons */
@@ -69,93 +81,76 @@
     margin-left: 25%;
   }
 
-  #pln-next-location{
-  }
-
-  #pln-param-reset{
-  }
-
   #pln-dronesafety {
     display: block;
     width: 150px;
   }
-
   /* End of Styling for Fixed Buttons */
 
   /* Styling for the 'Virtual Page' div elements */
   div.MenuComponent{
-  padding: 100px 0 120px 0;
-  margin-bottom: 60px;
+    padding: 100px 0 120px 0;
+    margin-bottom: 60px;
   }
 
   .pln-param-instruct{
-  font-size: 14pt;
-  background-color: #ffffff00;
-  font-weight: 300;
-  line-height: 1;
-  margin: 0;
-  border-radius: 2px;
-  padding: 2px;
-  min-height: 50px;
+    font-size: 14pt;
+    background-color: #ffffff00;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+    border-radius: 2px;
+    padding: 2px;
+    min-height: 50px;
   }
 
   .pln-step{
-  font-size: 14pt;
-  margin: 2px 10px 2px 0;
-  color: rgb(146, 10, 10);
-  }
-
-  *{
-  margin: 0;
-  padding: 0;
-  border: 0;
+    font-size: 14pt;
+    margin: 2px 10px 2px 0;
+    color: rgb(146, 10, 10);
   }
 
   .pln-steps{
-  background-color: var(--footergrey);
-  padding: 5px;
-  color: #000000;
+    background-color: var(--footergrey);
+    padding: 5px;
+    color: #000000;
   }
 
   .pln-btn{
-  background-color: #007bff;
-  color: #ffffff;
-  margin: 2px;
-  padding: 2px;
-  border-radius: 2px;
-  cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 2px;
+    cursor: pointer;
   }
 /* END OF GLOBAL ELEMENTS */
 
 /* || NAVIGATION */
 
-#Gallery{
-margin-bottom: 0px;
-}
+  #HomePageButton{
+    margin-left: 80px;
+  }
 
-#HomePageButton{
-  margin-left: 80px;
-}
+  .nav-item {
+    width: 100%;
+  }
 
-.nav-item {
-  width: 100%;
-}
+  #menu{
+    background-color: #000000;
+    width: 80%;
+    z-index: 12;
+  }
 
-#menu{
-  background-color: #000000;
-  width: 80%;
-  z-index: 12;
-}
+  .MenuButton{
+    width: 100%;
+  }
 
-.MenuButton{
-  width: 100%;
-}
+  .navbar navbar-nav a{
+    font-weight: bold;
+  }
 
-.navbar navbar-nav a{
-font-weight: bold;
-}
-
-.navbar{
+  .navbar{
     margin-bottom: 0;
     border: 0;
     width: 100%;
@@ -164,41 +159,73 @@ font-weight: bold;
     top: 0;
     height: 100px;
     z-index: 5;
-}
+  }
 
-.navbar .navbar-toggler{
-border: 0;
-}
+  .navbar .navbar-toggler{
+    border: 0;
+  }
 
-.navbar .navbar-toggler{
-border: 0;
-}
+  .navbar .navbar-toggler{
+    border: 0;
+  }
 
-nav{
-width: 100%;
-padding: 0px;
-margin: 0px 0px 0px 0px;
-display: block;
-background-color: #000000cc;
-}
+  nav{
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    display: block;
+    background-color: #000000cc;
+  }
 
-#nav{
-margin: 0 10% 0 50px;
-}
+  #nav{
+    margin: 0 10% 0 50px;
+  }
 
-.menu_span{
- color: #ffffff;
- margin: 0 50px;
-}
+  .menu_span{
+  color: #ffffff;
+  margin: 0 50px;
+  }
 
-.nav-item{
- cursor: pointer;
-}
+  .nav-item{
+  cursor: pointer;
+  }
 
-.pln-help{
-  font-size: 150%;
-  color: #ffffffff;
-}
+  .pln-help{
+    font-size: 150%;
+    color: #ffffffff;
+  }
+
+  .logoleft{
+    border-radius: 50%;
+    width: 80px;
+    padding: 0;
+    margin: 0 10px 0 0;
+    border-width: 0;
+  }
+    
+  header{
+    overflow: hidden;
+    margin: 0;
+  }
+    
+  .header-lg{
+    font-size: 130%;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    text-align: center;
+  }
+    
+  .header-sm{
+    font-size: 90%;
+    font-weight: 300;
+    margin: 0 0 0 5px;
+    padding: 0;
+    line-height: 100%;
+    letter-spacing: 1px;
+    text-align: center;
+  }
 /* END OF NAVIGATION */
 
 /* || HOME PAGE */
@@ -250,71 +277,119 @@ margin: 0 10% 0 50px;
   }
 /* END OF HOME PAGE */
 
-/* || FOOTER */
+/* || FLIGHT PARAMETERS */
 
-footer{
- position: fixed;
- bottom: 0;
- width: 100%;
- text-align: center;
- background-color: var(--footergrey);
- height: 60px;
- z-index: 5;
-}
+  /* Styling for competency boxes on the flight parameters page */
+  .pln-comp{
+    border: 2px solid black;
+    padding: 5px;
+    height: 120px;
+  }
 
-footer p{
-color: #ffffffff;
-margin: 0;
-}
+  /* Styling for drone category boxes on the flight parameters page */
+  .pln-dronecat{
+    border: 2px solid black;
+    height: 67px;
+    padding: 3px;
+    font-size: 10pt;
+    margin: 0 5px;
+  }
 
-#CSSSerNo::before{
-content: var(--cssfileversion);
-}
+  .pln-flightcat{
+    border: 2px solid;
+    height: 100px;
+    padding: 5px;
+  }
 
-.footer-sm{
- font-size: 100%;
- color: #fff;
- margin-top: 30px;
-}
+  /* Labels for the competencies on the flight parameters page. */
+  .pln-comp-lbl{
+  font-size: 110%;
+  font-weight: 600;
+  }
 
-#CSSSerNo::before{
-content: var(--cssfileversion);
-}
+  /* Styling for competency checkboxes */
+  .pln-comp input{
+  margin-left: 5px;
+  }
 
-/* END OF FOOTER */
+  /* Styling for description box for competencies. */
+  .pln-comp-desc{
+  display: flex;
+  align-items: center;
+  font-size: 12pt;
+  }
 
+  /* Styling that applies to all elements in the drone categories column */
+  #pln-dronecategories{
+  color: #000055;
+  height: 800px;
+  padding: 0;
+  }
 
-.logoleft{
-border-radius: 50%;
-width: 80px;
-padding: 0;
-margin: 0 10px 0 0;
-border-width: 0;
-}
+  /* Styling that applies to all elements in the flight categories column */
+  #pln-flightcategories{
+  color: #de8f00;
+  height: 800px;
+  padding: 0;
+  }
 
-header{
-overflow: hidden;
-margin: 0;
-}
+  .pln-comp-head{
+  height: 40px;
+  }
 
-.header-lg{
-font-size: 130%;
-font-weight: 500;
-margin: 0;
-padding: 0;
-line-height: 100%;
-text-align: center;
-}
+  .pln-dronecat-head{
+  height: 25px;
+  font-weight: 600;
+  font-size: 14pt;
+  }
 
-.header-sm{
-font-size: 90%;
-font-weight: 300;
-margin: 0 0 0 5px;
-padding: 0;
-line-height: 100%;
-letter-spacing: 1px;
-text-align: center;
-}
+  /* Styling that applies to all elements in the competencies column */
+  #pln-competencies{
+  color: #000000;
+  height: 800px;
+  padding: 0;
+  }
+
+  /* Styling for headers of sections on the flight parameters page. */
+  .pln-params-h1{
+  font-weight: 600;
+  font-size: 24pt;;
+  margin: 10px 0 10px 3px;
+  }
+
+  #pln-step-two{
+  font-weight: 300;
+  background-color: #ffffff00;
+  }
+
+  #pln-result-a{
+  font-weight: 100;
+  background-color: #ffffff00;
+  }
+
+  .pln-comp, .pln-dronecat, .pln-flightcat{
+  background-color: #dddddddd;
+  margin: 0 5px;
+  }
+
+  .pln-flight-yes{
+  color: var(--flightallowed);
+  }
+
+  .pln-flight-no{
+  color: var(--flightnotallowed);
+  text-decoration: line-through;
+  }
+
+  .pln-btn-next{
+  margin: auto;
+  }
+
+   .pln-flightcat-head{
+  font-weight: 900;
+  }
+
+/* END OF FLIGHT PARAMETERS */
 
 /* || LOCATION PAGE */
 
@@ -323,228 +398,123 @@ text-align: center;
   }
 
   #pln-osmap{
-  height: 580px;
+    height: 580px;
   }
 
   #pln-satview{
-  height: 580px;
+    height: 580px;
+  }
+
+  #pln-dsmap-1, #pln-param-rtn {
+  margin: 0;
+  background-color: #0078ff;
+  color: #ffffff;
+  padding: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11pt;
+  }
+
+  #pln-step-four-1{
+    padding-right: 1px;
+  }
+
+  #pln-step-four-2{
+  padding-left: 1px;
+  }
+
+  #pln-recenter{
+  margin: 10px auto;
+  width: 100%;
+  }
+
+  #pln-dsmap-2{
+  margin: 10px auto;
+  width: 80%;
+  }
+
+  #pln-flsummary{
+  font-size: 14pt;
+  text-align: center;
+  background-color: var(--footergrey);
+  color: #920a0a;
+  }
+
+  #pln-geo{
+  height: 100%;
+  padding: 0;
+  }
+
+  #pln-maps{
+  padding: 0;
+  }
+
+  .pln-location-frm{
+  padding: 5px;
+  }
+
+  .pln-steps-location{
+  padding: 0;
   }
 
 /* END OF LOCATION PAGE */
 
-/* || FLIGHT PARAMETERS */
-
-/* Styling for competency boxes on the flight parameters page */
-.pln-comp{
- border: 2px solid black;
- padding: 5px;
- height: 120px;
+/* || FOOTER */
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--footergrey);
+  height: 60px;
+  z-index: 5;
 }
 
-/* Styling for drone category boxes on the flight parameters page */
-.pln-dronecat{
- border: 2px solid black;
- height: 67px;
- padding: 3px;
- font-size: 10pt;
- margin: 0 5px;
+footer p{
+  color: #ffffffff;
+  margin: 0;
 }
 
-.pln-flightcat{
- border: 2px solid;
- height: 100px;
- padding: 5px;
+#CSSSerNo::before{
+  content: var(--cssfileversion);
 }
 
-/* Labels for the competencies on the flight parameters page. */
-.pln-comp-lbl{
- font-size: 110%;
- font-weight: 600;
+.footer-sm{
+  font-size: 100%;
+  color: #fff;
+  margin-top: 30px;
 }
 
-/* Styling for competency checkboxes */
-.pln-comp input{
- margin-left: 5px;
+#CSSSerNo::before{
+  content: var(--cssfileversion);
 }
-
-/* Styling for description box for competencies. */
-.pln-comp-desc{
- display: flex;
- align-items: center;
- font-size: 12pt;
-}
-
-/* Styling that applies to all elements in the drone categories column */
-#pln-dronecategories{
- color: #000055;
- height: 800px;
- padding: 0;
-}
-
-/* Styling that applies to all elements in the flight categories column */
-#pln-flightcategories{
- color: #de8f00;
- height: 800px;
- padding: 0;
-}
-
-.pln-comp-head{
- height: 40px;
-}
-
-.pln-dronecat-head{
- height: 25px;
- font-weight: 600;
- font-size: 14pt;
-}
-
-/* Styling that applies to all elements in the competencies column */
-#pln-competencies{
- color: #000000;
- height: 800px;
- padding: 0;
-}
-
-/* Styling for headers of sections on the flight parameters page. */
-.pln-params-h1{
- font-weight: 600;
- font-size: 24pt;;
- margin: 10px 0 10px 3px;
-}
-
-
-
-.pln-dronecat-desc{
-}
-
-#pln-step-one{
-}
-
-#pln-step-two{
- font-weight: 300;
- background-color: #ffffff00;
-}
-
-#pln-result-a{
- font-weight: 100;
- background-color: #ffffff00;
-}
-
-.pln-comp, .pln-dronecat, .pln-flightcat{
- background-color: #dddddddd;
- margin: 0 5px;
-}
-
-.pln-flight-yes{
- color: var(--flightallowed);
-}
-
-.pln-flight-no{
- color: var(--flightnotallowed);
- text-decoration: line-through;
-}
-
-
-
-.pln-btn-next{
- margin: auto;
-}
-
-.row{
- margin: 0;
-}
-
-.pln-flightcat-head{
- font-weight: 900;
-}
-
-/* END OF FLIGHT PARAMETERS */
-
-/* || LOCATION PAGE */
-
-#pln-dsmap-1, #pln-param-rtn {
- margin: 0;
- background-color: #0078ff;
- color: #ffffff;
- padding: 1px;
- border-radius: 3px;
- cursor: pointer;
- font-size: 11pt;
-}
-
-#pln-step-four-1{
- padding-right: 1px;
-}
-
-#pln-step-four-2{
- padding-left: 1px;
-}
-
-#pln-recenter{
- margin: 10px auto;
- width: 100%;
-}
-
-#pln-dsmap-2{
- margin: 10px auto;
- width: 80%;
-}
-
-#pln-flsummary{
- font-size: 14pt;
- text-align: center;
- background-color: var(--footergrey);
- color: #920a0a;
-}
-
-#pln-geo{
- height: 100%;
- padding: 0;
-}
-
-#pln-maps{
- padding: 0;
-}
-
-.pln-location-frm{
- padding: 5px;
-}
-
-.pln-steps-location{
- padding: 0;
-}
-
-/* END OF LOCATION PAGE */
+/* END OF FOOTER */
 
 /* || ANIMATIONS */
-@keyframes bground-blur{
-  from{
-     transform: scale(1);
-     filter: blur(10px);
- 
-   }
-   to{
-     transform: scale(1.1);
-     filter: blur(1px);
-   }
+  @keyframes bground-blur{
+    from{
+      transform: scale(1);
+      filter: blur(10px);
+  
+    }
+    to{
+      transform: scale(1.1);
+      filter: blur(1px);
+    }
  }
- /* END OF ANIMATIONS */
-
+/* END OF ANIMATIONS */
 
 /* || MEDIA QUERIES*/
-  /* For extra-wide 4k screens */
+  /* For extra-wide 4k screens, currently blank but left in as a placeholder to aid future collaboration */
   @media screen and (min-width: 2400px){
- 
   }
   
-  /* Equivalent to Bootstrap Extra Extra Large */
+  /* Equivalent to Bootstrap Extra Extra Large, currently blank but left in as a placeholder to aid future collaboration */
   @media screen and (min-width: 2000px){
-   
   }
  
- /* Equivalent to Bootstrap Extra Large */
+ /* Equivalent to Bootstrap Extra Large, currently blank but left in as a placeholder to aid future collaboration */
   @media screen and (max-width: 1999px){
-  
   }
  
  /* Equivalent to Bootstrap Large */

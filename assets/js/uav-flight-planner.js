@@ -1,9 +1,9 @@
 //* Global Variables *//
-   var jsfileversion = "0500";
-   var dlat = 51.477976;
-   var dlng = 0.000001;
-   var originalFlSummary;
-   var i;
+   var jsfileversion = "0501";
+   var dlat = 51.477976; // * Default Latitude, centring on Greenwich, will be used if the Latitude control is left blank*//
+   var dlng = 0.000001; // * Default Longitude, centring on Greenwich, will be used if the Longitude control is left blank*//
+   var originalFlSummary; // * Global Variable Used in Multiple Functions *//
+   var i; // * Global Variable Used in Multiple Functions *//
 
 //* Derived from The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  *//
 function aaMapShow() {
@@ -19,7 +19,7 @@ function aaMapShow() {
    });
 }
 
-//* Function aiming to consolidate all onload scripts into a single place, keeping the HTML cleaner *//
+//* Function aiming to consolidate onload scripts into a single place, keeping the HTML cleaner *//
 function domLoaded() {
 
    document.getElementById('navbarNavDropdown').className = 'noshow navbar-collapse collapse';
@@ -140,7 +140,6 @@ function showMenuComponent(sect) {
    document.getElementById(sect).scrollIntoView();
 }
 
-
 function GetMap(lat, long) {
    var map = new Microsoft.Maps.Map('#pln-osmap', {});
 
@@ -157,7 +156,6 @@ function GetMap(lat, long) {
    var pin = new Microsoft.Maps.Pushpin(loc);
    map.entities.push(pin);
 }
-
 
 function initialize() {
 
