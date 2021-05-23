@@ -1,5 +1,5 @@
 # README Version Details
-README Version: 0049;  
+README Version: 0050;  
 HTML Version: 0225;  
 CSS Version: 0315;  
 JavaScript Version: 0501;
@@ -8,9 +8,25 @@ JavaScript Version: 0501;
 
 ## 1.1 Project Summary
 
-The UAV (Unmanned Aerial Vehicles, commonly known as drones) Flight Planner helps remote pilots to understand how to plan flights under the CAA rules introduced at the start of 2021.
+Unmanned Aerial Vehicles or UAVs, commonly known as drones are bcoming ever more widely used, as a result the rules on the use of drones were changed considerably at the start of 2021.  
 
-The new CAA rules on the use drones are based on the European Legislation, and bring a strong degree of harmonisation and move in a direction that matches the level of regulation to the risks represented by the combination of the drone and the qualifications of the pilot.  However, the new structure is, especially when first reviewed, complex and is further complicated by the addition of transitional arrangements for existing drones.
+The UAV Flight Planner helps remote pilots to understand how to plan flights under the CAA rules introduced at the start of 2021.
+
+The new CAA rules on the use drones are based on the European Legislation, and bring a strong degree of harmonisation and move in a direction that matches the level of regulation to the risks represented by the combination of the drone and the qualifications of the pilot.  
+
+The flights covered by this area of legislation are collectively referred to as the Open Category Flights.  
+
+However, the new structure is, especially when first reviewed, complex and is further complicated by the addition of transitional arrangements for existing drones. 
+
+For drones to be used safely and legally it is important that pilots understand what they can, and cannot, do.
+
+The site is aimed at UK-based drone pilots as the CAA rules are UK-sepcific.
+
+The site uses UK postcodes to give locations, convering those to latitude and longitude which can be further localised.
+
+The site uses UK ordnance survey mapping, provide by Bing Maps.
+
+The geolocation tools can be used beyond the UK, but the rules the site incorporates are UK only.
 
 ## 1.2 Project Goals
 
@@ -23,11 +39,25 @@ The goals for the site are to:
 
 # 2 Responsive Mockup
 
-The site itself will have three main pages, a link to open an external service in a Javascript generated page and a help link that will generated a new page with an embedded  YouTube video that walks a user through the key functionality of the site. 
+The site itself will have three main pages and two auxilliary pages.
+
+The three main pages are:
+
+* Home Page - engage the user, give a brief context and main call to action.
+
+* Flight Parameters Page - allow the user to enter their qualifications, the drone they intend to fly and then to tell them what categories of flight are permitted.
+
+* Flight Location Page - give geographic information about their intended location.
+
+The two auxilliary pages are:
+
+* Drone Safety Map - a link to open an external service in a Javascript generated page, giving flight specific information.
+
+* Help Page - a new page with an embedded  YouTube video that walks a user through the key functionality of the site. 
 
 The three main pages need to be adapted for the different devices.  The two generated pages will open in a small window on the desktop version and will open as separate full screen tabs on tablets and mobile phones.
 
-Desktop use is probably the main means of access to the site, but the site does need to be available on tablets and mobile phones.
+Desktop use is the main means of access to the site, but the site does need to be available on tablets and mobile phones.
 
 The page designs shown below evolved during the development process, with iterative adaptation of the scope.  Earlier versions are on GitHub.  The mockups were created using the [Pencil Project Wireframe Designer](https://pencil.evolus.vn/), the source files are on GitHub should collaborators wish to revisit them.
 
@@ -65,7 +95,7 @@ The Tablet version of the Flight Parameters page aims to keep all of the flight 
 
 ![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_tablet_v2.png) 
 
-However, there is an important balance to draw between minimising scrolling and clarity of text.  User interactions and feedbackm may alter this, but the present page does have some vertical scrolling.  To make this more intutitive content at the bottom is shown behind a translucent footer, inviting the user to scroll downwards.
+However, there is an important balance to draw between minimising scrolling and clarity of text.  User interactions and feedback may alter this, but the present page does have some vertical scrolling.  To make this more intutitive content at the bottom is shown behind a translucent footer, inviting the user to scroll downwards.
 
 ### 2.2.3 Tablet Location Page
 
@@ -90,7 +120,7 @@ The Mobiile Phone version of the Flight Parameters page aims to keep all of the 
 
 ![Flight Parameters](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_phone_v2.png) 
 
-User interactions and feedback may alter this, but the present page has extensive vertical scrolling.  In general mobile phone users will be comofrtable with scrolling.  To make this more intutitive content at the bottom is shown behind a translucent footer, inviting the user to scroll downwards.  An alternative approach would be to have multiple sub-pages from a single parent page, and this may be considered for future implementations is user feedback suggests it.
+User interactions and feedback may alter this, but the present page has extensive vertical scrolling.  In general mobile phone users will be comofrtable with scrolling.  To make this more intutitive content at the bottom is shown behind a translucent footer, inviting the user to scroll downwards.  An alternative approach would be to have multiple sub-pages from a single parent page, and this may be considered for future implementations if user feedback suggests it is preferable.
 
 ### 2.3.3 Mobile Location Page
 
@@ -109,7 +139,7 @@ The drone safety map opens in a separate page, created by Javascript and loaded 
 
 When opening on a desktop device the map opens in a separate window, of a predetermined size that will adjust to match the size of the embedded maps.
 
-When opening on a tablet or mobile phone it will open in a new tab, taking up the full screen space available.
+When opening on a tablet or mobile phone it will open in a new tab, taking up the full screen space available within that tab.
 
 The site itself, prodived by Altitude Angel, is responsive and therefore does not require any additional refactoring for different devices.
 
@@ -160,7 +190,7 @@ The space in the footer area is also used for fixed buttons, typically NEXT and 
 
 ### 3.1.4 Help
 
-The Help Page is described in section 1.2.5  
+The Help Page is described in more detail above. 
 
 The page is, at this stage, an embedded YouTube video and provides the standard YouTube functionality.  The window can be closed in the usual way, and can be opened via the Navigation bar, which is always visible.
 
@@ -174,9 +204,15 @@ When GET STARTED is selected the first step is highlighted.  As the actions are 
 
 The idea is that the steps are there to guide users, but users can use any of the other functionality at any time, without the need to follow every step in the default process.
 
-#### 3.1.6 Flight Parameters
+### 3.1.6 Flight Parameters
 
-The Flight Paramters Page needs to represent all of the pilot competencies, those being familiarity, training and qualifications, of which there are five, drone categories, of which there are effectively nine once subcategories are included, and the flight categories, of which there are six if subcategories are included.
+The Flight Paramters Page needs to represent:
+
+1.  Pilot Competencies, those being familiarity, training and qualifications, of which there are five.  
+
+2.  Drone Categories, of which there are effectively nine once subcategories are included.
+
+3.  Flight Categories, of which there are six when subcategories are included.
 
 The need, that this site will address, is for pilots, or potential pilots, to select their qualification level and the drone they intend to use, and to then apply the CAA rules to show the flight categories that are available.
 
@@ -192,7 +228,6 @@ Pilots or prospective pilots need an easy way of changing parameters to see what
 
 See the post-scoping wireframe ![Flight Parameters Wireframe](https://etiennedevaux.github.io/planner/project-documents/wireframes/flight_parameters_desktop_v2.png)
 
-
 ### 3.1.7 Flight Location
 
 The Flight Location page has alot of information on a single screen.  This is so that a pilot can see that information together and consider all factors in a single context.  This gives the pilot a feel for the location, almost as if they had visited the location.
@@ -207,7 +242,11 @@ If a flight category has not been selected the user will be invited to return to
 
 #### 3.1.7.2 Geo-Location Data 
 
-The site is aimed at users with a wide range of mapping skills.  Even for experienced commercial pilots precise mapping data is often not available for target locations, especially as commissioning clients do not generally know the co-ordinates for the filming locations.  However, all UK locations are covered by a postcode, e.g. SW1A 1AA (Buckingham Palace) or SW19 5AG (Wimbledon All England Lawn Tennis).  The UK Royal Mail manages the postcode database, and makes the information, which in includes latitude and longitude for all postcodes, available via a public API.
+The site is aimed at users with a wide range of mapping skills.  Even for experienced commercial pilots precise mapping data is often not available for target locations, especially as commissioning clients do not generally know the latitude and longitude for the filming locations.  
+
+However, this site targets the use of drones in the UK, and all UK locations are covered by a postcode, e.g. SW1A 1AA (Buckingham Palace) or SW19 5AG (Wimbledon All England Lawn Tennis).  
+
+The UK Royal Mail manages the postcode database, and makes the information, which in includes latitude and longitude for all postcodes, available via a public API.
 
 Accessing this API so that the user can enter a postcode and be given a mappable latitude and longitude is a key function from which following information draws.
 
@@ -217,7 +256,11 @@ Bing Maps is considered an important tool amongst UK-based UAV pilots, as it pro
 
 #### 3.1.7.4 Google Maps
 
-Google Maps is also considered an important tool amongst UAV pilots as it provides the most up to date and detailed aerial views, plus the ability to select a street level view.  When combined with a traditional map, such as the UK ordnance survey, this provides thorough insite into the environment.  This insight ensures that a drone pilot can become familiar with a location that they have never visited.  Seeing this alongside the OS Map saves switching between maps and helps the pilot to align visual images with mapped features at a glance.
+Google Maps is also considered an important tool amongst UAV pilots as it provides the most up to date and detailed aerial views, plus the ability to select a street level view.  
+
+One of the unique points for this site is that it puts Bing Maps and Google Maps on the same page, and ties it into the UK postcode database.  In that way the three primary geolocation tools available to cover the UK are visible together in a single place.
+
+When these three sources are combined this provides a simple and thorough insite into the environment.  This insight ensures that a drone pilot can become familiar with a location that they have never visited.  Seeing this alongside the OS Map saves switching between maps and helps the pilot to align visual images with mapped features at a glance.
 
 #### 3.1.7.5 Altitude Angel
 
@@ -225,7 +268,7 @@ The above maps are extremely powerful and detailed, but they do not contain any 
 
 Altitude Angel produce mapping layers that provide all of this information.  Those are available via APIs and via the freely accessible Drone Safety Map - the APIs were considered and tested as part of the POC for this project but the freely accessible version better met the overall requirements.
 
-This map is incorporated as a layer that goes over the embedded maps, this functionality can be seen by clicing on the link below
+This map is incorporated as a layer that goes over the embedded maps, this functionality can be seen by clicking on the link below
 
 [Drone Safety Map](https://youtu.be/tMLuqcFOD-I)
 
@@ -286,25 +329,37 @@ JSHint also indentified five unused variables.
 
 These are all referenced from within the HTML page.
 
-## 4.4 Fixed Bugs
+## 4.4 Lighthouse Score
 
-### 4.4.1 SWITCH CASE and Safari 
+The Lighthouse Score for the site is shown here
+
+[Lighthouse Score](https://etiennedevaux.github.io/planner/project-documents/validators/lighthouse.png)
+
+Overall the Lighthouse scores are good.  Search Engine Optimisation and Accessibility are both in the 90s.  Best Practices at 87% suggests some further optimisations.  Close review shows that much of these would relate to external content.
+
+The key area for further work is the performance area.  Overall none of the user feedback or testing raised issues with performance, but the key recommendations for image sizing and some small restructuring of Javascript and CSS are worth pursuing.  Some of these are due to script and CSS that is left in as placeholder content for future development.
+
+## 4.5 Fixed Bugs
+
+### 4.5.1 SWITCH CASE and Safari 
 
 During user testing feedback from Mac users, and testing on Mobile devices, gave problems in the Javascript for calculating the permitted flight categories.  To overcome this the SWITCH CASE was changed to IF and ELSE IF statements.  The statement length is similar so this approach is equally effective and avoids some browser compatibility issues.  However, making this switch did not fully resolve the issue - but as it is an equally effective approach it was left in place.
 
-### 4.4.2 attributeStyleMap and Safari
+### 4.5.2 attributeStyleMap and Safari
 
-The user testing and iOS testing on tablets and phones would not work with the attrubuteStyleMap command as this is not yet available in some versions of Safari, up to Version 14.1.  This was therefore replaced by reading in the attribute styles from the DOM and storing them in arrays so that they could be re-applied.  This solution worked well.
+The user testing and iOS testing on tablets and phones would not work with the attrubuteStyleMap command as this is not yet available in some versions of Safari, up to Version 14.1.  This was therefore replaced by reading in the attribute styles from the DOM and storing them in arrays so that they could be re-applied.  This solution worked well and the issue with Safari is fully resolved.
 
-### 4.4.3 Small Text in Flight Categories and Drone Categories
+In this case the Safari testing was completed by a fellow drone pilot.  Validating HTML on Safari on a desktop or laptop machine is often a challenge for people working on a PC, but it is an important area of testing as the Safari Apple combination will represent a large group of users.
 
-On smaller screens, including desktop screens, the text in the Drone Categories and Flight Categories needed to be very small to minimise scrolling.  However the text is important.  So an event handler was added so that when the mouse passed over the box the text is enlarged and emphasised.  As the mouse passes over this reverts to its original.  This also led to 4.4.2 which was resolved as above.
+### 4.5.3 Small Text in Flight Categories and Drone Categories
 
-### 4.4.4 Selecting Competencies and Drone Categories
+On smaller screens, including desktop screens, the text in the Drone Categories and Flight Categories needed to be very small to minimise scrolling.  However the text is important.  So an event handler was added so that when the mouse passed over the box the text is enlarged and emphasised.  As the mouse passes over this reverts to its original.  This also led to teh error described above, which was resolved as described.
 
-In the original design it was necessary to click on the actual radio button or checkbox.  This made the process slow, and users testing the interface, reported that this was not intuitive.  To overcome this an event handler was added to the full text box, such that the checkbox or radio button would be toggled when any part of the textbox was clicked.  This also had to handle the actual checkbox or radion button being clicked, as this would trigger two event handlers.
+### 4.5.4 Selecting Competencies and Drone Categories
 
-## 4.5 Unfixed Bugs
+In the original design it was necessary to click on the actual radio button or checkbox.  This made the process slow, and users testing the interface, reported that this was not intuitive.  To overcome this an event handler was added to the full text box, such that the checkbox or radio button would be toggled when any part of the textbox was clicked.  This also had to handle the actual checkbox or radio button being clicked, as this would trigger two event handlers, which coudl cancel each other out.
+
+## 4.6 Unfixed Bugs
 
 Use of eval is not recommended.  These sections of code will need to be reviewed to see if an improved solution can be found.
 
@@ -392,11 +447,11 @@ The goal for this round of development is to make the site available for
 
 Both of these are achieved by making the site available as an externally facing URL via the GitHub pages.
 
-To add GitHub pages to a site (or to change setting)
+To add GitHub pages to a site (or to change settings)
 
 1.  Logon to GitHub
 2.  Go to Repositories
-3.  Select the desired repository (e.g. warksar)
+3.  Select the desired repository (e.g. planner)
 4.  Go to Settings
 5.  Scroll down to the GitHub Pages section
 6.  In the Source section click on the dropdown (default value None, but maybe already configured to point to a given branch such as Main)
@@ -421,11 +476,13 @@ To deploy to different server
 6. Folow the test procedures set out in this document
 7. Test the above on a Desktop machine, a Tablet and a Mobile phone.
 
-### 5.10 Index File
+## 5.10 Index File
 
 The index.html file is the only html file for the site.  The single file contains all pages and all static html content.
 
 Javascript, contained in the file uav-flight-planner.js, displays and hides the content as required for each page of the site.
+
+CSS, contained in the file uav-flight-planner.css, determines the initial styling and visibility for each page.
 
 ## 5.11 Help Page
 The Help page is created via Javascript whenever the user selects the help icon.  The Javascript creates the page, and then inserts the embed code for a YouTube video, giving a brief walkthrough of the site.
@@ -433,7 +490,6 @@ The Help page is created via Javascript whenever the user selects the help icon.
 ## 5.12 Drone Safety Map
 
 The Drone Safety Map page is created via Javascript whenever the user selects the help icon.  The Javascript creates the page, and then loads the HTML content from the URL https://www.dronesafetymap.com
-
 
 ## 5.13 Assets
 
@@ -447,7 +503,7 @@ The Project Documents folder (project-documents) contains information and files 
 
 # 6 Proof of Concept
 
-The strategy outlined above is dependent on the technical feasibility of the following items:
+The strategy outlined at start of this document is dependent on the technical feasibility of a number of items.  Before finalising the strategy it was necessary to create a series of brief 'Proof of Concept' files for the following items:
 
 ## 6.1  Javascript Objects to Provide Drone Categories, Flight Categories and Pilot Competencies Data
 
@@ -459,7 +515,7 @@ This has also been covered in the Code Institute module Interactive Front End De
 
 ## 6.3 Link to Google StreetView API
 
-The POC file is called [googlestreetview](https://etiennedevaux.github.io/planner/projectdocuments/poccode/googlestreetview.html) and provides the latitude and longitude in the correct format for a a chosen location.  For the location used in this POC the map and the streetview show side by side.  However, if we change to [googlestreetview2](https://etiennedevaux.github.io/planner/projectdocuments/poccode/googlestreetview2.html), which is by an obscure lake in County Cavan, and arguably a more likely flight location, then we get a blank screen - which is a poor user experience.
+The POC file is called [googlestreetview](https://etiennedevaux.github.io/planner/project-documents/poccode/googlestreetview.html) and provides the latitude and longitude in the correct format for a a chosen location.  For the location used in this POC the map and the streetview show side by side.  However, if we change to [googlestreetview2](https://etiennedevaux.github.io/planner/project-documents/poccode/googlestreetview2.html), which is by an obscure lake in County Cavan, and arguably a more likely flight location, then we get a blank screen - which is a poor user experience.
 
 ## 6.4 Link to Government Postcode Checker API
 
@@ -469,14 +525,14 @@ This data is feely available from the [*Open Postcode Geo*](https://www.gettheda
 
 A proof of concept page has been created to ensure that the technology could return decimal latitude and longitude, suitable for use in both the Google Maps and Altitude Angel APIs, and is stored within the project space on GitHub.
 
-The POC file is called [PostCodeLookup](https://etiennedevaux.github.io/planner/projectdocuments/poccode/PostCodeLookup.html) and provides the latitude and longitude in the correct format for a single postcode (CV31 3PE).  The code to input any postcode was not required to prove the concept, but will be within the final project.
+The POC file is called [PostCodeLookup](https://etiennedevaux.github.io/planner/project-documents/poccode/PostCodeLookup.html) and provides the latitude and longitude in the correct format for a single postcode (CV31 3PE).  The code to input any postcode was not required to prove the concept, but will be within the final project.
 
 ## 6.5 Link to Altitude Angel Drone Flight API
 
 The smooth operation of this site requires mapping of proposed flight locations.  On its own this is sufficient for the core strategy.  However that does still leave the users needing to cross-reference with air traffic data.  Using the Altitude Angel API an air traffic map can be integrated.  The API for this is commercial, and offers a 1 month free trial.  Altitude Angel have agreed to grant me free access for academic purposes until the end of August 2021, allowing me to incorporate it into my project.  Should problems occur then this feature may need to be deprecated. 
 
 
-THe POC file is called [AltititudeAngelAPI](https://etiennedevaux.github.io/planner/projectdocuments/poccode/AltitudeAngelAPI.html) and provides a surface level air traffic map for a given latitude and longitude.
+THe POC file is called [AltititudeAngelAPI](https://etiennedevaux.github.io/planner/project-documents/poccode/AltitudeAngelAPI.html) and provides a surface level air traffic map for a given latitude and longitude.
 
 The POC file was provided by Altitude Angel and was taken from the sample source code at [https://developers.altitudeangel.com/](https://developers.altitudeangel.com/)  
 **NB Requires registration and login.**
@@ -485,7 +541,7 @@ The POC file was provided by Altitude Angel and was taken from the sample source
 
 Google maps is generally seen as the *Goto* mapping service.  Within the UK Bing Maps provides an additional service that Google Maps does not, that being access to the Ordnance Survey mapping for the country.  This mapping provides an outstanding level of detail, authority and familiarity for UK based navigation.
 
-THe POC file is called [BingMapsAPI](https://etiennedevaux.github.io/planner/projectdocuments/poccode/BingMapsAPI.html) and provides a surface level air traffic map for a given latitude and longitude.
+THe POC file is called [BingMapsAPI](https://etiennedevaux.github.io/planner/project-documents/poccode/BingMapsAPI.html) and provides a surface level air traffic map for a given latitude and longitude.
 
 
 The POC file was taken from the sample source code at the [Bing Maps SDK](https://www.bing.com/api/maps/sdk/mapcontrol/isdk/)
@@ -493,9 +549,12 @@ The POC file was taken from the sample source code at the [Bing Maps SDK](https:
 # 7 Credits
 
 ## 7.1 Content Credits
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
 
-You can break the credits section up into Content and Media, depending on what you have included in your project.
+The content for this section was created by the author.
+
+Information on pilot competencies, drone categories and fligth categories is drawn from the CAA [CAP 722](https://publicapps.caa.co.uk/modalapplication.aspx?appid=11&mode=detail&id=415) and the [Drone Code](https://dronesafe.uk/drone-code/).  
+
+Both provided by the [UK Civil Aviation Authority](https://www.caa.co.uk/).
 
 ## 7.2 Media Credits
 
@@ -504,6 +563,10 @@ The site background image is taken from NASA, showing an artists impression of t
 https://www.nasaspaceflight.com/2021/03/nasa-preparing-ingenuity-enabling-future-missions/
 
 The Hero Image on the Home Page was supplied from the photographic stock of Devaux Online.
+
+The Wireframes were produced with [Pencil Project Wireframe Designer](https://pencil.evolus.vn/)
+
+GitHub Desktop can be accessed from http://desktop.github.com
 
 ## 7.3 Code Credits
 
@@ -562,9 +625,9 @@ The Flight Parameters should appear as ![Desktop Flight Parameters](https://etie
 
 5. Click on the browser back button to return to the Home Page
 
-6. From the top navigation bar click on Flight Parameters 
+6. From the top navigation bar click on Location 
 
-   The Flight Parameters should appear as ![Desktop Location](https://github.com/etiennedevaux/planner/blob/main/project-documents/screenshots/desktop-location.png?raw=true)
+   The Location Page should appear as ![Desktop Location](https://github.com/etiennedevaux/planner/blob/main/project-documents/screenshots/desktop-location.png?raw=true)
 
 ## 8.2 Responsiveness Testing
 
@@ -642,7 +705,7 @@ Inexperienced pilots will follow the following user story:
 
 9.  Enter a UK postcode and press Enter, the Latitude and Longitude should be populated, these can be entered or adjusted independently of the Postcode
 
-10.  Recentre the maps, check that they show the same location and that it corresponds to the Latitude and Longitude.
+10.  Re-centre the maps, check that they show the same location and that it corresponds to the Latitude and Longitude.
 
 11.  Click Next, Step Five should be highlighed
 
@@ -673,5 +736,21 @@ Experienced pilots will move directly to the service or services they most requi
 
 9.  Click on Drone Safety Map, check that the Drone Safety Map is the same size as the embedded maps.
 
+# 9 Conclusions
 
+The site is highly effective at supporting the planning process for the new Open Category flights introduced in 2021.
+
+The site has some unique features that have great value to the key target users.
+
+The ability to dynamically link pilot competencies to drone categories and flight categories is genuinely innovative.
+
+The ability to see critical geographic information on one page combines existing tools in a unique way.
+
+Site performance and functionality is good.
+
+This is a great platform for further development and potential future commercialisation.
+
+The look and feel needs some enhancement, as each page is still quite densely packed.
+
+Integration with existing commercial providers would be a productive and efficient direction for future development.
 
