@@ -1,5 +1,5 @@
 //* Global Variables *//
-   var jsfileversion = "0501";
+   var jsfileversion = "0502";
    var dlat = 51.477976; // * Default Latitude, centring on Greenwich, will be used if the Latitude control is left blank*//
    var dlng = 0.000001; // * Default Longitude, centring on Greenwich, will be used if the Longitude control is left blank*//
    var originalFlSummary; // * Global Variable Used in Multiple Functions *//
@@ -121,9 +121,9 @@ function showMenuComponent(sect) {
    for (var i = 0; i < elements.length; i++) {
       elements[i].style.display = 'none';
    }
+   
    var x = document.getElementById(sect);
    x.style.display = 'block';
-
    var menuElements = document.getElementsByClassName('MenuButton');
 
    for (i = 0; i < menuElements.length; i++) {
@@ -132,9 +132,7 @@ function showMenuComponent(sect) {
 
    var y = document.getElementById(sect + 'Button');
    y.style.textDecoration = 'underline';
-
    document.getElementById('navbarNavDropdown').className='navbar-collapse show';
-
    document.getElementById('JSSerNo').textContent = '.' + jsfileversion;
    window.history.pushState("", "UAV Flight Planner Home", "#" + sect + "-Top");
    document.getElementById(sect).scrollIntoView();
@@ -143,10 +141,10 @@ function showMenuComponent(sect) {
 function GetMap(lat, long) {
    var map = new Microsoft.Maps.Map('#pln-osmap', {});
 
-   //Center the map on the user's location.
+   //* Center the map on the user's location. *//
 
-   if (lat == undefined) { lat = 51.4779760; }
-   if (long == undefined) { long = 0.000001; }
+   if (lat == undefined) { lat = 51.4779760; }  //* Replace empty value for latitude *//
+   if (long == undefined) { long = 0.000001; }  //* Replace empty value for longitude *//
 
    //* var loc = new Microsoft.Maps.Location(51.4779760,0.000001);*//
    var loc = new Microsoft.Maps.Location(lat, long);
@@ -507,6 +505,7 @@ function flightCatMarker(elem, status) {
 }
 
 function flightCatReset() {
+   //* Reset Flight Categories to status 2 *//
    var fcats = document.getElementsByClassName("pln-flightcat");
 
    var i;
@@ -516,6 +515,7 @@ function flightCatReset() {
 }
 
 function paramReset() {
+   //* Reset Flight Parameters *//
 
    var dcats = document.getElementsByClassName("pln-param-input");
 
@@ -540,24 +540,24 @@ function paramReset() {
 }
 
 function allFly() {
+   //* Set all flight categories to permitted *//
    flightCatMarker(document.getElementById("pln-flightcat-a1-so"), 1); //* A1 - Fly Over Stay Over*//
    flightCatMarker(document.getElementById("pln-flightcat-a1-po"), 1); //* A1 - Fly Over Pass Over*//
    flightCatMarker(document.getElementById("pln-flightcat-a2-5"), 1); //* A2 - 5m*//
    flightCatMarker(document.getElementById("pln-flightcat-a2-30"), 1); //* A2 - 30m*//
    flightCatMarker(document.getElementById("pln-flightcat-a2-50"), 1); //* A2 - 50m*//
    flightCatMarker(document.getElementById("pln-flightcat-a3"), 1); //* A3 - 50m and 150m from congested areas*//
-
    topFlightCat(1);
 }
 
 function noFly() {
+   //* Set all flight categories to NOT permitted *//
    flightCatMarker(document.getElementById("pln-flightcat-a1-so"), 0); //* A1 - Fly Over Stay Over*//
    flightCatMarker(document.getElementById("pln-flightcat-a1-po"), 0); //* A1 - Fly Over Pass Over*//
    flightCatMarker(document.getElementById("pln-flightcat-a2-5"), 0); //* A2 - 5m*//
    flightCatMarker(document.getElementById("pln-flightcat-a2-30"), 0); //* A2 - 30m*//
    flightCatMarker(document.getElementById("pln-flightcat-a2-50"), 0); //* A2 - 50m*//
    flightCatMarker(document.getElementById("pln-flightcat-a3"), 0); //* A3 - 50m and 150m from congested areas*//
-
    topFlightCat(); //* Revert to original flight summary *//
 }
 
@@ -568,7 +568,6 @@ function paramHlight(elem) {
    var hLStyleCSS = ["border-width", "background-color", "height", "position", "font-size", "z-index"];
    var hLStyleOldValue = [];
    var hLStyleNewValue = ["3px", "#ffffff", "120px", "relative", "14pt", "12"];
-
 
    //* Take current values and apply new values*//
    var i;
@@ -589,6 +588,8 @@ function paramHlight(elem) {
 }
 
 function topFlightCat(flightcat) {
+
+   //* On the basis of permitted flight categories fully describe the most exact flight category at the top of the location page *//
 
    var flSummary = document.getElementById("pln-flsummary");
    if (flightcat == 1) {
@@ -627,17 +628,21 @@ function topFlightCat(flightcat) {
 }
 
 function instrDisplay(instrid, status) {
+   //* Display the status of each instruction *//
 
+   //* Status for instructions/steps not yet reached *//
    if (status == 0) {
       document.getElementById(instrid).style.backgroundColor = "#ffffff00";
       document.getElementById(instrid).style.fontWeight = "200";
       document.getElementById(instrid).style.borderStyle = "none";
+   //* Status for instructions/steps that are active *//
    } else if (status == 1) {
       document.getElementById(instrid).style.backgroundColor = "#bbd2e2cc";
       document.getElementById(instrid).style.fontWeight = "900";
       document.getElementById(instrid).style.borderStyle = "solid";
       document.getElementById(instrid).style.borderColor = "#007bff";
       document.getElementById(instrid).style.borderWidth = "3px";
+      //* Status for instructions/steps that ahve been passed in the process *//
    } else if (status == 2) {
       document.getElementById(instrid).style.backgroundColor = "#ffffff00";
       document.getElementById(instrid).style.fontWeight = "900";
