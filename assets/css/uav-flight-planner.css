@@ -4,10 +4,10 @@
 
 /* || VARIABLES */
   :root{
-  --cssfileversion: "0315";
-  --footergrey:#999999cc;;
-  --flightallowed:#209020;;
-  --flightnotallowed:#995555;;
+    --cssfileversion: "0315";
+    --footergrey:#999999cc;;
+    --flightallowed:#209020;;
+    --flightnotallowed:#995555;;
   }
 /* END OF VARIABLES */
 
@@ -20,9 +20,9 @@
   }
 
   body{
-      font-family: Lato;
-      background-color: var(--bgroundshade);
-      margin: 0;
+    font-family: Lato;
+    background-color: var(--bgroundshade);
+    margin: 0;
   }
 
   /* Bootstrap Customisation */
@@ -182,12 +182,12 @@
   }
 
   .menu_span{
-  color: #ffffff;
-  margin: 0 50px;
+    color: #ffffff;
+    margin: 0 50px;
   }
 
   .nav-item{
-  cursor: pointer;
+    cursor: pointer;
   }
 
   .pln-help{
@@ -303,90 +303,90 @@
 
   /* Labels for the competencies on the flight parameters page. */
   .pln-comp-lbl{
-  font-size: 110%;
-  font-weight: 600;
+    font-size: 110%;
+    font-weight: 600;
   }
 
   /* Styling for competency checkboxes */
   .pln-comp input{
-  margin-left: 5px;
+    margin-left: 5px;
   }
 
   /* Styling for description box for competencies. */
   .pln-comp-desc{
-  display: flex;
-  align-items: center;
-  font-size: 12pt;
+    display: flex;
+    align-items: center;
+    font-size: 12pt;
   }
 
   /* Styling that applies to all elements in the drone categories column */
   #pln-dronecategories{
-  color: #000055;
-  height: 800px;
-  padding: 0;
+    color: #000055;
+    height: 800px;
+    padding: 0;
   }
 
   /* Styling that applies to all elements in the flight categories column */
   #pln-flightcategories{
-  color: #de8f00;
-  height: 800px;
-  padding: 0;
+    color: #de8f00;
+    height: 800px;
+    padding: 0;
   }
 
   .pln-comp-head{
-  height: 40px;
+    height: 40px;
   }
 
   .pln-dronecat-head{
-  height: 25px;
-  font-weight: 600;
-  font-size: 14pt;
+    height: 25px;
+    font-weight: 600;
+    font-size: 14pt;
   }
 
   /* Styling that applies to all elements in the competencies column */
   #pln-competencies{
-  color: #000000;
-  height: 800px;
-  padding: 0;
+    color: #000000;
+    height: 800px;
+    padding: 0;
   }
 
   /* Styling for headers of sections on the flight parameters page. */
   .pln-params-h1{
-  font-weight: 600;
-  font-size: 24pt;;
-  margin: 10px 0 10px 3px;
+    font-weight: 600;
+    font-size: 24pt;;
+    margin: 10px 0 10px 3px;
   }
 
   #pln-step-two{
-  font-weight: 300;
-  background-color: #ffffff00;
+    font-weight: 300;
+    background-color: #ffffff00;
   }
 
   #pln-result-a{
-  font-weight: 100;
-  background-color: #ffffff00;
+    font-weight: 100;
+    background-color: #ffffff00;
   }
 
   .pln-comp, .pln-dronecat, .pln-flightcat{
-  background-color: #dddddddd;
-  margin: 0 5px;
+    background-color: #dddddddd;
+    margin: 0 5px;
   }
 
   .pln-flight-yes{
-  color: var(--flightallowed);
+    color: var(--flightallowed);
   }
 
   .pln-flight-no{
-  color: var(--flightnotallowed);
-  text-decoration: line-through;
+    color: var(--flightnotallowed);
+    text-decoration: line-through;
   }
 
   .pln-btn-next{
-  margin: auto;
+    margin: auto;
   }
 
-   .pln-flightcat-head{
-  font-weight: 900;
+  .pln-flightcat-head{
+    font-weight: 900;
   }
 
 /* END OF FLIGHT PARAMETERS */
@@ -406,13 +406,13 @@
   }
 
   #pln-dsmap-1, #pln-param-rtn {
-  margin: 0;
-  background-color: #0078ff;
-  color: #ffffff;
-  padding: 1px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 11pt;
+    margin: 0;
+    background-color: #0078ff;
+    color: #ffffff;
+    padding: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11pt;
   }
 
   #pln-step-four-1{
@@ -420,41 +420,41 @@
   }
 
   #pln-step-four-2{
-  padding-left: 1px;
+    padding-left: 1px;
   }
 
   #pln-recenter{
-  margin: 10px auto;
-  width: 100%;
+    margin: 10px auto;
+    width: 100%;
   }
 
   #pln-dsmap-2{
-  margin: 10px auto;
-  width: 80%;
+    margin: 10px auto;
+    width: 80%;
   }
 
   #pln-flsummary{
-  font-size: 14pt;
-  text-align: center;
-  background-color: var(--footergrey);
-  color: #920a0a;
+    font-size: 14pt;
+    text-align: center;
+    background-color: var(--footergrey);
+    color: #920a0a;
   }
 
   #pln-geo{
-  height: 100%;
-  padding: 0;
+    height: 100%;
+    padding: 0;
   }
 
   #pln-maps{
-  padding: 0;
+    padding: 0;
   }
 
   .pln-location-frm{
-  padding: 5px;
+    padding: 5px;
   }
 
   .pln-steps-location{
-  padding: 0;
+    padding: 0;
   }
 
 /* END OF LOCATION PAGE */
@@ -539,7 +539,7 @@ footer p{
 
     #pln-osmap, #pln-satview {
       height: 450px;
-      }
+    }
 
     .pln-h1 {
       font-size: 14pt;
@@ -549,6 +549,7 @@ footer p{
       margin: 0;
       line-height: 1;
     }
+
     .pln-attrib {
       font-size: 8pt;
       line-height: 1;
@@ -556,9 +557,11 @@ footer p{
     .form-control {
       font-size: 9pt;
     }
+
     .form-group {
       margin: 0;
     }
+
     #pln-recenter {
       margin: 0 auto;
     }
@@ -585,6 +588,7 @@ footer p{
   #pln-osmap, #pln-satview {
     height: 300px;
   }
+
   #FlightParameters, #Location {
     padding-top: 100px;
   }
@@ -604,7 +608,6 @@ footer p{
   .footer-sm{
     font-size: 8pt;
   }
-
   
  }
 
